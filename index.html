@@ -266,16 +266,22 @@
   /* ---------- verticals (3D flip cards) ---------- */
   .vert-grid{
     display:grid;grid-template-columns:repeat(4,1fr);gap:22px;
-    perspective:1600px;
+    perspective:1800px;
   }
   .vcard{
+    width:100%;
     height:250px;position:relative;transform-style:preserve-3d;
-    transition:transform .6s cubic-bezier(.2,.8,.2,1);
+    transform:perspective(1200px) rotateY(0deg);
+    transition:transform .4s ease;
+    transform-origin:center center;
+    will-change:transform;
     cursor:pointer;
   }
-  .vcard.flipped{transform:rotateY(180deg);}
+  .vcard:hover{transform:perspective(1200px) rotateY(180deg);}
+  .vcard.flipped{transform:perspective(1200px) rotateY(180deg);}
   .vface{
     position:absolute;inset:0;backface-visibility:hidden;
+    width:100%;min-height:250px;
     border-radius:14px;border:1px solid var(--line-strong);
     padding:24px;display:flex;flex-direction:column;
   }
@@ -290,7 +296,9 @@
   .vfront .vfull{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:4px;}
   .vfront .flip-hint{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:0.05em;margin-top:12px;}
   .vback p{font-family:var(--body);font-size:14px;color:#c7cad4;line-height:1.55;}
-
+  .wing-detail{display:flex;flex-direction:column;justify-content:center;gap:12px;min-height:100%;}
+  .wing-detail h3{font-family:var(--body);font-size:16px;font-weight:700;color:var(--paper);margin:0;}
+  .wing-detail p{margin:0;color:#c7cad4;line-height:1.7;}
 .v1 .mark{background:rgba(180,138,47,0.14);color:var(--accent);} 
   .v2 .mark{background:rgba(116,146,181,0.16);color:var(--accent-2);} 
   .v3 .mark{background:rgba(180,138,47,0.18);color:var(--accent);} 
@@ -459,9 +467,8 @@
 <div class="welcome-modal" id="welcomeModal" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
   <div class="welcome-card">
     <button class="welcome-close" id="welcomeClose" aria-label="Close welcome message">&times;</button>
-    <img src="images/Idea-Lab_logo.png" alt="IDEA LAB logo" class="welcome-logo">
-    <span class="kicker">IDEA LAB</span>
-    <h2 id="welcomeTitle">Welcome to the Recruitment process of IDEA-LAB AKGEC</h2>
+    <img src="images/logo.png" alt="AKGEC logo" class="welcome-logo">
+    <h2 id="welcomeTitle">Welcome to the recruitment process at IDEA-LAB AKGEC</h2>
     <p>Find your track, bring your curiosity, and build something that matters.</p>
     <a href="#top" class="btn-primary" id="welcomeContinue">Let's Go</a>
   </div>
@@ -478,8 +485,6 @@
       <a href="#verticals">Verticals</a>
       <a href="#timeline">Process</a>
       <a href="#coordinators">Coordinators</a>
-      <!-- Add a direct social hyperlink here when needed. -->
-      <a href="https://instagram.com/akgec_idealab" class="nav-social" target="_blank" rel="noopener" aria-label="IDEA LAB on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></a>
       <a href="#apply" class="nav-cta" style="font-family:var(--mono)">Register</a>
     </div>
     <button class="navToggle" id="navToggle" aria-label="Toggle menu">☰</button>
@@ -505,7 +510,7 @@
           <div class="cd-unit"><div class="n" id="cd-m">--</div><div class="l">MIN</div></div>
           <div class="cd-unit"><div class="n" id="cd-s">--</div><div class="l">SEC</div></div>
         </div>
-        <div class="cd-note" id="deadlineNote">until registrations close · 5 August 2026</div>
+        <div class="cd-note" id="deadlineNote">until registrations close · 6 August 2026</div>
       </div>
 
       <div class="chip-stage" id="chipStage">
@@ -558,7 +563,9 @@
             <div><div class="vname">E-Cell</div><div class="vfull">Entrepreneurship Cell</div></div>
             <div class="flip-hint">tap for details →</div>
           </div>
-          <div class="vface vback"><p>Runs pitch nights, founder talks and early-stage venture support for students who want to start something of their own.</p></div>
+          <div class="vface vback">
+            <div class="wing-detail"><h3>Founder support</h3><p>Runs pitch nights, founder talks and early-stage venture support for students who want to start something of their own.</p></div>
+          </div>
         </div>
 
         <div class="vcard v2">
@@ -567,7 +574,9 @@
             <div><div class="vname">IP India Cell</div><div class="vfull">Intellectual Property</div></div>
             <div class="flip-hint">tap for details →</div>
           </div>
-          <div class="vface vback"><p>Helps student teams understand patents, copyrights and trademarks, and guides them through filing for their own work.</p></div>
+          <div class="vface vback">
+            <div class="wing-detail"><h3>IP guidance</h3><p>Helps student teams understand patents, copyrights and trademarks, and guides them through filing for their own work.</p></div>
+          </div>
         </div>
 
         <div class="vcard v3">
@@ -576,7 +585,9 @@
             <div><div class="vname">TBI</div><div class="vfull">Technical Business Incubator</div></div>
             <div class="flip-hint">tap for details →</div>
           </div>
-          <div class="vface vback"><p>The core incubation arm — mentorship, prototyping resources and pre-incubation support for shortlisted projects.</p></div>
+          <div class="vface vback">
+            <div class="wing-detail"><h3>Pre-incubation support</h3><p>The core incubation arm — mentorship, prototyping resources and pre-incubation support for shortlisted projects.</p></div>
+          </div>
         </div>
 
         <div class="vcard v4">
@@ -585,7 +596,9 @@
             <div><div class="vname">IIC</div><div class="vfull">Institution's Innovation Council</div></div>
             <div class="flip-hint">tap for details →</div>
           </div>
-          <div class="vface vback"><p>MoE Innovation Cell initiative — connects the lab to national innovation programs, hackathons and rankings.</p></div>
+          <div class="vface vback">
+            <div class="wing-detail"><h3>Innovation ecosystem</h3><p>MoE Innovation Cell initiative — connects the lab to national innovation programs, hackathons and rankings.</p></div>
+          </div>
         </div>
 
       </div>
@@ -614,7 +627,7 @@
     <div class="banner">
       <div>
         <div class="btitle">Last date to register</div>
-        <div class="bdate" id="bannerDate">5th August, 2026</div>
+        <div class="bdate" id="bannerDate">6th August, 2026</div>
       </div>
       <a href="#" class="btn-primary" id="applyBtnBanner">Register ↗</a>
     </div>
@@ -645,7 +658,7 @@
         <div class="steps">
           <div class="step"><div class="num">01</div><div><div class="t">Open the form</div><div class="d">Button below, or scan the QR on the poster.</div></div></div>
           <div class="step"><div class="num">02</div><div><div class="t">Tell us about you</div><div class="d">Branch, year, and what you'd want to build.</div></div></div>
-          <div class="step"><div class="num">03</div><div><div class="t">Submit before 5 Aug 2026</div><div class="d">Late entries can't be guaranteed a slot.</div></div></div>
+          <div class="step"><div class="num">03</div><div><div class="t">Submit before 6 Aug 2026</div><div class="d">Late entries can't be guaranteed a slot.</div></div></div>
         </div>
         <div class="cta-row">
           <a href="#" class="btn-primary" id="applyBtnMain">Register ↗</a>
@@ -675,16 +688,16 @@
    ============================================================ */
 const CONFIG = {
   FORM_URL: "https://forms.gle/REPLACE_WITH_YOUR_GOOGLE_FORM_LINK", // EDIT ME
-  DEADLINE_ISO: "2026-08-05T23:59:59+05:30", // EDIT ME (5 Aug 2026, IST)
+  DEADLINE_ISO: "2026-08-06T23:59:59+05:30", // EDIT ME (6 Aug 2026, IST)
   SOCIALS: [
-    { label: "IG", url: "https://instagram.com/akgec_idealab" },
-    { label: "IN", url: "https://linkedin.com/company/akgec-idea-lab" }, // EDIT ME
-    { label: "FB", url: "https://facebook.com/akgecidealab" } // EDIT ME
+    { label: "IG", url: "" },
+    { label: "IN", url: "" }, // EDIT ME
+    { label: "FB", url: "" } // EDIT ME
   ],
   COORDINATORS: [
     { name: "Krishna Goel", role: "Coordinator", phone: "9548708361" },
     { name: "Naman Mishra", role: "Coordinator", phone: "8052865856" },
-    { name: "Divi Srivastava", role: "Coordinator", phone: "" } // EDIT ME - add phone
+    { name: "Raghav Garg", role: "Coordinator", phone: "9027126264" }
   ]
 };
 
@@ -697,7 +710,12 @@ const CONFIG = {
 const footSocial = document.getElementById("footSocial");
 CONFIG.SOCIALS.forEach(s=>{
   const a = document.createElement("a");
-  a.href = s.url; a.target = "_blank"; a.rel = "noopener"; a.setAttribute("aria-label", `IDEA LAB on ${s.label}`);
+  a.href = s.url || "#";
+  if (s.url) {
+    a.target = "_blank";
+    a.rel = "noopener";
+  }
+  a.setAttribute("aria-label", `IDEA LAB on ${s.label}`);
   a.innerHTML = s.label === "IG"
     ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg>'
     : s.label === "IN"
@@ -707,10 +725,10 @@ CONFIG.SOCIALS.forEach(s=>{
 });
 
 const coordGrid = document.getElementById("coordGrid");
-  [...CONFIG.COORDINATORS].sort((a,b)=>{
-    const order = ["Naman Mishra", "Krishna Goel", "Divi Srivastava"];
-    return order.indexOf(a.name) - order.indexOf(b.name);
-  }).forEach(c=>{
+[...CONFIG.COORDINATORS].sort((a,b)=>{
+    const order = ["Krishna Goel", "Naman Mishra", "Raghav Garg"];
+  return order.indexOf(a.name) - order.indexOf(b.name);
+}).forEach(c=>{
   const card = document.createElement("div");
   card.className = "ccard";
   card.innerHTML = `
@@ -726,9 +744,15 @@ const poster = document.querySelector(".poster-frame img");
 if(poster) poster.src = "images/DRIVEposter.png";
 
 const welcomeModal = document.getElementById("welcomeModal");
-const closeWelcome = ()=> welcomeModal.classList.add("is-hidden");
+const closeWelcome = ()=> {
+  welcomeModal.classList.add("is-hidden");
+  window.location.hash = "#top";
+};
 document.getElementById("welcomeClose").addEventListener("click", closeWelcome);
-document.getElementById("welcomeContinue").addEventListener("click", closeWelcome);
+document.getElementById("welcomeContinue").addEventListener("click", e=>{
+  e.preventDefault();
+  closeWelcome();
+});
 welcomeModal.addEventListener("click", e=>{ if(e.target === welcomeModal) closeWelcome(); });
 
 // countdown
@@ -784,16 +808,10 @@ if(stage && chip && !reduceMotion && matchMedia("(hover:hover)").matches){
   document.head.appendChild(styleTag);
 }
 
-// flip cards — click/tap toggles on all pointer types, hover handled by CSS below via JS-added class on mouseenter for desktop
+// flip cards — click/tap toggles on all pointer types
 document.querySelectorAll(".vcard").forEach(card=>{
   card.addEventListener("click", ()=> card.classList.toggle("flipped"));
 });
-if(matchMedia("(hover:hover)").matches){
-  document.querySelectorAll(".vcard").forEach(card=>{
-    card.addEventListener("mouseenter", ()=> card.classList.add("flipped"));
-    card.addEventListener("mouseleave", ()=> card.classList.remove("flipped"));
-  });
-}
 </script>
 </body>
 </html>
