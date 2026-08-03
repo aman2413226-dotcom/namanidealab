@@ -45,8 +45,11 @@
     background-attachment:fixed;
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
+    -webkit-text-size-adjust:100%;
     -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation;
   }
+  a, button, .vcard{touch-action:manipulation;}
 
   ::selection{background:var(--ember);color:var(--void);}
 
@@ -187,13 +190,12 @@
 
   /* 3D chip artwork */
   .chip-stage{
-    position:relative;height:420px;display:flex;align-items:center;justify-content:center;
-    transform-style:preserve-3d;
+    position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;
+    transform-style:preserve-3d;padding:16px;
   }
   .chip-card{
-    position:relative;width:300px;height:300px;
-    transform-style:preserve-3d;
-    transition:transform .12s ease-out;
+    position:relative;width:min(300px, 78vw);aspect-ratio:1/1;max-height:300px;
+    transform-style:preserve-3d;transition:transform .12s ease-out;
   }
   .chip-layer{position:absolute;inset:0;border-radius:18px;transform-style:preserve-3d;}
   .chip-base{
@@ -215,16 +217,60 @@
     transform:translateZ(48px);
     display:flex;align-items:center;justify-content:center;
   }
-  .chip-bulb{
-    width:96px;height:96px;border-radius:50%;
-    background:radial-gradient(circle at 35% 30%, #fff4cd, var(--accent) 55%, #7a4c14 100%);
-    box-shadow:0 0 60px 14px rgba(180,138,47,0.28), 0 0 120px 30px rgba(116,146,181,0.16);
+  .startup-orb{
+    position:relative;width:112px;height:112px;display:flex;align-items:center;justify-content:center;
     animation:pulse 3.2s ease-in-out infinite;
   }
-  @keyframes pulse{
-    0%,100%{filter:brightness(1);}
-    50%{filter:brightness(1.18);}
+  .startup-core{
+    width:74px;height:74px;border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, #fff5d1, var(--accent) 45%, #8a4d0d 100%);
+    box-shadow:0 0 40px rgba(180,138,47,0.35), inset 0 0 20px rgba(255,255,255,0.25);
+    position:relative;z-index:3;display:grid;place-items:center;overflow:hidden;
   }
+  .startup-core::before,
+  .startup-core::after{
+    content:"";position:absolute;inset:-20%;
+    background:conic-gradient(from 0deg, transparent, rgba(255,255,255,0.28), transparent 35%, rgba(255,255,255,0.18), transparent 70%);
+    animation:shine 4.2s linear infinite;
+    transform:rotate(20deg);
+  }
+  .startup-core::after{
+    inset:-30%;opacity:0.45;animation-duration:5.8s;animation-direction:reverse;
+  }
+  .startup-icon{
+    width:38px;height:38px;color:#fff7dd;filter:drop-shadow(0 0 8px rgba(255,255,255,0.18));
+    position:relative;z-index:4;
+  }
+  .startup-ring{
+    position:absolute;border-radius:50%;border:2px solid rgba(255,255,255,0.35);
+    inset:0;transform:rotate(22deg);
+  }
+  .startup-ring-a{border-color:rgba(180,138,47,0.75);inset:6px;animation:spin 8s linear infinite;}
+  .startup-ring-b{border-color:rgba(116,146,181,0.65);inset:-8px;animation:spinReverse 10s linear infinite;}
+  .pulse-ring{
+    position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,0.16);
+    inset:0;transform:scale(0.8);opacity:0;animation:ringPulse 2.8s ease-out infinite;
+  }
+  .pulse-ring-2{animation-delay:0.9s;}
+  .pulse-ring-3{animation-delay:1.8s;}
+  .startup-spark{
+    position:absolute;width:10px;height:10px;border-radius:50%;background:var(--paper);
+    box-shadow:0 0 12px rgba(255,255,255,0.75);
+  }
+  .spark-a{top:10px;right:18px;animation:driftA 3.2s ease-in-out infinite;}
+  .spark-b{bottom:18px;left:16px;animation:driftB 3.6s ease-in-out infinite;}
+  .spark-c{top:42px;left:8px;animation:driftC 3.8s ease-in-out infinite;}
+  @keyframes pulse{
+    0%,100%{filter:brightness(1);transform:scale(1);} 
+    50%{filter:brightness(1.16);transform:scale(1.04);} 
+  }
+  @keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+  @keyframes spinReverse{from{transform:rotate(360deg);}to{transform:rotate(0deg);}}
+  @keyframes ringPulse{0%{transform:scale(0.72);opacity:0.8;}50%{opacity:0.35;}100%{transform:scale(1.28);opacity:0;}}
+  @keyframes shine{from{transform:rotate(20deg) translateX(-16%);}to{transform:rotate(20deg) translateX(16%);}}
+  @keyframes driftA{0%,100%{transform:translate3d(0,0,0) scale(1);}50%{transform:translate3d(6px,-8px,0) scale(1.16);}}
+  @keyframes driftB{0%,100%{transform:translate3d(0,0,0) scale(1);}50%{transform:translate3d(-6px,6px,0) scale(1.1);}}
+  @keyframes driftC{0%,100%{transform:translate3d(0,0,0) scale(1);}50%{transform:translate3d(4px,8px,0) scale(1.12);}}
   .chip-tag{
     position:absolute;bottom:20px;left:20px;right:20px;
     transform:translateZ(30px);
@@ -235,9 +281,11 @@
 
   @media(max-width:1024px){
     .hero-grid{grid-template-columns:1fr;gap:34px;}
-    .chip-stage{height:300px;order:-1;}
-    .chip-card{width:240px;height:240px;}
-    .chip-bulb{width:80px;height:80px;}
+    .chip-stage{height:auto;min-height:260px;order:-1;padding:10px 0 0;}
+    .chip-card{width:min(240px,72vw);max-height:240px;}
+    .startup-orb{width:96px;height:96px;}
+    .startup-core{width:64px;height:64px;}
+    .startup-icon{width:32px;height:32px;}
     .about-grid,.apply-wrap{grid-template-columns:1fr;gap:32px;}
   }
 
@@ -265,20 +313,28 @@
 
   /* ---------- verticals (3D flip cards) ---------- */
   .vert-grid{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:22px;
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;
     perspective:1800px;
   }
   .vcard{
     width:100%;
     height:250px;position:relative;transform-style:preserve-3d;
     transform:perspective(1200px) rotateY(0deg);
-    transition:transform .4s ease;
+    transition:transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .25s ease, border-color .25s ease;
     transform-origin:center center;
     will-change:transform;
     cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
   }
-  .vcard:hover{transform:perspective(1200px) rotateY(180deg);}
-  .vcard.flipped{transform:perspective(1200px) rotateY(180deg);}
+  .vcard:hover,
+  .vcard:focus-visible{
+    transform:perspective(1200px) rotateY(180deg);
+    box-shadow:0 18px 34px rgba(0,0,0,0.24);
+  }
+  .vcard.flipped,
+  .vcard.is-active{
+    transform:perspective(1200px) rotateY(180deg);
+  }
   .vface{
     position:absolute;inset:0;backface-visibility:hidden;
     width:100%;min-height:250px;
@@ -303,12 +359,9 @@
   .v2 .mark{background:rgba(116,146,181,0.16);color:var(--accent-2);} 
   .v3 .mark{background:rgba(180,138,47,0.18);color:var(--accent);} 
   .v4 .mark{background:rgba(116,146,181,0.16);color:var(--accent-2);}
+  .v5 .mark{background:rgba(63,183,168,0.16);color:var(--teal);} 
 
-  @media(max-width:900px){.vert-grid{grid-template-columns:1fr 1fr;}}
-  @media(max-width:560px){.vert-grid{grid-template-columns:1fr;}}
-
-  .process-block{border:1px solid var(--line-strong);border-radius:18px;padding:28px 26px;background:rgba(14,27,46,0.52);box-shadow:0 18px 42px rgba(0,0,0,0.16);}
-
+  @media(max-width:900px){.vert-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
   @media(max-width:768px){
     .wrap{padding:0 18px;}
     header{padding:0;}
@@ -344,9 +397,11 @@
     .hero{padding:110px 0 64px;}
     .eyebrow{font-size:11px;padding:7px 12px;}
     h1.headline{font-size:clamp(32px,11vw,44px);} 
-    .chip-stage{height:230px;}
-    .chip-card{width:200px;height:200px;}
-    .chip-bulb{width:72px;height:72px;}
+    .chip-stage{min-height:220px;}
+    .chip-card{width:min(200px,74vw);}
+    .startup-orb{width:84px;height:84px;}
+    .startup-core{width:58px;height:58px;}
+    .startup-icon{width:28px;height:28px;}
     .vfront,.vback,.ccard{padding:20px;}
     .ccard .avatar{width:48px;height:48px;}
     .poster-frame{transform:none;}
@@ -482,7 +537,7 @@
     </div>
     <div class="navlinks" id="navlinks">
       <a href="#about">About</a>
-      <a href="#verticals">Verticals</a>
+      <a href="#domains">Domains</a>
       <a href="#timeline">Process</a>
       <a href="#coordinators">Coordinators</a>
       <a href="#apply" class="nav-cta" style="font-family:var(--mono)">Register</a>
@@ -499,10 +554,10 @@
         <span class="eyebrow">Recruitment Drive '26 Now Open</span>
         <h1 class="headline">Recruitment<span class="line2">Drive '26</span></h1>
         <div class="subline">INNOVATE&nbsp; · &nbsp;COLLABORATE&nbsp; · &nbsp;IMPACT</div>
-        <p class="desc" id="aboutBlurbShort">AKGEC IDEA Lab is the college's technical business incubator — where students building real products, startups and prototypes get mentorship, resources and a team. This year's drive is open to every branch and every year.</p>
+        <p class="desc" id="aboutBlurbShort">AKGEC IDEA Lab is the college's technical business incubator — where second-year students building real products, startups and prototypes get mentorship, resources and a team. This year's drive is open to second-year members only.</p>
         <div class="cta-row">
           <a href="#" class="btn-primary" id="applyBtnHero">Register ↗</a>
-          <a href="#verticals" class="btn-ghost">Explore the wings</a>
+          <a href="#domains" class="btn-ghost">Explore the domains</a>
         </div>
         <div class="countdown" id="countdown">
           <div class="cd-unit"><div class="n" id="cd-d">--</div><div class="l">DAYS</div></div>
@@ -517,8 +572,26 @@
         <div class="chip-card" id="chipCard">
           <div class="chip-layer chip-base"></div>
           <div class="chip-layer chip-circuit"></div>
-          <div class="chip-layer chip-glow"><div class="chip-bulb"></div></div>
-          <div class="chip-tag"><span>IDEA//LAB</span><b>AKGEC</b></div>
+          <div class="chip-layer chip-glow">
+            <div class="startup-orb">
+              <div class="pulse-ring pulse-ring-1"></div>
+              <div class="pulse-ring pulse-ring-2"></div>
+              <div class="pulse-ring pulse-ring-3"></div>
+              <div class="startup-core">
+                <svg class="startup-icon" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                  <path d="M32 12c6 0 11 5 11 11 0 7-5 12-11 18-6-6-11-11-11-18 0-6 5-11 11-11Z" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M24 34l8 10 8-10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M22 22h20" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="startup-ring startup-ring-a"></div>
+              <div class="startup-ring startup-ring-b"></div>
+              <div class="startup-spark spark-a"></div>
+              <div class="startup-spark spark-b"></div>
+              <div class="startup-spark spark-c"></div>
+            </div>
+          </div>
+          <div class="chip-tag"><span>BUILD//START</span><b>AKGEC</b></div>
         </div>
       </div>
     </div>
@@ -540,64 +613,75 @@
         <div class="stat-row">
           <div class="stat"><div class="n">4</div><div class="l">CORE WINGS</div></div>
           <div class="stat"><div class="n">'26</div><div class="l">RECRUITMENT CYCLE</div></div>
-          <div class="stat"><div class="n">1</div><div class="l">TEAM, MANY TRACKS</div></div>
+          <div class="stat"><div class="n">5</div><div class="l">DOMAINS</div></div>
           <div class="stat"><div class="n">50+</div><div class="l">STARTUPS</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= VERTICALS ================= -->
-  <section id="verticals">
+  <!-- ================= DOMAINS ================= -->
+  <section id="domains">
     <div class="wrap">
       <div class="section-head">
-        <span class="kicker">// 01 Wings</span>
-        <h2 class="h-title">Four wings, one lab</h2>
-        <p>Tap or hover a card to see what each wing actually does. Swap this copy for your real mandate per wing.</p>
+        <span class="kicker">// 01 Domains</span>
+        <h2 class="h-title">Five domains, one society</h2>
+        <p>IDEA Lab AKGEC is a college society built around five core domains where students can contribute, lead, and create impact.</p>
       </div>
       <div class="vert-grid" id="vertGrid">
 
         <div class="vcard v1">
           <div class="vface vfront">
-            <div class="mark">EC</div>
-            <div><div class="vname">E-Cell</div><div class="vfull">Entrepreneurship Cell</div></div>
+            <div class="mark">OR</div>
+            <div><div class="vname">Oratory</div><div class="vfull">Public speaking & expression</div></div>
             <div class="flip-hint">tap for details →</div>
           </div>
           <div class="vface vback">
-            <div class="wing-detail"><h3>Founder support</h3><p>Runs pitch nights, founder talks and early-stage venture support for students who want to start something of their own.</p></div>
+            <div class="wing-detail"><h3>Oratory</h3><p>Leads debates, presentations, storytelling, and live event communication that helps the society speak with confidence and clarity.</p></div>
           </div>
         </div>
 
         <div class="vcard v2">
           <div class="vface vfront">
-            <div class="mark">IP</div>
-            <div><div class="vname">IP India Cell</div><div class="vfull">Intellectual Property</div></div>
+            <div class="mark">MM</div>
+            <div><div class="vname">Media & Marketing</div><div class="vfull">Branding & outreach</div></div>
             <div class="flip-hint">tap for details →</div>
           </div>
           <div class="vface vback">
-            <div class="wing-detail"><h3>IP guidance</h3><p>Helps student teams understand patents, copyrights and trademarks, and guides them through filing for their own work.</p></div>
+            <div class="wing-detail"><h3>Media & Marketing</h3><p>Handles promotion, campaigns, audience engagement, and strategic outreach to grow the society's presence and impact.</p></div>
           </div>
         </div>
 
         <div class="vcard v3">
           <div class="vface vfront">
-            <div class="mark">TBI</div>
-            <div><div class="vname">TBI</div><div class="vfull">Technical Business Incubator</div></div>
+            <div class="mark">CW</div>
+            <div><div class="vname">Content Writing</div><div class="vfull">Stories & communication</div></div>
             <div class="flip-hint">tap for details →</div>
           </div>
           <div class="vface vback">
-            <div class="wing-detail"><h3>Pre-incubation support</h3><p>The core incubation arm — mentorship, prototyping resources and pre-incubation support for shortlisted projects.</p></div>
+            <div class="wing-detail"><h3>Content Writing</h3><p>Creates captions, posts, articles, scripts, and written content that shapes how the society communicates with its audience.</p></div>
           </div>
         </div>
 
         <div class="vcard v4">
           <div class="vface vfront">
-            <div class="mark">IIC</div>
-            <div><div class="vname">IIC</div><div class="vfull">Institution's Innovation Council</div></div>
+            <div class="mark">DV</div>
+            <div><div class="vname">Design & Video Editing</div><div class="vfull">Visual storytelling</div></div>
             <div class="flip-hint">tap for details →</div>
           </div>
           <div class="vface vback">
-            <div class="wing-detail"><h3>Innovation ecosystem</h3><p>MoE Innovation Cell initiative — connects the lab to national innovation programs, hackathons and rankings.</p></div>
+            <div class="wing-detail"><h3>Design & Video Editing</h3><p>Builds posters, reels, visual content, and edited videos that make the society's ideas look polished and engaging.</p></div>
+          </div>
+        </div>
+
+        <div class="vcard v5">
+          <div class="vface vfront">
+            <div class="mark">MG</div>
+            <div><div class="vname">Managerial</div><div class="vfull">Operations & coordination</div></div>
+            <div class="flip-hint">tap for details →</div>
+          </div>
+          <div class="vface vback">
+            <div class="wing-detail"><h3>Managerial</h3><p>Drives planning, coordination, execution, and team support so everything runs smoothly from idea to event.</p></div>
           </div>
         </div>
 
@@ -627,7 +711,7 @@
     <div class="banner">
       <div>
         <div class="btitle">Last date to register</div>
-        <div class="bdate" id="bannerDate">6th August, 2026</div>
+        <div class="bdate" id="bannerDate">6 August 2026</div>
       </div>
       <a href="#" class="btn-primary" id="applyBtnBanner">Register ↗</a>
     </div>
@@ -809,8 +893,20 @@ if(stage && chip && !reduceMotion && matchMedia("(hover:hover)").matches){
 }
 
 // flip cards — click/tap toggles on all pointer types
-document.querySelectorAll(".vcard").forEach(card=>{
-  card.addEventListener("click", ()=> card.classList.toggle("flipped"));
+const domainCards = document.querySelectorAll(".vcard");
+domainCards.forEach(card=>{
+  card.addEventListener("click", ()=> {
+    card.classList.toggle("flipped");
+    card.classList.toggle("is-active");
+  });
+  card.addEventListener("keydown", (e)=>{
+    if(e.key === "Enter" || e.key === " "){
+      e.preventDefault();
+      card.classList.toggle("flipped");
+      card.classList.toggle("is-active");
+    }
+  });
+  card.setAttribute("tabindex", "0");
 });
 </script>
 </body>
