@@ -1,954 +1,2904 @@
-<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>IdeaLabOfficial | AKGEC IDEA Lab</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&amp;family=Sora:wght@400..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<!-- Tailwind theme tokens used by the page utility classes -->
-<script id="tailwind-config">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AKGEC IDEA Lab | Innovation • Incubation • Entrepreneurship</title>
+
+    <meta
+        name="description"
+        content="AKGEC IDEA Lab empowers students to transform ideas into prototypes, protect innovations, and launch scalable ventures."
+    >
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Sora:wght@400..800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet"
+    >
+
+    <script>
         tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "primary-fixed-dim": "#ffb3b6",
-                      "secondary": "#835400",
-                      "on-secondary-fixed": "#2a1800",
-                      "surface-variant": "#e4e2e0",
-                      "secondary-container": "#feb64e",
-                      "on-secondary": "#ffffff",
-                      "error": "#ba1a1a",
-                      "on-surface-variant": "#564242",
-                      "on-error": "#ffffff",
-                      "surface-bright": "#fbf9f7",
-                      "on-tertiary-fixed": "#151b2a",
-                      "on-tertiary-fixed-variant": "#404757",
-                      "surface": "#fbf9f7",
-                      "on-tertiary-container": "#a6adc0",
-                      "outline": "#897172",
-                      "error-container": "#ffdad6",
-                      "on-surface": "#1b1c1b",
-                      "inverse-surface": "#30302f",
-                      "tertiary-fixed": "#dce2f6",
-                      "surface-container-lowest": "#ffffff",
-                      "on-primary-fixed": "#40000c",
-                      "on-primary": "#ffffff",
-                      "secondary-fixed": "#ffddb5",
-                      "on-background": "#1b1c1b",
-                      "primary-fixed": "#ffdada",
-                      "surface-container-high": "#eae8e6",
-                      "outline-variant": "#dcc0c0",
-                      "primary-container": "#7a1e2b",
-                      "on-tertiary": "#ffffff",
-                      "on-primary-fixed-variant": "#822430",
-                      "surface-container-highest": "#e4e2e0",
-                      "on-secondary-fixed-variant": "#643f00",
-                      "tertiary-fixed-dim": "#c0c6da",
-                      "background": "#fbf9f7",
-                      "surface-container-low": "#f5f3f1",
-                      "on-primary-container": "#ff8a92",
-                      "inverse-on-surface": "#f2f0ee",
-                      "inverse-primary": "#ffb3b6",
-                      "tertiary": "#242b3a",
-                      "primary": "#5b0417",
-                      "tertiary-container": "#3a4151",
-                      "surface-container": "#efedeb",
-                      "surface-dim": "#dbdad8",
-                      "surface-tint": "#a13c46",
-                      "secondary-fixed-dim": "#ffb956",
-                      "on-error-container": "#93000a",
-                      "on-secondary-container": "#714800"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "margin-desktop": "64px",
-                      "stack-md": "16px",
-                      "stack-sm": "8px",
-                      "section-padding": "120px",
-                      "container-max": "1280px",
-                      "gutter": "24px",
-                      "stack-lg": "32px",
-                      "margin-mobile": "20px"
-              },
-              "fontFamily": {
-                      "body-md": [
-                              "DM Sans"
-                      ],
-                      "headline-xl": [
-                              "Sora"
-                      ],
-                      "label-caps": [
-                              "DM Sans"
-                      ],
-                      "body-lg": [
-                              "DM Sans"
-                      ],
-                      "headline-md": [
-                              "Sora"
-                      ],
-                      "headline-xl-mobile": [
-                              "Sora"
-                      ],
-                      "headline-lg": [
-                              "Sora"
-                      ]
-              },
-              "fontSize": {
-                      "body-md": [
-                              "16px",
-                              {
-                                      "lineHeight": "1.6",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "headline-xl": [
-                              "56px",
-                              {
-                                      "lineHeight": "1.1",
-                                      "letterSpacing": "-0.02em",
-                                      "fontWeight": "800"
-                              }
-                      ],
-                      "label-caps": [
-                              "13px",
-                              {
-                                      "lineHeight": "1.0",
-                                      "letterSpacing": "0.1em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "body-lg": [
-                              "18px",
-                              {
-                                      "lineHeight": "1.6",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "headline-md": [
-                              "28px",
-                              {
-                                      "lineHeight": "1.3",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "headline-xl-mobile": [
-                              "36px",
-                              {
-                                      "lineHeight": "1.2",
-                                      "letterSpacing": "-0.01em",
-                                      "fontWeight": "800"
-                              }
-                      ],
-                      "headline-lg": [
-                              "40px",
-                              {
-                                      "lineHeight": "1.2",
-                                      "fontWeight": "700"
-                              }
-                      ]
-              }
+            darkMode: "class",
+
+            theme: {
+                extend: {
+
+                    colors: {
+                        primary: "#5b0417",
+                        "primary-container": "#7a1e2b",
+                        "primary-fixed": "#ffdada",
+                        "primary-fixed-dim": "#ffb3b6",
+
+                        secondary: "#835400",
+                        "secondary-container": "#feb64e",
+                        "secondary-fixed": "#ffddb5",
+                        "secondary-fixed-dim": "#ffb956",
+
+                        tertiary: "#242b3a",
+                        "tertiary-container": "#3a4151",
+
+                        background: "#fbf9f7",
+                        surface: "#fbf9f7",
+                        "surface-bright": "#fbf9f7",
+                        "surface-container": "#efedeb",
+                        "surface-container-low": "#f5f3f1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#eae8e6",
+                        "surface-container-highest": "#e4e2e0",
+                        "surface-variant": "#e4e2e0",
+
+                        "on-surface": "#1b1c1b",
+                        "on-surface-variant": "#564242",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+
+                        outline: "#897172",
+                        "outline-variant": "#dcc0c0"
+                    },
+
+                    spacing: {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "section-padding": "120px",
+                        "container-max": "1280px",
+                        gutter: "24px"
+                    },
+
+                    fontFamily: {
+                        body: ["DM Sans"],
+                        heading: ["Sora"]
+                    }
+                }
             }
-          }
-        }
+        };
     </script>
-<style>
-    /* Gallery interaction styles */
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "DM Sans", sans-serif;
+            background: #fbf9f7;
+            color: #1b1c1b;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Sora", sans-serif;
+        }
+
+        ::selection {
+            background: #7a1e2b;
+            color: white;
+        }
+
+        /* --------------------------------
+           NAVIGATION
+        -------------------------------- */
+
+        .docked {
+            min-height: 80px;
+        }
+
+        .docked-logo {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        @media (max-width: 767px) {
+            .docked {
+                min-height: 72px;
+            }
+
+            .docked-logo {
+                height: 72px;
+                max-width: 175px;
+            }
+        }
+
+        .mobile-menu-panel {
+            display: none;
+        }
+
+        .mobile-menu-panel.is-open {
+            display: grid;
+        }
+
+        /* --------------------------------
+           HERO
+        -------------------------------- */
+
+        .hero-grid {
+            position: relative;
+        }
+
+        .hero-grid::before {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            background: rgba(255, 218, 218, 0.45);
+            filter: blur(90px);
+            top: -180px;
+            right: -180px;
+            pointer-events: none;
+        }
+
+        .hero-grid::after {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: rgba(255, 221, 181, 0.35);
+            filter: blur(90px);
+            bottom: -180px;
+            left: -180px;
+            pointer-events: none;
+        }
+
+        .hero-logo {
+            filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.16));
+        }
+
+        /* --------------------------------
+           PILLARS
+        -------------------------------- */
+
+        .pillar-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillar-card::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: currentColor;
+            opacity: 0.035;
+            right: -30px;
+            bottom: -30px;
+            transition: transform 0.4s ease;
+        }
+
+        .pillar-card:hover::after {
+            transform: scale(2);
+        }
+
+        .pillar-card:nth-child(1) {
+            box-shadow: 8px -8px 0 rgba(91, 4, 23, 0.65);
+        }
+
+        .pillar-card:nth-child(2) {
+            box-shadow: 8px -8px 0 rgba(37, 99, 235, 0.65);
+        }
+
+        .pillar-card:nth-child(3) {
+            box-shadow: 8px -8px 0 rgba(131, 84, 0, 0.65);
+        }
+
+        .pillar-card:nth-child(4) {
+            box-shadow: 8px -8px 0 rgba(46, 125, 50, 0.65);
+        }
+
+        /* --------------------------------
+           JOURNEY
+        -------------------------------- */
+
+        .journey-line {
+            background: linear-gradient(
+                to bottom,
+                #5b0417,
+                #835400,
+                #2563eb,
+                #2e7d32
+            );
+        }
+
+        /* --------------------------------
+           SERVICE DIRECTORY
+        -------------------------------- */
+
+        .service-row {
+            transition:
+                background-color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .service-row:hover {
+            transform: translateX(6px);
+        }
+
+        /* --------------------------------
+           GALLERY
+        -------------------------------- */
+
         .gallery-image-wrapper {
             overflow: hidden;
             border-radius: 24px;
             position: relative;
             cursor: pointer;
+            background: #eae8e6;
         }
+
         .gallery-image {
-            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            transition:
+                transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         .gallery-image-wrapper:hover .gallery-image {
             transform: scale(1.05);
         }
+
         .gallery-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(11,18,32,0.4) 0%, rgba(11,18,32,0) 50%);
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(11, 18, 32, 0.55) 0%,
+                    rgba(11, 18, 32, 0) 55%
+                );
             opacity: 0;
             transition: opacity 0.4s ease;
             pointer-events: none;
         }
+
         .gallery-image-wrapper:hover .gallery-overlay {
             opacity: 1;
         }
+
         .lightbox-open {
             overflow: hidden;
         }
-        /* Desktop navigation alignment and logo sizing */
-        @media (min-width: 768px) {
-            nav.docked > div > div:nth-of-type(1) {
-                margin-left: auto;
-                margin-right: 5%;
+
+        /* --------------------------------
+           DARK MODE
+        -------------------------------- */
+
+        html.dark body {
+            background: #111827;
+            color: #f3f4f6;
+        }
+
+        html.dark .light-surface {
+            background: #1f2937 !important;
+        }
+
+        html.dark .light-text {
+            color: #f9fafb !important;
+        }
+
+        html.dark .light-muted {
+            color: #d1d5db !important;
+        }
+
+        html.dark .global-nav {
+            background: #1f2937;
+            border-color: #374151;
+        }
+
+        html.dark .global-nav a {
+            color: #f3f4f6;
+        }
+
+        html.dark .idea-nav {
+            background: rgba(17, 24, 39, 0.95);
+            border-color: #374151;
+        }
+
+        /* --------------------------------
+           ANIMATIONS
+        -------------------------------- */
+
+        @keyframes floatLogo {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
             }
         }
-            nav.docked > div {
-                min-height: 5rem;
-            }
-            nav.docked > div > a img {
-                height: 5rem;
-                display: block;
-                margin: 0;
-            }
-            nav.docked > div > a:first-child {
-                height: 5rem;
-                margin: 0;
-                padding: 0;
-                align-self: stretch;
-            }
-            nav.docked [aria-label="Toggle Theme"] {
-                order: -1;
-            }
-            /* Dark-mode overrides for page surfaces and readable text */
-            html.dark body {
-                background-color: #111827;
-                color: #f3f4f6;
-            }
-            html.dark .bg-surface,
-            html.dark .bg-surface-bright,
-            html.dark .bg-surface-container-lowest,
-            html.dark .bg-surface-container-low,
-            html.dark .bg-surface-container,
-            html.dark .bg-white {
-                background-color: #1f2937;
-            }
-            html.dark .text-on-surface,
-            html.dark .text-primary {
-                color: #f9fafb;
-            }
-            html.dark .text-on-surface-variant {
-                color: #d1d5db;
-            }
-            html.dark nav.docked {
-                background-color: rgba(17, 24, 39, 0.92);
-                border-color: #374151;
-            }
-            html.dark .akgec-global-nav a,
-            html.dark .akgec-global-nav a:hover {
-                color: #000000;
-            }
-            #about-pillars .grid > div:nth-child(1) {
-                box-shadow: 8px -8px 0 rgba(91, 4, 23, 0.65);
-            }
-            #about-pillars .grid > div:nth-child(2) {
-                box-shadow: 8px -8px 0 rgba(37, 99, 235, 0.65);
-            }
-            #about-pillars .grid > div:nth-child(3) {
-                box-shadow: 8px -8px 0 rgba(131, 84, 0, 0.65);
-            }
-            #about-pillars .grid > div:nth-child(4) {
-                box-shadow: 8px -8px 0 rgba(46, 125, 50, 0.65);
-            }
-            /* End page-specific styles */
-    </style>
-<style>
-        .mobile-menu-panel {
-            display: none;
+
+        .floating-logo {
+            animation: floatLogo 5s ease-in-out infinite;
         }
-        .mobile-menu-panel.is-open {
-            display: grid;
+
+        @keyframes pulseDot {
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(1.25);
+            }
         }
+
+        .pulse-dot {
+            animation: pulseDot 2s infinite;
+        }
+
+        /* --------------------------------
+           RESPONSIVE
+        -------------------------------- */
+
         @media (max-width: 767px) {
-            nav.docked > div {
-                min-height: 4.5rem;
+
+            .hero-logo {
+                max-width: 320px;
             }
-            nav.docked > div > a img {
-                height: 4.5rem;
-                max-width: 170px;
+
+            .pillar-card {
+                box-shadow: 6px -6px 0 rgba(91, 4, 23, 0.4) !important;
+            }
+
+            .service-row:hover {
+                transform: none;
             }
         }
+
+    </style>
+
+<style id="android-theme-toggle-styles">
+#androidThemeToggle{display:none;position:fixed;right:16px;bottom:18px;z-index:9999;width:52px;height:52px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(23,33,43,.94);color:#fff;align-items:center;justify-content:center;font-size:21px;box-shadow:0 8px 24px rgba(0,0,0,.28);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);cursor:pointer;-webkit-tap-highlight-color:transparent}
+#androidThemeToggle:active{transform:scale(.92)}
+html.android-light body{background:#fbf9f7!important;color:#1b1c1b!important}
+html.android-light .idea-nav{background:rgba(251,249,247,.95)!important;border-color:#dcc0c0!important}
+html.android-light .android-theme-label{color:#1b1c1b}
+html.android-light #androidThemeToggle{background:#fff;color:#5b0417;border-color:rgba(91,4,23,.15)}
+@media (max-width:767px),(pointer:coarse){#androidThemeToggle{display:flex}}
 </style>
 </head>
-<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
-<!-- Global AKGEC Header -->
-<!-- Universal site-wide ribbon: identity, accreditation, and admission actions -->
-<div class="w-full bg-surface-container-lowest border-b border-surface-variant hidden md:block">
-<div class="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
-<!-- Logo Area -->
-<div class="flex items-center h-16"><img alt="AJAY KUMAR GARG ENGINEERING COLLEGE" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6syRMqqzKGFRhwcnGheAXP3eNBTHY0SxMpkEfzg_0UUMi99UatJsqOSJbftcPSooTRFgUbw_0A8mwuJjgoHUUny-oiTCrdSJ0R0lbifmvupgjNzE2bPFkaiIFQi3i4yzKFELJONhlHeTUu-72xJH2r-APxW043gQVTkgISzXdy4RQLjEsCF1ydSVi0j2_XUdt_X4p_9PSqxvavtpl1-Xl2uVMmgI3JrbO3V24qqzPYYsgBPJ3xPJY-GEjAEV93szwnWc"></div>
-<!-- Badges & Actions -->
-<div class="flex items-center gap-6">
-<div class="flex items-center gap-2 h-14">
-<div class="h-full border border-surface-variant px-3 py-1 flex items-center justify-center bg-surface-container">
-<span class="text-primary font-bold text-lg leading-none">NAAC<br><span class="text-xs font-normal text-on-surface-variant">GRADE</span> A++</span>
-</div>
-<div class="h-full border border-surface-variant px-3 py-1 flex flex-col items-center justify-center bg-surface-container">
-<div class="flex items-center gap-1 text-secondary-fixed-dim font-bold leading-none">
-<span class="bg-secondary-fixed-dim text-black px-1 text-xs rounded-sm">QS</span> I-GAUGE
+
+<body class="overflow-x-hidden">
+<button id="androidThemeToggle" type="button" aria-label="Switch to light theme" title="Change theme"><span id="androidThemeIcon" class="material-symbols-outlined">light_mode</span></button>
+
+
+<!-- ============================================================
+     AKGEC TOP HEADER
+============================================================ -->
+
+<div class="hidden md:block bg-surface-container-lowest border-b border-surface-variant light-surface">
+
+    <div class="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
+
+        <div class="flex items-center h-16">
+            <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6syRMqqzKGFRhwcnGheAXP3eNBTHY0SxMpkEfzg_0UUMi99UatJsqOSJbftcPSooTRFgUbw_0A8mwuJjgoHUUny-oiTCrdSJ0R0lbifmvupgjNzE2bPFkaiIFQi3i4yzKFELJONhlHeTUu-72xJH2r-APxW043gQVTkgISzXdy4RQLjEsCF1ydSVi0j2_XUdt_X4p_9PSqxvavtpl1-Xl2uVMmgI3JrbO3V24qqzPYYsgBPJ3xPJY-GEjAEV93szwnWc"
+                alt="Ajay Kumar Garg Engineering College"
+                class="h-full w-auto object-contain"
+            >
+        </div>
+
+        <div class="flex items-center gap-6">
+
+            <div class="flex items-center gap-2 h-14">
+
+                <div class="h-full border border-surface-variant px-3 py-1 flex items-center justify-center bg-surface-container">
+                    <span class="text-primary font-bold text-lg leading-none">
+                        NAAC<br>
+                        <span class="text-xs font-normal text-on-surface-variant">
+                            GRADE
+                        </span>
+                        A++
+                    </span>
+                </div>
+
+                <div class="h-full border border-surface-variant px-3 py-1 flex flex-col items-center justify-center bg-surface-container">
+
+                    <div class="flex items-center gap-1 text-secondary-fixed-dim font-bold">
+                        <span class="bg-secondary-fixed-dim text-black px-1 text-xs rounded-sm">
+                            QS
+                        </span>
+                        I-GAUGE
                     </div>
-<span class="bg-tertiary-container text-white text-[10px] px-2 py-0.5 mt-1 font-bold rounded-sm w-full text-center">DIAMOND</span>
-</div>
-</div>
-<div class="flex flex-col gap-2">
-<a class="bg-primary-container hover:bg-primary text-white hover:text-white text-sm font-semibold py-2 px-6 rounded shadow-md flex items-center justify-center gap-2 transition-colors" href="#">
-<span class="text-primary-fixed-dim">❖</span> Apply Now for Admissions
+
+                    <span class="bg-tertiary-container text-white text-[10px] px-2 py-0.5 mt-1 font-bold rounded-sm w-full text-center">
+                        DIAMOND
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="flex flex-col gap-2">
+
+                <a
+                    href="#contact"
+                    class="bg-primary-container hover:bg-primary text-white text-sm font-semibold py-2 px-6 rounded shadow-md transition"
+                >
+                    ❖ Apply Now for Admissions
                 </a>
-<a class="bg-primary-container hover:bg-primary text-white hover:text-white text-sm font-semibold py-2 px-6 rounded shadow-md flex items-center justify-center gap-2 transition-colors" href="#">
-<span class="text-primary-fixed-dim">❖</span> Registration Process for First Year
+
+                <a
+                    href="#contact"
+                    class="bg-primary-container hover:bg-primary text-white text-sm font-semibold py-2 px-6 rounded shadow-md transition"
+                >
+                    ❖ Registration Process for First Year
                 </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
+
+
+<!-- ============================================================
+     GLOBAL AKGEC NAVIGATION
+============================================================ -->
+
+<div class="global-nav hidden lg:block w-full bg-surface-container-highest border-b-2 border-secondary-fixed-dim">
+
+    <div class="max-w-[1400px] mx-auto px-6">
+
+        <ul class="flex items-center h-12 text-[11px] font-bold tracking-wider">
+
+            <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">ABOUT</a></li>
+            <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">DEPARTMENTS</a></li>
+            <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">ACADEMICS</a></li>
+
+            <li>
+                <a href="#" class="px-3 py-3 uppercase text-primary">
+                    <span class="material-symbols-outlined text-[14px] align-middle">
+                        school
+                    </span>
+                    ADMISSIONS
+                </a>
+            </li>
+
+            <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">R&D</a></li>
+            <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">LIFE@AKGEC</a></li>
+            <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">ACHIEVEMENTS</a></li>
+            <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">PLACEMENTS</a></li>
+            <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">VE CELL</a></li>
+            <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">IQAC</a></li>
+            <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">ERP</a></li>
+            <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">CAREER</a></li>
+
+        </ul>
+
+    </div>
+
 </div>
-</div>
-</div>
-<!-- Global AKGEC Navigation -->
-<!-- Universal site-wide navigation menu -->
-<div class="akgec-global-nav w-full bg-surface-container-highest hidden lg:block border-b-2 border-secondary-fixed-dim">
-<div class="max-w-[1400px] mx-auto px-6">
-<ul class="flex items-center justify-start h-12 text-on-surface text-[11px] font-bold tracking-wider">
-<li class=""><a class="flex items-center gap-1 px-3 py-3 hover:text-primary transition-colors uppercase" href="#">ABOUT <span class="material-symbols-outlined text-[14px]">arrow_drop_down</span></a></li>
-<li class=""><a class="flex items-center gap-1 px-3 py-3 hover:text-primary transition-colors uppercase" href="#">DEPARTMENTS <span class="material-symbols-outlined text-[14px]">arrow_drop_down</span></a></li>
-<li class=""><a class="flex items-center gap-1 px-3 py-3 hover:text-primary transition-colors uppercase" href="#">ACADEMICS <span class="material-symbols-outlined text-[14px]">arrow_drop_down</span></a></li>
-<li class=""><a class="flex items-center gap-1 px-3 py-3 text-primary hover:text-primary-fixed-dim transition-colors uppercase" href="#"><span class="material-symbols-outlined text-[14px]">school</span> ADMISSIONS <span class="material-symbols-outlined text-[14px]">arrow_drop_down</span></a></li>
-<li class=""><a class="flex items-center gap-1 px-3 py-3 hover:text-primary transition-colors uppercase" href="#">R&amp;D <span class="material-symbols-outlined text-[14px]">arrow_drop_down</span></a></li>
-<li class=""><a class="flex items-center gap-1 px-3 py-3 hover:text-primary transition-colors uppercase" href="#">LIFE@AKGEC <span class="material-symbols-outlined text-[14px]">arrow_drop_down</span></a></li>
-<li class=""><a class="flex items-center gap-1 px-3 py-3 hover:text-primary transition-colors uppercase" href="#">ACHIEVEMENTS <span class="material-symbols-outlined text-[14px]">arrow_drop_down</span></a></li>
-<li class=""><a class="flex items-center gap-1 px-3 py-3 hover:text-primary transition-colors uppercase" href="#">PLACEMENTS <span class="material-symbols-outlined text-[14px]">arrow_drop_down</span></a></li>
-<li class=""><a class="flex items-center gap-1 px-3 py-3 hover:text-primary transition-colors uppercase" href="#">VE CELL <span class="material-symbols-outlined text-[14px]">arrow_drop_down</span></a></li>
-<li class=""><a class="flex items-center px-3 py-3 hover:text-primary transition-colors uppercase" href="#">IQAC</a></li>
-<li class=""><a class="flex items-center px-3 py-3 hover:text-primary transition-colors uppercase" href="#">ERP</a></li>
-<li class=""><a class="flex items-center px-3 py-3 hover:text-primary transition-colors uppercase" href="#">CAREER</a></li>
-</ul>
-</div>
-</div>
-<!-- Secondary NavBar (IDEA Lab) -->
-<!-- IDEA Lab navigation: page sections, Events, and theme control -->
-<nav class="docked full-width top-0 sticky shadow-sm bg-surface-container-lowest/90 z-40 border-b border-surface-variant backdrop-blur-md">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-[95%] mx-auto h-16"><a class="flex items-center gap-2 group" href="#"><img alt="AKGEC IDEA Lab Logo" class="w-auto object-contain h-20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Scnw8_Od-8GHVWRbb_4M4g8iS6MJbw3e92DaCZgVOEWdDwduugNbKt2EHd1mkwPx1szCbxpx2HZyWeJFFhZgGWbCgKZX_06sj4qj4pc3V2_oYw4MaqupWGgT-Wwz3ulNK65U_4lxksGq2kUxxL-o4XadfVfsQdV3bkCrKhky1DXeI_09Gb-9pppywcdZmSbCCrVXWUZ_OZobwrqZ6yI7ZX6OUPpPZ8JRvZALemJ39n8729bEFrlqpr1DyZY5br_0vDI"></a><div class="hidden md:flex items-center gap-8"><a class="font-label-caps text-[11px] uppercase text-primary border-b-2 border-primary pb-1 Active: opacity-80 transition-all duration-200 font-bold" href="#">Home</a><a class="font-label-caps text-[11px] uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 font-bold" href="#about">About US</a><a class="font-label-caps text-[11px] uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 font-bold" href="#vision">OUR Vision</a><a class="font-label-caps text-[11px] uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 font-bold" href="#activities">SERVICES</a><a class="font-label-caps text-[11px] uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 font-bold" href="#gallery">Gallery</a><a class="font-label-caps text-[11px] uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 font-bold" href="#contact">Contact</a></div><div class="hidden md:flex items-center gap-4 ml-auto"><a class="bg-primary text-on-primary font-label-caps text-[11px] uppercase px-5 py-2 rounded-full hover:bg-primary-container transition-colors shadow-sm" href="#explore">EVENTS</a><button aria-label="Toggle Theme" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all duration-200 shadow-sm border border-surface-variant"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button></div><button class="md:hidden text-on-surface p-2"><span class="material-symbols-outlined">menu</span></button></div>
+
+
+<!-- ============================================================
+     IDEA LAB NAVIGATION
+============================================================ -->
+
+<nav
+    class="idea-nav docked sticky top-0 z-40 bg-surface-container-lowest/90 backdrop-blur-md shadow-sm border-b border-surface-variant"
+>
+
+    <div class="max-w-[95%] mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center">
+
+        <a href="#home" class="flex items-center">
+
+            <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Scnw8_Od-8GHVWRbb_4M4g8iS6MJbw3e92DaCZgVOEWdDwduugNbKt2EHd1mkwPx1szCbxpx2HZyWeJFFhZgGWbCgKZX_06sj4qj4pc3V2_oYw4MaqupWGgT-Wwz3ulNK65U_4lxksGq2kUxxL-o4XadfVfsQdV3bkCrKhky1DXeI_09Gb-9pppywcdZmSbCCrVXWUZ_OZobwrqZ6yI7ZX6OUPpPZ8JRvZALemJ39n8729bEFrlqpr1DyZY5br_0vDI"
+                alt="AKGEC IDEA Lab Logo"
+                class="docked-logo"
+            >
+
+        </a>
+
+
+        <div class="hidden md:flex items-center gap-8">
+
+            <a
+                href="#home"
+                class="nav-link font-bold text-[11px] uppercase text-primary border-b-2 border-primary pb-1"
+            >
+                Home
+            </a>
+
+            <a
+                href="#about"
+                class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary"
+            >
+                About Us
+            </a>
+
+            <a
+                href="#vision"
+                class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary"
+            >
+                Our Vision
+            </a>
+
+            <a
+                href="#services"
+                class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary"
+            >
+                Services
+            </a>
+
+            <a
+                href="#events"
+                class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary"
+            >
+                Events
+            </a>
+
+            <a
+                href="#gallery"
+                class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary"
+            >
+                Gallery
+            </a>
+
+            <a
+                href="#contact"
+                class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary"
+            >
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="hidden md:flex items-center gap-3">
+
+            <a
+                href="#events"
+                class="bg-primary text-white text-[11px] uppercase font-bold px-5 py-2.5 rounded-full hover:bg-primary-container transition shadow-sm"
+            >
+                Events
+            </a>
+
+            <button
+                id="themeToggle"
+                aria-label="Toggle Theme"
+                class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition border border-surface-variant"
+            >
+                <span class="material-symbols-outlined">
+                    dark_mode
+                </span>
+            </button>
+
+        </div>
+
+
+        <button
+            id="mobileMenuButton"
+            class="md:hidden w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+
+    </div>
+
+
+    <div
+        id="mobileMenu"
+        class="mobile-menu-panel md:hidden border-t border-surface-variant bg-surface-container-lowest px-5 py-3"
+    >
+
+        <a href="#home" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">
+            Home
+        </a>
+
+        <a href="#about" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">
+            About Us
+        </a>
+
+        <a href="#vision" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">
+            Our Vision
+        </a>
+
+        <a href="#services" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">
+            Services
+        </a>
+
+        <a href="#events" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">
+            Events
+        </a>
+
+        <a href="#gallery" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">
+            Gallery
+        </a>
+
+        <a href="#contact" class="py-3 text-[11px] uppercase font-bold">
+            Contact
+        </a>
+
+    </div>
+
 </nav>
-<!-- Hero Section -->
-<!-- Hero: introduction and primary IDEA Lab emblem -->
-<section class="bg-primary-container py-6 px-margin-mobile md:px-margin-desktop relative overflow-hidden shadow-md">
-<div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-4 relative z-10">
-<div class="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-<span class="bg-secondary-container text-on-secondary-container font-label-caps text-[11px] uppercase px-4 py-1.5 rounded-full whitespace-nowrap shadow-sm font-bold">Upcoming Event</span>
-<p class="font-body-lg text-white font-semibold text-center md:text-left">INTERNAL SMART INDIA HACKATHON'26 : Innovate for Sustainability&nbsp; <br>LAST DATE TO REGISTER : 03 SEPTEMBER&nbsp;</p>
-</div>
-<a class="bg-surface text-primary font-label-caps text-[11px] uppercase px-6 py-2.5 rounded-full hover:bg-surface-bright transition-all shadow-sm whitespace-nowrap shrink-0 font-bold" href="#">Register Now</a>
-</div>
-</section><header class="pt-16 pb-section-padding px-margin-mobile md:px-margin-desktop relative overflow-hidden bg-surface">
-<div class="absolute top-0 right-0 -mr-32 -mt-32 w-[600px] h-[600px] bg-primary-fixed rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
-<div class="absolute bottom-0 left-0 -ml-32 -mb-32 w-[500px] h-[500px] bg-secondary-fixed rounded-full blur-[100px] opacity-10 pointer-events-none"></div>
-<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-<div class="flex flex-col items-start space-y-6">
-<div class="inline-flex items-center gap-2 bg-surface-container px-4 py-2 rounded-full border border-surface-variant">
-<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">AKGEC Innovation Ecosystem</span>
-</div>
-<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary leading-tight">
+
+
+<!-- ============================================================
+     UPCOMING EVENT
+============================================================ -->
+
+<section
+    id="home"
+    class="bg-primary-container py-5 px-margin-mobile md:px-margin-desktop text-white"
+>
+
+    <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+
+        <div class="flex flex-col md:flex-row items-center gap-4">
+
+            <span class="bg-secondary-container text-black font-bold text-[11px] uppercase px-4 py-1.5 rounded-full">
+                Upcoming Event
+            </span>
+
+            <p class="font-semibold text-center md:text-left">
+                INTERNAL SMART INDIA HACKATHON'26:
+                Innovate for Sustainability
+                <br>
+                <span class="text-white/80">
+                    LAST DATE TO REGISTER: 03 SEPTEMBER
+                </span>
+            </p>
+
+        </div>
+
+        <a
+            href="#events"
+            class="bg-white text-primary font-bold text-[11px] uppercase px-6 py-2.5 rounded-full hover:bg-surface-bright transition"
+        >
+            Register Now
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+
+<header
+    class="hero-grid bg-surface pt-16 pb-28 px-margin-mobile md:px-margin-desktop overflow-hidden"
+>
+
+    <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+
+        <div class="flex flex-col items-start space-y-7">
+
+            <div class="inline-flex items-center gap-2 bg-surface-container px-4 py-2 rounded-full border border-surface-variant">
+
+                <span class="pulse-dot w-2 h-2 rounded-full bg-primary"></span>
+
+                <span class="text-[11px] text-primary uppercase tracking-widest font-bold">
+                    AKGEC Innovation Ecosystem
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <p class="text-primary text-sm font-bold uppercase tracking-[0.2em] mb-4">
+                    Innovation • Incubation • Entrepreneurship
+                </p>
+
+                <h1
+                    class="font-heading text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary leading-[1.05] tracking-tight"
+                >
                     IDEA LAB
                 </h1>
-<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">
-                    Innovation • Incubation • Entrepreneurship
-                </h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-                    A 24/7 technical fabrication hub at Ajay Kumar Garg Engineering College, moving students from theoretical engineering to functional, validated prototyping.
-                </p>
-<div class="flex flex-wrap gap-4 pt-4">
-<a class="bg-primary text-on-primary font-label-caps text-label-caps uppercase px-8 py-4 rounded-full hover:bg-primary-container transition-all hover:-translate-y-1 shadow-md hover:shadow-lg flex items-center gap-2" href="#activities">
-                        Explore EVENTS<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-<div class="relative flex min-h-[360px] items-center justify-center lg:min-h-[600px]">
-<img alt="AKGEC IDEA Lab innovation emblem" class="w-[min(75vw,520px)] h-auto object-contain shadow-2xl transition-transform duration-700 hover:scale-105" src="images/idealab logo.png">
-</div>
-</div>
-</header>
-<!-- About Idea Lab: four foundational pillars -->
-<section class="py-24 px-margin-mobile md:px-margin-desktop bg-[#17212B] border-t border-white/10 relative overflow-hidden" id="about-pillars"><div class="absolute inset-0 opacity-[0.05] pointer-events-none" style="background-image: radial-gradient(#ffffff 0.5px, transparent 0.5px); background-size: 24px 24px;"></div>
-<div class="max-w-container-max mx-auto relative z-10">
-<div class="text-center max-w-3xl mx-auto mb-16"><h2 class="font-headline-lg text-headline-lg text-white mb-6">About Idea Lab</h2><p class="font-body-lg text-body-lg text-gray-300">The AKGEC IDEA Lab is a comprehensive innovation ecosystem that stands on four foundational pillars. Together, they provide a seamless pathway for students, transforming raw ideas into protected intellectual property and successful entrepreneurial ventures.</p></div>
-<!-- Pillars Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<!-- Pillar 1 -->
-<div class="bg-white rounded-2xl p-8 border border-white/10 shadow-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:-translate-y-2 transition-all duration-300 cursor-pointer group flex flex-col items-center text-center border-t-4 border-t-primary" onclick="openPillarModal('Institute Innovation Council (IIC)', ['Innovation culture through ideathons, hackathons, and workshops', 'Real-world problem-solving exposure', 'Encourages early stage student ideas and concept validation'])"><div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300"><span class="material-symbols-outlined text-primary group-hover:text-white text-2xl">psychology</span></div><h3 class="font-headline-md text-xl mb-3 text-on-surface group-hover:text-primary transition-colors">Institute Innovation Council (IIC)</h3><p class="font-body-md text-sm text-on-surface-variant">Fostering a culture of innovation and creative problem-solving on campus.</p></div>
-<!-- Pillar 2 -->
-<div class="bg-white rounded-2xl p-8 border border-white/10 shadow-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:-translate-y-2 transition-all duration-300 cursor-pointer group flex flex-col items-center text-center border-t-4 border-t-[#242b3a]" onclick="openPillarModal('Intellectual Property Rights (IPR)', ['Basics of patents, copyrights, trademarks', 'Awareness of IP protection and filing pathways', 'Workshops and expert sessions'])"><div class="w-12 h-12 bg-tertiary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-tertiary transition-colors duration-300"><span class="material-symbols-outlined text-tertiary group-hover:text-white text-2xl">gavel</span></div><h3 class="font-headline-md text-xl mb-3 text-on-surface group-hover:text-tertiary transition-colors">Intellectual Property Rights (IPR)</h3><p class="font-body-md text-sm text-on-surface-variant">Protecting visionary ideas and managing intellectual property patent filings.</p></div>
-<!-- Pillar 3 -->
-<div class="bg-white rounded-2xl p-8 border border-white/10 shadow-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:-translate-y-2 transition-all duration-300 cursor-pointer group flex flex-col items-center text-center border-t-4 border-t-secondary" onclick="openPillarModal('Entrepreneurship Cell (E-Cell)', ['Entrepreneurial mindset and risk-taking basics', 'Founder talks and startup exposure', 'Turning ideas into viable ventures'])"><div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors duration-300"><span class="material-symbols-outlined text-secondary group-hover:text-white text-2xl">monetization_on</span></div><h3 class="font-headline-md text-xl mb-3 text-on-surface group-hover:text-secondary transition-colors">Entrepreneurship Cell (E-Cell)</h3><p class="font-body-md text-sm text-on-surface-variant">Inspiring students to pursue ventures and build sustainable business models.</p></div>
-<!-- Pillar 4 -->
-<div class="bg-white rounded-2xl p-8 border border-white/10 shadow-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:-translate-y-2 transition-all duration-300 cursor-pointer group flex flex-col items-center text-center border-t-4 border-t-[#2e7d32]" onclick="openPillarModal('Technical Business Incubator (TBI)', ['Incubation support and mentorship', 'Help navigating early stage challenges', 'Exposure to investors and potential seed funding via events'])"><div class="w-12 h-12 bg-[#2e7d32]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#2e7d32] transition-colors duration-300"><span class="material-symbols-outlined text-[#2e7d32] group-hover:text-white text-2xl">domain</span></div><h3 class="font-headline-md text-xl mb-3 text-on-surface group-hover:text-[#2e7d32] transition-colors">Technical Business Incubator (TBI)</h3><p class="font-body-md text-sm text-on-surface-variant">Empowering tech startups with specialized mentorship and seed funding.</p></div>
-</div>
-</div>
-</section><section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-bright relative overflow-hidden transition-opacity duration-700 ease-in-out" id="vision">
-<div class="max-w-container-max mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-<!-- Left Column: Vision Statement -->
-<div class="flex flex-col space-y-8">
-<div class="space-y-4">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest block">OUR VISION</span>
-<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-lg text-on-surface leading-tight">
-            Building Ideas.<br>Enabling Innovation.<br>Creating Impact.
-          </h2>
-</div>
-<div class="space-y-6 font-body-lg text-on-surface-variant leading-relaxed">
-<p class="">AKGEC Idea Lab envisions a dynamic and supportive ecosystem where students are empowered to transform their creative concepts into tangible, market-ready solutions. We bridge the gap between academic theory and industrial application through hands-on technical excellence.</p>
-<p class="">Our mission is to foster a culture of relentless curiosity and problem-solving, providing the infrastructure and mentorship necessary for students to navigate the complex journey from a raw idea to a protected intellectual property and a sustainable business model.</p>
-<p class="">By integrating innovation, incubation, and entrepreneurship, we aim to produce not just engineers, but visionary leaders who can drive technological advancement and create significant socio-economic impact in the global landscape.</p>
-</div>
-</div>
-<!-- Right Column: Visual Story (Vertical Flow) -->
-<div class="relative pl-8 md:pl-12">
-<!-- Connecting Line -->
-<div class="absolute left-0 top-8 bottom-8 w-px bg-gradient-to-b from-primary via-secondary to-tertiary opacity-30">
-<div class="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-12 bg-primary animate-pulse rounded-full"></div>
-</div>
-<div class="space-y-12">
-<!-- Stage 1 -->
-<div class="relative flex items-start gap-6 group">
-<div class="w-4 h-4 rounded-full bg-primary mt-2 shrink-0 shadow-[0_0_10px_rgba(91,4,23,0.4)]"></div>
-<div>
-<h4 class="font-headline-md text-xl text-primary mb-1">IDEA</h4>
-<p class="font-body-md text-on-surface-variant">Encouraging students to think differently and identify real-world challenges.</p>
-</div>
-</div>
-<!-- Stage 2 -->
-<div class="relative flex items-start gap-6 group">
-<div class="w-4 h-4 rounded-full bg-secondary mt-2 shrink-0 shadow-[0_0_10px_rgba(131,84,0,0.4)]"></div>
-<div>
-<h4 class="font-headline-md text-xl text-secondary mb-1">INNOVATION</h4>
-<p class="font-body-md text-on-surface-variant">Prototyping and validating concepts using state-of-the-art technical facilities.</p>
-</div>
-</div>
-<!-- Stage 3 -->
-<div class="relative flex items-start gap-6 group">
-<div class="w-4 h-4 rounded-full bg-blue-600 mt-2 shrink-0 shadow-[0_0_10px_rgba(37,99,235,0.4)]"></div>
-<div>
-<h4 class="font-headline-md text-xl text-blue-600 mb-1">INCUBATION</h4>
-<p class="font-body-md text-on-surface-variant">Nurturing startups with professional mentorship and strategic resources.</p>
-</div>
-</div>
-<!-- Stage 4 -->
-<div class="relative flex items-start gap-6 group">
-<div class="w-4 h-4 rounded-full bg-[#2e7d32] mt-2 shrink-0 shadow-[0_0_10px_rgba(46,125,50,0.4)]"></div>
-<div>
-<h4 class="font-headline-md text-xl text-[#2e7d32] mb-1">IMPACT</h4>
-<p class="font-body-md text-on-surface-variant">Launching successful ventures that create value and drive progress.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Bottom Impact Strip -->
-<div class="mt-24 pt-12 border-t border-surface-variant">
-<div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 text-center">
-<span class="font-label-caps text-on-surface uppercase tracking-widest">Promote Innovation</span>
-<span class="hidden md:block text-outline-variant">|</span>
-<span class="font-label-caps text-on-surface uppercase tracking-widest">Encourage Entrepreneurship</span>
-<span class="hidden md:block text-outline-variant">|</span>
-<span class="font-label-caps text-on-surface uppercase tracking-widest">Enable Incubation</span>
-<span class="hidden md:block text-outline-variant">|</span>
-<span class="font-label-caps text-on-surface uppercase tracking-widest">Create Real-World Impact</span>
-</div>
-</div>
-</div>
-</section><section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="services"><div class="max-w-container-max mx-auto">
-<!-- Horizontal Header -->
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 border-b border-surface-variant pb-8">
-<div class="md:w-1/3">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-4 block">OUR SERVICES</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Service Directory</h2>
-</div>
-<div class="md:w-1/2">
-<p class="font-body-lg text-body-lg text-on-surface-variant">A comprehensive directory of support services provided by the AKGEC IDEA Lab ecosystem to foster innovation and entrepreneurship.</p>
-</div>
-</div>
-<!-- Directory Rows -->
-<div class="flex flex-col">
-<!-- Row 01 -->
-<div class="group relative py-10 border-b border-surface-variant hover:bg-surface-bright transition-colors duration-300 px-4 md:px-8">
-<div class="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
-<span class="text-4xl md:text-5xl font-light text-outline-variant/40 shrink-0">01</span>
-<div class="w-14 h-14 bg-primary/5 rounded-full flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
-</div>
-<div class="flex-grow">
-<h3 class="font-headline-md text-2xl text-on-surface mb-2">Institute Innovation Council (IIC)</h3>
-<p class="font-body-md text-on-surface-variant max-w-md">Fostering a culture of innovation and creative problem-solving through structured campus activities.</p>
-</div>
-<div class="flex flex-wrap gap-2 md:w-1/3 justify-start md:justify-end">
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">Ideathons &amp; Hackathons</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">Innovation Workshops</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">Problem-Solving</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">Ecosystem Exposure</span>
-</div>
-</div>
-</div>
-<!-- Row 02 -->
-<div class="group relative py-10 border-b border-surface-variant hover:bg-surface-bright transition-colors duration-300 px-4 md:px-8">
-<div class="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
-<span class="text-4xl md:text-5xl font-light text-outline-variant/40 shrink-0">02</span>
-<div class="w-14 h-14 bg-primary/5 rounded-full flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-<span class="material-symbols-outlined text-primary text-3xl">gavel</span>
-</div>
-<div class="flex-grow">
-<h3 class="font-headline-md text-2xl text-on-surface mb-2">Intellectual Property Rights (IPR)</h3>
-<p class="font-body-md text-on-surface-variant max-w-md">Protecting visionary ideas through professional patent management and legal guidance.</p>
-</div>
-<div class="flex flex-wrap gap-2 md:w-1/3 justify-start md:justify-end">
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">Patent Search &amp; Drafting</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">Copyright &amp; Trademark</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">IP Protection Strategy</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">Expert IP Sessions</span>
-</div>
-</div>
-</div>
-<!-- Row 03 -->
-<div class="group relative py-10 border-b border-surface-variant hover:bg-surface-bright transition-colors duration-300 px-4 md:px-8">
-<div class="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
-<span class="text-4xl md:text-5xl font-light text-outline-variant/40 shrink-0">03</span>
-<div class="w-14 h-14 bg-primary/5 rounded-full flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-<span class="material-symbols-outlined text-primary text-3xl">monetization_on</span>
-</div>
-<div class="flex-grow">
-<h3 class="font-headline-md text-2xl text-on-surface mb-2">Entrepreneurship Cell (E-Cell)</h3>
-<p class="font-body-md text-on-surface-variant max-w-md">Inspiring students to pursue ventures and build sustainable, scalable business models.</p>
-</div>
-<div class="flex flex-wrap gap-2 md:w-1/3 justify-start md:justify-end">
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">Entrepreneurial Mindset</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">Founder Interactions</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">Startup Training</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">Opportunity Validation</span>
-</div>
-</div>
-</div>
-<!-- Row 04 -->
-<div class="group relative py-10 border-b border-surface-variant hover:bg-surface-bright transition-colors duration-300 px-4 md:px-8">
-<div class="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
-<span class="text-4xl md:text-5xl font-light text-outline-variant/40 shrink-0">04</span>
-<div class="w-14 h-14 bg-primary/5 rounded-full flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-<span class="material-symbols-outlined text-primary text-3xl">domain</span>
-</div>
-<div class="flex-grow">
-<h3 class="font-headline-md text-2xl text-on-surface mb-2">Technical Business Incubator (TBI)</h3>
-<p class="font-body-md text-on-surface-variant max-w-md">Empowering tech startups with specialized mentorship, infrastructure, and seed funding.</p>
-</div>
-<div class="flex flex-wrap gap-2 md:w-1/3 justify-start md:justify-end">
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">Early-Stage Incubation</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">Infrastructure Access</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">Startup Exhibitions</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant">Investor &amp; Seed Funding</span>
-</div>
-</div>
-</div>
-</div>
-</div></section>
-<!-- Gallery Section -->
-<section class="py-section-padding bg-surface" id="gallery-section">
-<header class="pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
-<span class="font-label-caps text-label-caps uppercase text-secondary-fixed-dim tracking-widest mb-stack-md block">GALLERY</span>
-<h2 class="font-headline-xl-mobile md:font-headline-lg text-headline-xl-mobile md:text-headline-lg text-on-surface mb-stack-md">Moments of Innovation</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                A glimpse into the events, activities and experiences that shape the Idea Lab ecosystem.
+
+            </div>
+
+
+            <h2
+                class="font-heading text-2xl md:text-3xl font-bold text-on-surface max-w-2xl"
+            >
+                Where engineering minds meet entrepreneurship.
+            </h2>
+
+
+            <p
+                class="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-2xl"
+            >
+                Build, scale, and launch scalable startups from the ground up —
+                turning bold engineering ideas into prototypes, protected
+                innovations, and real-world ventures.
             </p>
+
+
+            <div class="flex flex-wrap gap-4 pt-2">
+
+                <a
+                    href="#about"
+                    class="bg-primary text-white font-bold text-[11px] uppercase tracking-wider px-7 py-4 rounded-full hover:bg-primary-container hover:-translate-y-1 transition shadow-md flex items-center gap-2"
+                >
+                    Explore IDEA LAB
+                    <span class="material-symbols-outlined text-sm">
+                        arrow_forward
+                    </span>
+                </a>
+
+                <a
+                    href="#services"
+                    class="border border-primary text-primary font-bold text-[11px] uppercase tracking-wider px-7 py-4 rounded-full hover:bg-primary hover:text-white transition"
+                >
+                    Explore Services
+                </a>
+
+            </div>
+
+
+            <div class="grid grid-cols-3 gap-6 pt-6 border-t border-surface-variant w-full max-w-xl">
+
+                <div>
+                    <div class="font-heading text-2xl font-bold text-primary">
+                        24/7
+                    </div>
+                    <div class="text-xs text-on-surface-variant uppercase tracking-wider">
+                        Creative Space
+                    </div>
+                </div>
+
+                <div>
+                    <div class="font-heading text-2xl font-bold text-primary">
+                        5
+                    </div>
+                    <div class="text-xs text-on-surface-variant uppercase tracking-wider">
+                        Core Pillars
+                    </div>
+                </div>
+
+                <div>
+                    <div class="font-heading text-2xl font-bold text-primary">
+                        ∞
+                    </div>
+                    <div class="text-xs text-on-surface-variant uppercase tracking-wider">
+                        Possibilities
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="relative flex items-center justify-center min-h-[380px] lg:min-h-[600px]">
+
+            <div class="absolute w-[420px] h-[420px] rounded-full bg-primary-fixed opacity-20 blur-3xl"></div>
+
+            <img
+                src="images/idealab logo.png"
+                alt="AKGEC IDEA Lab"
+                class="hero-logo floating-logo w-[min(75vw,520px)] h-auto object-contain relative z-10"
+            >
+
+        </div>
+
+    </div>
+
 </header>
-<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-section-padding">
-<!-- Section 1: Startup Conclave -->
-<section class="space-y-stack-lg">
-<div class="border-b border-surface-variant pb-stack-md">
-<h3 class="font-headline-md text-headline-md text-on-surface">Startup Conclave</h3>
-<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-2">Entrepreneurship • 2024</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto md:h-[600px]">
-<div class="gallery-image-wrapper md:col-span-8 h-64 md:h-full" onclick="openLightbox(this)" data-index="0">
-<img alt="Startup Conclave main" class="gallery-image" data-alt="A large, high-quality editorial photograph capturing a dynamic panel discussion at a startup conclave. The lighting is modern and bright, reflecting a professional academic innovation setting. The composition focuses on engaged speakers against a minimalist stage setup, emphasizing intellectual authority and forward-thinking energy in an off-white and deep oxblood color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnd82fPHHijUuph-zU_XjQn3DeVj6j3J-nyoOd9tBcDsPN2xC19kB45UAprCSt2nan-qlYq02ipVJ-z1ry43HZnDMMyexVHGdfGIWaujf36cCHyaoIMqzzMeauf7lSrbnbTFDvOD1eVet9wyjI2QJX5xk6rXKn0gvdlv1YYhHr_foLFSAQQVHTE5ALWL5Lo5XJIwrRtKvHbM5jGW5Czii-PzMnf9INf-ZjwJFrkda5mvzUVjEobG_8yQ">
-<div class="gallery-overlay"></div>
-</div>
-<div class="md:col-span-4 flex flex-col gap-gutter h-full">
-<div class="gallery-image-wrapper flex-1 h-48 md:h-auto" onclick="openLightbox(this)" data-index="1">
-<img alt="Networking at Conclave" class="gallery-image" data-alt="A vibrant, candid shot of students networking during a startup event. The atmosphere is energetic and collaborative, set within a bright, airy atrium. The lighting is natural and soft, highlighting the modern architecture of the innovation hub. The color scheme features warm neutrals with subtle amber accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5tLqb1j_7PUzPab9olYMY9R52QB9_x0LivDhL0-MzNaXRvO3Pmacn5xi-b6P96AqMRh8yfkHYvfbqoUwBaAsDp5NY6N8f4x9C2JhM1sqy1KPn-peNQh2CrBu6txtReNkJSKFHe3_tQk-mtL0FCKpHfWFJjp4cgM93eqjd7h2CH438kxYmInJAsdpPskXB1msVwfGQ8KImZHVmVh3bUkgjgCvbEuJQ_jmc0nh4ii6QKwTmT9ODZFQ1wg">
-<div class="gallery-overlay"></div>
-</div>
-<div class="gallery-image-wrapper flex-1 h-48 md:h-auto" onclick="openLightbox(this)" data-index="2">
-<img alt="Pitching idea" class="gallery-image" data-alt="Close-up editorial photo of a student enthusiastically pitching an idea to an investor or mentor. The focus is sharp on the speaker, with the background beautifully blurred. The lighting is focused and professional, capturing the intensity and passion of entrepreneurship within a modern academic space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEJaFPxlHdwu7giur42HReQpmJKb1cLJ3XpqbAkQnl9PUppLktX6PUt38SgBEoJn6BnpSPqGi1VIEB8KtHmRXAv3kkCar0YWQQ2Y_A5AoDvQUW-AD3e9WXn4u-Dk4MT8SiFgs_H_GbuwPfHa1stynCOkgYAYY_3X0DP0KIwOIEb7LSlKdcp6w1gvynLKKYxZnHRixR-4cQbSgjE2KqCsXKNldYaxmNgMVTgV-0g5eXNiOP_-kDM2psUw">
-<div class="gallery-overlay"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- Section 2: Smart India Hackathon -->
-<section class="space-y-stack-lg">
-<div class="border-b border-surface-variant pb-stack-md">
-<h3 class="font-headline-md text-headline-md text-on-surface">Smart India Hackathon</h3>
-<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-2">Technology &amp; Innovation • 2023</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter h-auto md:h-[400px]">
-<div class="gallery-image-wrapper h-64 md:h-full" onclick="openLightbox(this)" data-index="3">
-<img alt="Hackathon coding" class="gallery-image" data-alt="Intense, focused shot of a team of student developers huddled around a glowing laptop screen during a late-night hackathon. The room is dimly lit to contrast with the bright screens, creating a dramatic, tech-forward mood. The aesthetic leans into a modern, focused work environment emphasizing coding and collaboration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_iG9UE_0I4asSEWDB58ba98m4VmBBgRShkmbEmkWy0WDB43lAiFQD3ZvQm7_IvI2nOfPipahuesLmp2ZbeCswvny2LILMJP9BhQkbgXylwGVIWnOd5PmPS9r7kvRAO1qm_RC8dOlMpwH-xAtg9wNDwWmQ__5NnNGUFp2kO0oT9DUapAl9okv5o9AqZJsXkoGwAkjgRQoq9J8XXr0jjY_SP0da1o-GAXJf2oZpitjxmbqQvtdRJXehGQ">
-<div class="gallery-overlay"></div>
-</div>
-<div class="gallery-image-wrapper h-64 md:h-full" onclick="openLightbox(this)" data-index="4">
-<img alt="Hackathon hall" class="gallery-image" data-alt="A wide angle shot of a large hall filled with hackathon participants working intently at long tables. The scale of the event is impressive, set in a modern, industrial-chic academic space with high ceilings and excellent artificial lighting. The overall tone is busy, productive, and academically rigorous." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkUhAwfrMV2Wn3uJ98_uBJHJFQ7GvrSSVktbgHxoICbaTi_nxpsoUVBV1H7Q8Ku1Q_fHVUxJu-zUFwD5hP46li7CIJosYhjpHDbozNNb7c1Vp-YA4Lqa4mMIFQUthb9X9d8cvXsl_4z7H--w8o7MC9oSBj5R1u8ml_xnBlJZ_F58ixqgtKudZu6Jah_ytcYeg0v6ojQoCzs0u5v5MLncWGrp0vXVVzxNBPswDLSBlL96It_EwR6--t1w">
-<div class="gallery-overlay"></div>
-</div>
-<div class="gallery-image-wrapper h-64 md:h-full" onclick="openLightbox(this)" data-index="5">
-<img alt="Hackathon winners" class="gallery-image" data-alt="A triumphant photo of a winning hackathon team holding their prototype and certificates on a well-lit stage. They look exhausted but ecstatic. The lighting highlights their expressions against a sophisticated, dark stage backdrop, celebrating achievement in technological innovation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuj3WjeQVjEkb7to0PCYmyk07LR5jm0wFVC8x-n7sq6VHOBdhK7-uDDDxtonqNjkFca35KVXbF0SnHnbgEgI7MomH7E3VhabCX5x7lVWqpp2xcybgi6q2C9LzU2veZFi01eOjdnLq0EvrTk3pbfa1bpIZ5LrnBk-OQrpqBexJTjJ8dBYkpJG76xJ2MzFqU2OJByAxLOvpikidusk1gaXfFnEVEHFEVGRYsJDp8xm9__5qC9nzucv8Glg">
-<div class="gallery-overlay"></div>
-</div>
-</div>
-</section>
-<!-- Section 3: Technical Business Incubator -->
-<section class="space-y-stack-lg">
-<div class="border-b border-surface-variant pb-stack-md">
-<h3 class="font-headline-md text-headline-md text-on-surface">Technical Business Incubator</h3>
-<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-2">Incubation • Ongoing</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto md:h-[500px]">
-<div class="md:col-span-5 gallery-image-wrapper h-64 md:h-full" onclick="openLightbox(this)" data-index="6">
-<img alt="Incubator workspace" class="gallery-image" data-alt="A sleek, modern incubation office space showing a small team brainstorming in front of a glass whiteboard. The lighting is bright and even, typical of a high-end corporate or academic workspace. The mood is collaborative and professional, emphasizing a modern minimalist aesthetic with clean lines and neutral tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYHFwX2aW5YxmH9nNO6usgbP4OivMjuiku3xVkO1Q4LBmjECeFfatZ78PeNCMgsmWHZC4jGJDOl-EEd8dL405nIr_XF9la7VmKp2zpzuxVq1Rs547Mm0SaXwK2bPAd67pycKfg3ln05usqrpb3LrxK1qfRf_bOI1zh-nhtpFg5CZUSOZczOsBo3s0vTslDiwzpljTJFVVk5Vz2HT3NImIf2h0NO2xUiDltvZYp8YSBSuLZCl2fjqhqYg">
-<div class="gallery-overlay"></div>
-</div>
-<div class="md:col-span-7 gallery-image-wrapper h-64 md:h-full" onclick="openLightbox(this)" data-index="7">
-<img alt="Prototype development" class="gallery-image" data-alt="A high-quality image of a complex hardware prototype being examined by a mentor and a student in a state-of-the-art laboratory setting. The lighting focuses on the intricate details of the prototype, conveying a sense of advanced engineering and technical precision within an authoritative academic environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0a47VjCd_lr9ARonwZNOzw8aSSk5igzAjQ-CvjbykUaq4WmVPcZXU2bm14CXmeem0CWOYPRX52AVvBkR0tRzuWm_WiT2BCvEcoXIkCK5TygJ_aBhwL2arP13hRFxVZgFEZFHiI_KE0Mvhs81aRWnd7MgO1zx1jfrNunUOfMy9D9y_tmeWiVJMWRheCLOObecmelVFsHDUjjpRHW6nPZJ0V_FdKWm_rRNFG3eR9hnvBfeUxgb8hL7EaA">
-<div class="gallery-overlay"></div>
-</div>
-</div>
-</section>
-<!-- Section 4: Intellectual Property Rights -->
-<section class="space-y-stack-lg">
-<div class="border-b border-surface-variant pb-stack-md">
-<h3 class="font-headline-md text-headline-md text-on-surface">Intellectual Property Rights</h3>
-<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-2">Workshop • 2023</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter h-auto md:h-[350px]">
-<div class="gallery-image-wrapper md:col-span-2 h-64 md:h-full" onclick="openLightbox(this)" data-index="8">
-<img alt="IPR Seminar presentation" class="gallery-image" data-alt="An engaging seminar setting where a legal expert is presenting complex IPR concepts to an attentive audience of students and faculty. The auditorium is modern and tiered, bathed in warm, intellectual lighting. The focus is on the speaker and the projection screen, conveying authoritative knowledge transfer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsCzdQAAR7ls76Bb9mF3bSKHiKOeg5_204XRhzz4iOk0dkQd8nZpcWnEZKAx8Km5qawAKr_GP5t46YqWXyuF6KR_NjQhyEFcibNptfLhWvHpfjSCb0kHIVqx61UV6FCQjyOHlULlU28wONMVfFzxhsYa_Q6uRaiw82H_1CWgb57-265Mlt-iHXMwZ7jEs4AknggIyMzgG2-wVXG87-GHkeNjjjkIiOuivOOBanwiI-UQ076pdfnHmfRA">
-<div class="gallery-overlay"></div>
-</div>
-<div class="gallery-image-wrapper md:col-span-2 h-64 md:h-full" onclick="openLightbox(this)" data-index="9">
-<img alt="IPR Workshop discussion" class="gallery-image" data-alt="A focused breakout session during an IPR workshop. Participants are deep in discussion, reviewing legal documents spread across a minimalist table. The lighting is soft and focused on the documents and faces, highlighting the serious, analytical nature of intellectual property studies in a modern setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAl6cXHxBUU2jvyqHWPZqZzQCiMpQlmn5klhqiQv2FyiWney47Bdq0lWQ95mHASd2DhjLZCZzQcMEnVBC2NeOA12NlO_5s_PrN-UpSJIKlmxSFgCwMRxGIcfFIKGzqtTe2MTXQmS5OnzGPuHUsJHh2lVYYQ7ySsvpYtDXsj_ISVSSLVCPuKcyveulbLuZzpPYEXZQeUliKPlKF6yG5SsKRqtP4LRBcLVzc-1mmhPhoBN4zJ2BGmYUFzw">
-<div class="gallery-overlay"></div>
-</div>
-</div>
-</section>
-<!-- Section 5: Innovation & Entrepreneurship Activities -->
-<section class="space-y-stack-lg">
-<div class="border-b border-surface-variant pb-stack-md">
-<h3 class="font-headline-md text-headline-md text-on-surface">Innovation &amp; Entrepreneurship Activities</h3>
-<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-2">Student Activities • Year Round</p>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-gutter">
-<div class="gallery-image-wrapper aspect-square" onclick="openLightbox(this)" data-index="10">
-<img alt="Robotics assembly" class="gallery-image" data-alt="A close-up shot of students assembling a robotics project. The focus is on their hands and tools, highlighting hands-on technical skills and innovation. The lighting is bright and clear, emphasizing the practical, maker-space environment of an idea lab." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNCScFT7wUfzAlahW_YU4Kt8zUqo2KBZ9QT3MsLgcvdnlHz8gNMu14LOvIl-g795cnfMxGZtXwUduVTnJQEhNEm5WRQ_sNDdizEtAwZ28KuPItprMUm8u__RDSNLeWwZCQUZCoVlZWz029ozoHrOuzjJTnFvuRmzOe4oKvoa_2o622TYhDOdiLAv6iTrCfeIYtC1eEWfW0Azi9sATYeAJnNmFMazjnMK5eS0kf7bJgWikPj1kxYh8dBA">
-<div class="gallery-overlay"></div>
-</div>
-<div class="gallery-image-wrapper aspect-square" onclick="openLightbox(this)" data-index="11">
-<img alt="Ideation sketching" class="gallery-image" data-alt="Students sketching out design concepts on large paper pads scattered on a modern floor. The mood is creative and unstructured, capturing the early stages of ideation. The lighting is natural, streaming through large windows, enhancing the minimalist, airy aesthetic of the workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFQXnlehoFHAd6PgR3TZ9g-NhDS6x1VeAlvj0ghUNRNRk7aMDiBagfCWa61NqgYQ9TYNgj0GV4RbHMn7GaId6DrZ6_V_9llexZOYu53ZeNN0jkNe6CXIJ-D87vOTjTJ55mwBCy5XXadho-wXBbKLIt5ZjjjR8lGxI_RnU5bM1lvaUThERwuiU_7cPXrn8JRkCs20oPZbtpi434Dvrw0ZjnnBrpOITUsL2AH2o_gDoI2KSY7PqokeAWGQ">
-<div class="gallery-overlay"></div>
-</div>
-<div class="gallery-image-wrapper aspect-square" onclick="openLightbox(this)" data-index="12">
-<img alt="Student presentation" class="gallery-image" data-alt="A vibrant presentation by a student club leader explaining a new initiative to a small group. The setting is informal but professional, perhaps a corner of a modern library or lounge area within the innovation hub. The tones are warm, highlighting community and leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa9w1bUQjVNDIj88E7P1V30kBWXWojH8Vt0uofpiE3cccgoGRJ9bWt_RuVrY3MqnFPlyGgjQBxXckKXbEXIh0DCn7rvr1RCVCB-ffS_u56-huvKjpeHN6SP4htqSGRVFPNplQIr2-csHBz4skrveVQtIefD3ir5bDuy5l1PeCGhIQ4FvDGgcJExVylXCvxQPuxO2F6XasFeLJ8dsWY8nyj2zHAYrBrNyPyNQZPkUsKPQE7KNNw3HDjCg">
-<div class="gallery-overlay"></div>
-</div>
-<div class="gallery-image-wrapper aspect-square" onclick="openLightbox(this)" data-index="13">
-<img alt="3D printing" class="gallery-image" data-alt="An abstract, stylized close-up of a 3D printer in action, producing a complex component. The lighting is dramatic, highlighting the technological sophistication of the equipment. This represents the advanced manufacturing capabilities available to students in a premier innovation lab." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnDO_vphmBY3J9eOnY-Dm3YQYqcDgDchIJcWHHSP3xFRGM0tPTgn9W805hBavxth05Nlbiz3O1Z6G7YdVQJ4kreG42NcjD106kelVC5c-NXJc05Zo0HDUgmq4Mst7nIdr3MQZ5wg6KUaWX6Jdtrwim0_sTn5Dg_PS6zOUOaVzm09zTnmoaEDY92qp-2YO5iMgXvfS_MJA8Iu5l3rX3aTCW1FBvTHbcE8kVZUcqZI21_cJo5bxxR5I_iw">
-<div class="gallery-overlay"></div>
-</div>
-</div>
-</section>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-tertiary border-t border-surface-variant" id="contact">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-padding max-w-container-max mx-auto">
-<div class="col-span-1 md:col-span-1">
-<div class="flex items-center gap-2 mb-6"><img alt="AKGEC IDEA Lab" class="h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Scnw8_Od-8GHVWRbb_4M4g8iS6MJbw3e92DaCZgVOEWdDwduugNbKt2EHd1mkwPx1szCbxpx2HZyWeJFFhZgGWbCgKZX_06sj4qj4pc3V2_oYw4MaqupWGgT-Wwz3ulNK65U_4lxksGq2kUxxL-o4XadfVfsQdV3bkCrKhky1DXeI_09Gb-9pppywcdZmSbCCrVXWUZ_OZobwrqZ6yI7ZX6OUPpPZ8JRvZALemJ39n8729bEFrlqpr1DyZY5br_0vDI"></div>
-<p class="font-body-md text-body-md text-on-tertiary/70 mb-6">
-                    Empowering the next generation of innovators and entrepreneurs at AKGEC.
+
+
+<!-- ============================================================
+     ABOUT IDEA LAB
+============================================================ -->
+
+<section
+    id="about"
+    class="py-section-padding px-margin-mobile md:px-margin-desktop bg-[#17212B] relative overflow-hidden"
+>
+
+    <div
+        class="absolute inset-0 opacity-[0.05]"
+        style="
+            background-image: radial-gradient(#ffffff 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        "
+    ></div>
+
+
+    <div class="max-w-container-max mx-auto relative z-10">
+
+        <div class="text-center max-w-4xl mx-auto mb-16">
+
+            <span class="text-secondary-fixed-dim text-[11px] uppercase tracking-[0.2em] font-bold">
+                About IDEA Lab
+            </span>
+
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
+                From Spark to Startup
+            </h2>
+
+            <p class="text-lg text-gray-300 leading-relaxed">
+                The AKGEC IDEA Lab is built around four core pillars that
+                provide a structured innovation lifecycle — guiding students
+                from initial problem identification and prototyping to
+                intellectual property protection and commercial venture launch.
+            </p>
+
+        </div>
+
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- IIC -->
+
+            <div
+                class="pillar-card bg-white rounded-2xl p-8 border-t-4 border-primary cursor-pointer group hover:-translate-y-2 transition-all duration-300"
+                onclick="openPillarModal(
+                    'Institute Innovation Council (IIC)',
+                    [
+                        'Cultivates an institutional mindset of creative problem-solving, design thinking, and grassroots innovation.',
+                        'Fosters a culture of innovation through ideathons, hackathons, workshops, and collaborative initiatives.',
+                        'Provides students with exposure to real-world challenges and practical problem-solving experiences.',
+                        'Encourages students to develop, refine, and validate ideas at an early stage.'
+                    ]
+                )"
+            >
+
+                <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+
+                    <span class="material-symbols-outlined text-primary group-hover:text-white text-3xl">
+                        psychology
+                    </span>
+
+                </div>
+
+                <h3 class="font-heading text-xl font-bold mb-3">
+                    Institute Innovation Council
+                </h3>
+
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                    Cultivating creative problem-solving, design thinking,
+                    grassroots innovation, and an institutional culture of innovation.
                 </p>
-<p class="font-body-md text-sm text-on-tertiary/50">
-                    © 2024 AKGEC IDEA Lab. All rights reserved.
+
+                <div class="mt-6 text-primary text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+                    Explore IIC
+                    <span class="material-symbols-outlined text-sm">
+                        arrow_forward
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- IPR -->
+
+            <div
+                class="pillar-card bg-white rounded-2xl p-8 border-t-4 border-blue-600 cursor-pointer group hover:-translate-y-2 transition-all duration-300"
+                onclick="openPillarModal(
+                    'Intellectual Property Rights (IPR)',
+                    [
+                        'Safeguards innovative breakthroughs through patent filings, copyright protection, and intellectual asset management.',
+                        'Provides foundational knowledge of patents, copyrights, trademarks, and other forms of intellectual property.',
+                        'Raises awareness about IP protection and pathways for IP registration and filing.',
+                        'Conducts workshops and expert-led sessions to provide practical insights into intellectual property rights.'
+                    ]
+                )"
+            >
+
+                <div class="w-14 h-14 bg-blue-600/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition">
+
+                    <span class="material-symbols-outlined text-blue-600 group-hover:text-white text-3xl">
+                        gavel
+                    </span>
+
+                </div>
+
+                <h3 class="font-heading text-xl font-bold mb-3">
+                    Intellectual Property Rights
+                </h3>
+
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                    From idea to invention to ownership — helping innovators
+                    understand, protect, and manage their intellectual assets.
                 </p>
-</div>
-<div>
-<h4 class="font-label-caps text-label-caps text-on-tertiary uppercase mb-6 tracking-widest">Quick Links</h4>
-<ul class="space-y-4 flex flex-col">
-<li class=""><a class="font-body-md text-body-md text-on-tertiary/70 hover:text-secondary-fixed-dim transition-colors focus:outline-none focus:ring-2 focus:ring-secondary-fixed-dim" href="#">About Us</a></li>
-<li class=""><a class="font-body-md text-body-md text-on-tertiary/70 hover:text-secondary-fixed-dim transition-colors focus:outline-none focus:ring-2 focus:ring-secondary-fixed-dim" href="#">Programs</a></li>
-<li class=""><a class="font-body-md text-body-md text-on-tertiary/70 hover:text-secondary-fixed-dim transition-colors focus:outline-none focus:ring-2 focus:ring-secondary-fixed-dim" href="#">Events</a></li>
-<li class=""><a class="font-body-md text-body-md text-on-tertiary/70 hover:text-secondary-fixed-dim transition-colors focus:outline-none focus:ring-2 focus:ring-secondary-fixed-dim" href="#">Gallery</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-label-caps text-label-caps text-on-tertiary uppercase mb-6 tracking-widest">Innovation Hub</h4>
-<ul class="space-y-4 flex flex-col">
-<li class=""><a class="font-body-md text-body-md text-on-tertiary/70 hover:text-secondary-fixed-dim transition-colors focus:outline-none focus:ring-2 focus:ring-secondary-fixed-dim" href="#">TBI</a></li>
-<li class=""><a class="font-body-md text-body-md text-on-tertiary/70 hover:text-secondary-fixed-dim transition-colors focus:outline-none focus:ring-2 focus:ring-secondary-fixed-dim" href="#">IIC</a></li>
-<li class=""><a class="font-body-md text-body-md text-on-tertiary/70 hover:text-secondary-fixed-dim transition-colors focus:outline-none focus:ring-2 focus:ring-secondary-fixed-dim" href="#">IPR Cell</a></li>
-<li class=""><a class="font-body-md text-body-md text-on-tertiary/70 hover:text-secondary-fixed-dim transition-colors focus:outline-none focus:ring-2 focus:ring-secondary-fixed-dim" href="#">E-Cell</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-label-caps text-label-caps text-on-tertiary uppercase mb-6 tracking-widest">Connect</h4>
-<ul class="space-y-4 flex flex-col"><li class=""><a class="font-body-md text-body-md text-on-tertiary/70 hover:text-secondary-fixed-dim transition-colors flex items-center gap-2" href="mailto:contact@akgec.ac.in"><span class="material-symbols-outlined text-[18px]">mail</span> Gmail</a></li><li class=""><a class="font-body-md text-body-md text-on-tertiary/70 hover:text-secondary-fixed-dim transition-colors flex items-center gap-2" href="#"><svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg> LinkedIn</a></li><li class=""><a class="font-body-md text-body-md text-on-tertiary/70 hover:text-secondary-fixed-dim transition-colors flex items-center gap-2" href="#"><svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg> Instagram</a></li><li class=""><a class="font-body-md text-body-md text-on-tertiary/70 hover:text-secondary-fixed-dim transition-colors flex items-center gap-2" href="#"><svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg> Facebook</a></li></ul>
-</div>
-</div>
+
+                <div class="mt-6 text-blue-600 text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+                    Explore IPR
+                    <span class="material-symbols-outlined text-sm">
+                        arrow_forward
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- E-CELL -->
+
+            <div
+                class="pillar-card bg-white rounded-2xl p-8 border-t-4 border-secondary cursor-pointer group hover:-translate-y-2 transition-all duration-300"
+                onclick="openPillarModal(
+                    'Entrepreneurship Cell (E-Cell)',
+                    [
+                        'Acts as an entrepreneurial launchpad for students to transform innovative technology ideas into scalable startups.',
+                        'Mentors aspiring student founders with expert business guidance.',
+                        'Hosts startup pitches, hackathons, ideation bootcamps, and entrepreneurship activities.',
+                        'Connects campus innovators with market experts, mentors, and angel investors.'
+                    ]
+                )"
+            >
+
+                <div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary transition">
+
+                    <span class="material-symbols-outlined text-secondary group-hover:text-white text-3xl">
+                        rocket_launch
+                    </span>
+
+                </div>
+
+                <h3 class="font-heading text-xl font-bold mb-3">
+                    Entrepreneurship Cell
+                </h3>
+
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                    Igniting minds, incubating ideas, and inspiring students
+                    to explore entrepreneurship and meaningful ventures.
+                </p>
+
+                <div class="mt-6 text-secondary text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+                    Explore E-Cell
+                    <span class="material-symbols-outlined text-sm">
+                        arrow_forward
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- TBI -->
+
+            <div
+                class="pillar-card bg-white rounded-2xl p-8 border-t-4 border-green-700 cursor-pointer group hover:-translate-y-2 transition-all duration-300"
+                onclick="openPillarModal(
+                    'Technical Business Incubator (TBI)',
+                    [
+                        'Transforms innovative technical ideas into viable commercial ventures.',
+                        'Offers prototyping labs, manufacturing resources, and industry-grade workspace.',
+                        'Bridges the gap between technology-driven startups, venture capitalists, and corporate markets.',
+                        'Provides mentorship, incubation support, and opportunities for entrepreneurial networking.'
+                    ]
+                )"
+            >
+
+                <div class="w-14 h-14 bg-green-700/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-700 transition">
+
+                    <span class="material-symbols-outlined text-green-700 group-hover:text-white text-3xl">
+                        domain
+                    </span>
+
+                </div>
+
+                <h3 class="font-heading text-xl font-bold mb-3">
+                    Technical Business Incubator
+                </h3>
+
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                    A platform where technical ideas meet mentorship,
+                    prototypes become businesses, and startups scale.
+                </p>
+
+                <div class="mt-6 text-green-700 text-xs font-bold uppercase tracking-wider flex items-center gap-2">
+                    Explore TBI
+                    <span class="material-symbols-outlined text-sm">
+                        arrow_forward
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     VISION / INNOVATION JOURNEY
+============================================================ -->
+
+<section
+    id="vision"
+    class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface"
+>
+
+    <div class="max-w-container-max mx-auto">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+            <div>
+
+                <span class="text-primary text-[11px] uppercase tracking-[0.2em] font-bold">
+                    Our Vision
+                </span>
+
+                <h2 class="font-heading text-4xl md:text-5xl font-bold leading-tight mt-5 mb-8">
+                    Step into a space where ideas spark,
+                    minds connect,
+                    and innovation comes alive.
+                </h2>
+
+                <div class="space-y-6 text-lg text-on-surface-variant leading-relaxed">
+
+                    <p>
+                        AKGEC IDEA Lab is a 24/7 creative space where students
+                        build real working technology, solve real problems,
+                        and explore the journey from engineering concepts
+                        to next-generation startups.
+                    </p>
+
+                    <p>
+                        We bridge the gap between classroom learning and
+                        real-world entrepreneurship by providing students
+                        with the environment, infrastructure, mentorship,
+                        and freedom required to bring inventions to life.
+                    </p>
+
+                    <p>
+                        Built on four powerful pillars, IDEA Lab supports
+                        student creators through every stage — from the first
+                        concept and working prototype to intellectual property
+                        protection and startup launch.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="relative pl-8 md:pl-12">
+
+                <div class="journey-line absolute left-0 top-4 bottom-4 w-1 rounded-full opacity-30"></div>
+
+
+                <!-- IDEA -->
+
+                <div class="relative flex gap-6 mb-12">
+
+                    <div class="w-5 h-5 rounded-full bg-primary mt-1 shrink-0 ring-8 ring-primary/10"></div>
+
+                    <div>
+
+                        <span class="text-primary text-xs font-bold uppercase tracking-widest">
+                            Step 01
+                        </span>
+
+                        <h3 class="font-heading text-2xl font-bold mt-2 mb-2">
+                            IDEA
+                        </h3>
+
+                        <p class="text-on-surface-variant leading-relaxed">
+                            Identify real-world challenges, question existing
+                            solutions, and develop bold new concepts.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROTOTYPE -->
+
+                <div class="relative flex gap-6 mb-12">
+
+                    <div class="w-5 h-5 rounded-full bg-secondary mt-1 shrink-0 ring-8 ring-secondary/10"></div>
+
+                    <div>
+
+                        <span class="text-secondary text-xs font-bold uppercase tracking-widest">
+                            Step 02
+                        </span>
+
+                        <h3 class="font-heading text-2xl font-bold mt-2 mb-2">
+                            INNOVATION
+                        </h3>
+
+                        <p class="text-on-surface-variant leading-relaxed">
+                            Turn concepts into validated engineering prototypes
+                            through hands-on experimentation and technical facilities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROTECT -->
+
+                <div class="relative flex gap-6 mb-12">
+
+                    <div class="w-5 h-5 rounded-full bg-blue-600 mt-1 shrink-0 ring-8 ring-blue-600/10"></div>
+
+                    <div>
+
+                        <span class="text-blue-600 text-xs font-bold uppercase tracking-widest">
+                            Step 03
+                        </span>
+
+                        <h3 class="font-heading text-2xl font-bold mt-2 mb-2">
+                            PROTECT
+                        </h3>
+
+                        <p class="text-on-surface-variant leading-relaxed">
+                            Move from invention to ownership through patents,
+                            copyrights, trademarks, and intellectual property guidance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LAUNCH -->
+
+                <div class="relative flex gap-6">
+
+                    <div class="w-5 h-5 rounded-full bg-green-700 mt-1 shrink-0 ring-8 ring-green-700/10"></div>
+
+                    <div>
+
+                        <span class="text-green-700 text-xs font-bold uppercase tracking-widest">
+                            Step 04
+                        </span>
+
+                        <h3 class="font-heading text-2xl font-bold mt-2 mb-2">
+                            LAUNCH
+                        </h3>
+
+                        <p class="text-on-surface-variant leading-relaxed">
+                            Transform validated technology into sustainable
+                            ventures with incubation, mentorship, and market connections.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="mt-20 pt-10 border-t border-surface-variant">
+
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-center">
+
+                <span class="text-xs font-bold uppercase tracking-widest">
+                    Promote Innovation
+                </span>
+
+                <span class="hidden md:block text-outline-variant">|</span>
+
+                <span class="text-xs font-bold uppercase tracking-widest">
+                    Encourage Entrepreneurship
+                </span>
+
+                <span class="hidden md:block text-outline-variant">|</span>
+
+                <span class="text-xs font-bold uppercase tracking-widest">
+                    Enable Incubation
+                </span>
+
+                <span class="hidden md:block text-outline-variant">|</span>
+
+                <span class="text-xs font-bold uppercase tracking-widest">
+                    Create Real-World Impact
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     SERVICES
+============================================================ -->
+
+<section
+    id="services"
+    class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-low"
+>
+
+    <div class="max-w-container-max mx-auto">
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 border-b border-surface-variant pb-8">
+
+            <div>
+
+                <span class="text-primary text-[11px] uppercase tracking-[0.2em] font-bold">
+                    Our Services
+                </span>
+
+                <h2 class="font-heading text-4xl font-bold mt-3">
+                    Service Directory
+                </h2>
+
+            </div>
+
+            <p class="md:w-1/2 text-lg text-on-surface-variant leading-relaxed">
+                AKGEC IDEA Lab transforms innovative ideas into real-world
+                solutions through mentoring, prototyping, incubation,
+                and expert guidance — fostering innovation and entrepreneurship.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <!-- IIC -->
+
+            <div class="service-row py-10 px-4 md:px-8 border-b border-surface-variant">
+
+                <div class="flex flex-col md:flex-row gap-8 md:items-center">
+
+                    <span class="text-5xl font-light text-outline-variant/40">
+                        01
+                    </span>
+
+                    <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+
+                        <span class="material-symbols-outlined text-primary text-3xl">
+                            psychology
+                        </span>
+
+                    </div>
+
+                    <div class="flex-grow">
+
+                        <h3 class="font-heading text-2xl font-bold mb-2">
+                            Institute Innovation Council (IIC)
+                        </h3>
+
+                        <p class="text-on-surface-variant max-w-xl">
+                            Promoting innovation, creativity, design thinking,
+                            and entrepreneurial problem-solving among students.
+                        </p>
+
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 md:max-w-sm">
+
+                        <span class="service-tag">Ideathons</span>
+                        <span class="service-tag">Hackathons</span>
+                        <span class="service-tag">Innovation Workshops</span>
+                        <span class="service-tag">Problem Solving</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- IPR -->
+
+            <div class="service-row py-10 px-4 md:px-8 border-b border-surface-variant">
+
+                <div class="flex flex-col md:flex-row gap-8 md:items-center">
+
+                    <span class="text-5xl font-light text-outline-variant/40">
+                        02
+                    </span>
+
+                    <div class="w-14 h-14 rounded-full bg-blue-600/10 flex items-center justify-center shrink-0">
+
+                        <span class="material-symbols-outlined text-blue-600 text-3xl">
+                            gavel
+                        </span>
+
+                    </div>
+
+                    <div class="flex-grow">
+
+                        <h3 class="font-heading text-2xl font-bold mb-2">
+                            Intellectual Property Rights (IPR)
+                        </h3>
+
+                        <p class="text-on-surface-variant max-w-xl">
+                            Guiding innovators in protecting and commercialising
+                            their intellectual property.
+                        </p>
+
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 md:max-w-sm">
+
+                        <span class="service-tag">Patent Guidance</span>
+                        <span class="service-tag">Copyright</span>
+                        <span class="service-tag">Trademarks</span>
+                        <span class="service-tag">IP Workshops</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- E-CELL -->
+
+            <div class="service-row py-10 px-4 md:px-8 border-b border-surface-variant">
+
+                <div class="flex flex-col md:flex-row gap-8 md:items-center">
+
+                    <span class="text-5xl font-light text-outline-variant/40">
+                        03
+                    </span>
+
+                    <div class="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
+
+                        <span class="material-symbols-outlined text-secondary text-3xl">
+                            rocket_launch
+                        </span>
+
+                    </div>
+
+                    <div class="flex-grow">
+
+                        <h3 class="font-heading text-2xl font-bold mb-2">
+                            Entrepreneurship Cell (E-Cell)
+                        </h3>
+
+                        <p class="text-on-surface-variant max-w-xl">
+                            Encouraging students to explore entrepreneurship
+                            and turn ideas into meaningful, scalable ventures.
+                        </p>
+
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 md:max-w-sm">
+
+                        <span class="service-tag">Founder Mentorship</span>
+                        <span class="service-tag">Startup Pitches</span>
+                        <span class="service-tag">Bootcamps</span>
+                        <span class="service-tag">Market Connections</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TBI -->
+
+            <div class="service-row py-10 px-4 md:px-8">
+
+                <div class="flex flex-col md:flex-row gap-8 md:items-center">
+
+                    <span class="text-5xl font-light text-outline-variant/40">
+                        04
+                    </span>
+
+                    <div class="w-14 h-14 rounded-full bg-green-700/10 flex items-center justify-center shrink-0">
+
+                        <span class="material-symbols-outlined text-green-700 text-3xl">
+                            domain
+                        </span>
+
+                    </div>
+
+                    <div class="flex-grow">
+
+                        <h3 class="font-heading text-2xl font-bold mb-2">
+                            Technical Business Incubator (TBI)
+                        </h3>
+
+                        <p class="text-on-surface-variant max-w-xl">
+                            Supporting startups and entrepreneurs through
+                            incubation, mentorship, prototyping resources,
+                            and industry connections.
+                        </p>
+
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 md:max-w-sm">
+
+                        <span class="service-tag">Incubation</span>
+                        <span class="service-tag">Prototyping</span>
+                        <span class="service-tag">Mentorship</span>
+                        <span class="service-tag">Industry Connections</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     EVENTS
+============================================================ -->
+
+<section
+    id="events"
+    class="py-section-padding px-margin-mobile md:px-margin-desktop bg-primary text-white"
+>
+
+    <div class="max-w-container-max mx-auto">
+
+        <div class="max-w-3xl mb-16">
+
+            <span class="text-secondary-fixed-dim text-[11px] uppercase tracking-[0.2em] font-bold">
+                Innovation in Action
+            </span>
+
+            <h2 class="font-heading text-4xl md:text-5xl font-bold mt-4 mb-6">
+                Where Ideas Meet Opportunity
+            </h2>
+
+            <p class="text-white/75 text-lg leading-relaxed">
+                It only takes a spark to start something extraordinary,
+                and every great idea deserves the chance to become impact.
+            </p>
+
+        </div>
+
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- STARTUP CONCLAVE -->
+
+            <article class="rounded-2xl border border-white/15 bg-white/5 p-8 hover:bg-white/10 transition">
+
+                <span class="material-symbols-outlined text-secondary-fixed-dim text-4xl">
+                    groups
+                </span>
+
+                <h3 class="font-heading text-2xl font-bold mt-6 mb-3">
+                    Startup Conclave
+                </h3>
+
+                <p class="text-white/70 leading-relaxed mb-6">
+                    An event where ambitious founders connect,
+                    opportunities unfold, and possibilities grow.
+                </p>
+
+                <span class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-bold">
+                    Entrepreneurship • Networking • Startups
+                </span>
+
+            </article>
+
+
+            <!-- SIH -->
+
+            <article class="rounded-2xl border border-white/15 bg-white/5 p-8 hover:bg-white/10 transition">
+
+                <span class="material-symbols-outlined text-secondary-fixed-dim text-4xl">
+                    code
+                </span>
+
+                <h3 class="font-heading text-2xl font-bold mt-6 mb-3">
+                    Smart India Hackathon
+                </h3>
+
+                <p class="text-white/70 leading-relaxed mb-6">
+                    Where young innovators unite, collaborate,
+                    and change the world through technology-driven solutions.
+                </p>
+
+                <span class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-bold">
+                    Innovation • Collaboration • Impact
+                </span>
+
+            </article>
+
+
+            <!-- IPR WORKSHOP -->
+
+            <article class="rounded-2xl border border-white/15 bg-white/5 p-8 hover:bg-white/10 transition">
+
+                <span class="material-symbols-outlined text-secondary-fixed-dim text-4xl">
+                    gavel
+                </span>
+
+                <h3 class="font-heading text-2xl font-bold mt-6 mb-3">
+                    IPR Workshop
+                </h3>
+
+                <p class="text-white/70 leading-relaxed mb-6">
+                    From idea to invention to ownership,
+                    understand the journey of protecting innovation.
+                </p>
+
+                <span class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-bold">
+                    Patents • Copyright • IP
+                </span>
+
+            </article>
+
+
+            <!-- ACTIVITIES -->
+
+            <article class="rounded-2xl border border-white/15 bg-white/5 p-8 hover:bg-white/10 transition">
+
+                <span class="material-symbols-outlined text-secondary-fixed-dim text-4xl">
+                    lightbulb
+                </span>
+
+                <h3 class="font-heading text-2xl font-bold mt-6 mb-3">
+                    Innovation & Entrepreneurship Activities
+                </h3>
+
+                <p class="text-white/70 leading-relaxed mb-6">
+                    Ideation activities, bootcamps, hackathons,
+                    workshops, mentoring sessions, and student-led initiatives.
+                </p>
+
+                <span class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-bold">
+                    Year Round • Student Activities
+                </span>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     GALLERY
+============================================================ -->
+
+<section
+    id="gallery"
+    class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface"
+>
+
+    <div class="max-w-container-max mx-auto">
+
+        <div class="text-center max-w-3xl mx-auto mb-16">
+
+            <span class="text-secondary text-[11px] uppercase tracking-[0.2em] font-bold">
+                Gallery
+            </span>
+
+            <h2 class="font-heading text-4xl md:text-5xl font-bold mt-4 mb-5">
+                Moments of Innovation
+            </h2>
+
+            <p class="text-lg text-on-surface-variant">
+                A glimpse into the events, activities, collaborations,
+                and experiences that shape the IDEA Lab ecosystem.
+            </p>
+
+        </div>
+
+
+        <!-- STARTUP CONCLAVE -->
+
+        <section class="mb-24">
+
+            <div class="border-b border-surface-variant pb-5 mb-8">
+
+                <h3 class="font-heading text-2xl font-bold">
+                    Startup Conclave
+                </h3>
+
+                <p class="text-xs uppercase tracking-widest text-on-surface-variant mt-2">
+                    Entrepreneurship • Networking
+                </p>
+
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:h-[600px]">
+
+                <div
+                    class="gallery-image-wrapper md:col-span-8 h-72 md:h-full"
+                    onclick="openLightbox(this)"
+                >
+
+                    <img
+                        class="gallery-image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnd82fPHHijUuph-zU_XjQn3DeVj6j3J-nyoOd9tBcDsPN2xC19kB45UAprCSt2nan-qlYq02ipVJ-z1ry43HZnDMMyexVHGdfGIWaujf36cCHyaoIMqzzMeauf7lSrbnbTFDvOD1eVet9wyjI2QJX5xk6rXKn0gvdlv1YYhHr_foLFSAQQVHTE5ALWL5Lo5XJIwrRtKvHbM5jGW5Czii-PzMnf9INf-ZjwJFrkda5mvzUVjEobG_8yQ"
+                        alt="Startup Conclave"
+                    >
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+
+                <div class="md:col-span-4 flex flex-col gap-6">
+
+                    <div
+                        class="gallery-image-wrapper h-72 md:h-auto flex-1"
+                        onclick="openLightbox(this)"
+                    >
+
+                        <img
+                            class="gallery-image"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5tLqb1j_7PUzPab9olYMY9R52QB9_x0LivDhL0-MzNaXRvO3Pmacn5xi-b6P96AqMRh8yfkHYvfbqoUwBaAsDp5NY6N8f4x9C2JhM1sqy1KPn-peNQh2CrBu6txtReNkJSKFHe3_tQk-mtL0FCKpHfWFJjp4cgM93eqjd7h2CH438kxYmInJAsdpPskXB1msVwfGQ8KImZHVmVh3bUkgjgCvbEuJQ_jmc0nh4ii6QKwTmT9ODZFQ1wg"
+                            alt="Networking at Startup Conclave"
+                        >
+
+                        <div class="gallery-overlay"></div>
+
+                    </div>
+
+
+                    <div
+                        class="gallery-image-wrapper h-72 md:h-auto flex-1"
+                        onclick="openLightbox(this)"
+                    >
+
+                        <img
+                            class="gallery-image"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEJaFPxlHdwu7giur42HReQpmJKb1cLJ3XpqbAkQnl9PUppLktX6PUt38SgBEoJn6BnpSPqGi1VIEB8KtHmRXAv3kkCar0YWQQ2Y_A5AoDvQUW-AD3e9WXn4u-Dk4MT8SiFgs_H_GbuwPfHa1stynCOkgYAYY_3X0DP0KIwOIEb7LSlKdcp6w1gvynLKKYxZnHRixR-4cQbSgjE2KqCsXKNldYaxmNgMVTgV-0g5eXNiOP_-kDM2psUw"
+                            alt="Startup pitching"
+                        >
+
+                        <div class="gallery-overlay"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SIH -->
+
+        <section class="mb-24">
+
+            <div class="border-b border-surface-variant pb-5 mb-8">
+
+                <h3 class="font-heading text-2xl font-bold">
+                    Smart India Hackathon
+                </h3>
+
+                <p class="text-xs uppercase tracking-widest text-on-surface-variant mt-2">
+                    Technology • Innovation • Collaboration
+                </p>
+
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:h-[420px]">
+
+                <div
+                    class="gallery-image-wrapper h-72 md:h-full"
+                    onclick="openLightbox(this)"
+                >
+
+                    <img
+                        class="gallery-image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_iG9UE_0I4asSEWDB58ba98m4VmBBgRShkmbEmkWy0WDB43lAiFQD3ZvQm7_IvI2nOfPipahuesLmp2ZbeCswvny2LILMJP9BhQkbgXylwGVIWnOd5PmPS9r7kvRAO1qm_RC8dOlMpwH-xAtg9wNDwWmQ__5NnNGUFp2kO0oT9DUapAl9okv5o9AqZJsXkoGwAkjgRQoq9J8XXr0jjY_SP0da1o-GAXJf2oZpitjxmbqQvtdRJXehGQ"
+                        alt="Smart India Hackathon Coding"
+                    >
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+
+                <div
+                    class="gallery-image-wrapper h-72 md:h-full"
+                    onclick="openLightbox(this)"
+                >
+
+                    <img
+                        class="gallery-image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkUhAwfrMV2Wn3uJ98_uBJHJFQ7GvrSSVktbgHxoICbaTi_nxpsoUVBV1H7Q8Ku1Q_fHVUxJu-zUFwD5hP46li7CIJosYhjpHDbozNNb7c1Vp-YA4Lqa4mMIFQUthb9X9d8cvXsl_4z7H--w8o7MC9oSBj5R1u8ml_xnBlJZ_F58ixqgtKudZu6Jah_ytcYeg0v6ojQoCzs0u5v5MLncWGrp0vXVVzxNBPswDLSBlL96It_EwR6--t1w"
+                        alt="Smart India Hackathon Hall"
+                    >
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+
+                <div
+                    class="gallery-image-wrapper h-72 md:h-full"
+                    onclick="openLightbox(this)"
+                >
+
+                    <img
+                        class="gallery-image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuj3WjeQVjEkb7to0PCYmyk07LR5jm0wFVC8x-n7sq6VHOBdhK7-uDDDxtonqNjkFca35KVXbF0SnHnbgEgI7MomH7E3VhabCX5x7lVWqpp2xcybgi6q2C9LzU2veZFi01eOjdnLq0EvrTk3pbfa1bpIZ5LrnBk-OQrpqBexJTjJ8dBYkpJG76xJ2MzFqU2OJByAxLOvpikidusk1gaXfFnEVEHFEVGRYsJDp8xm9__5qC9nzucv8Glg"
+                        alt="Smart India Hackathon Winners"
+                    >
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TBI -->
+
+        <section class="mb-24">
+
+            <div class="border-b border-surface-variant pb-5 mb-8">
+
+                <h3 class="font-heading text-2xl font-bold">
+                    Technical Business Incubator
+                </h3>
+
+                <p class="text-xs uppercase tracking-widest text-on-surface-variant mt-2">
+                    Incubation • Prototyping • Mentorship
+                </p>
+
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:h-[500px]">
+
+                <div
+                    class="gallery-image-wrapper md:col-span-5 h-72 md:h-full"
+                    onclick="openLightbox(this)"
+                >
+
+                    <img
+                        class="gallery-image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYHFwX2aW5YxmH9nNO6usgbP4OivMjuiku3xVkO1Q4LBmjECeFfatZ78PeNCMgsmWHZC4jGJDOl-EEd8dL405nIr_XF9la7VmKp2zpzuxVq1Rs547Mm0SaXwK2bPAd67pycKfg3ln05usqrpb3LrxK1qfRf_bOI1zh-nhtpFg5CZUSOZczOsBo3s0vTslDiwzpljTJFVVk5Vz2HT3NImIf2h0NO2xUiDltvZYp8YSBSuLZCl2fjqhqYg"
+                        alt="TBI Workspace"
+                    >
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+
+                <div
+                    class="gallery-image-wrapper md:col-span-7 h-72 md:h-full"
+                    onclick="openLightbox(this)"
+                >
+
+                    <img
+                        class="gallery-image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0a47VjCd_lr9ARonwZNOzw8aSSk5igzAjQ-CvjbykUaq4WmVPcZXU2bm14CXmeem0CWOYPRX52AVvBkR0tRzuWm_WiT2BCvEcoXIkCK5TygJ_aBhwL2arP13hRFxVZgFEZFHiI_KE0Mvhs81aRWnd7MgO1zx1jfrNunUOfMy9D9y_tmeWiVJMWRheCLOObecmelVFsHDUjjpRHW6nPZJ0V_FdKWm_rRNFG3eR9hnvBfeUxgb8hL7EaA"
+                        alt="Prototype Development"
+                    >
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- IPR -->
+
+        <section class="mb-24">
+
+            <div class="border-b border-surface-variant pb-5 mb-8">
+
+                <h3 class="font-heading text-2xl font-bold">
+                    Intellectual Property Rights
+                </h3>
+
+                <p class="text-xs uppercase tracking-widest text-on-surface-variant mt-2">
+                    IPR Workshops • Knowledge • Protection
+                </p>
+
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:h-[380px]">
+
+                <div
+                    class="gallery-image-wrapper h-72 md:h-full"
+                    onclick="openLightbox(this)"
+                >
+
+                    <img
+                        class="gallery-image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsCzdQAAR7ls76Bb9mF3bSKHiKOeg5_204XRhzz4iOk0dkQd8nZpcWnEZKAx8Km5qawAKr_GP5t46YqWXyuF6KR_NjQhyEFcibNptfLhWvHpfjSCb0kHIVqx61UV6FCQjyOHlULlU28wONMVfFzxhsYa_Q6uRaiw82H_1CWgb57-265Mlt-iHXMwZ7jEs4AknggIyMzgG2-wVXG87-GHkeNjjjkIiOuivOOBanwiI-UQ076pdfnHmfRA"
+                        alt="IPR Seminar"
+                    >
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+
+                <div
+                    class="gallery-image-wrapper h-72 md:h-full"
+                    onclick="openLightbox(this)"
+                >
+
+                    <img
+                        class="gallery-image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAl6cXHxBUU2jvyqHWPZqZzQCiMpQlmn5klhqiQv2FyiWney47Bdq0lWQ95mHASd2DhjLZCZzQcMEnVBC2NeOA12NlO_5s_PrN-UpSJIKlmxSFgCwMRxGIcfFIKGzqtTe2MTXQmS5OnzGPuHUsJHh2lVYYQ7ySsvpYtDXsj_ISVSSLVCPuKcyveulbLuZzpPYEXZQeUliKPlKF6yG5SsKRqtP4LRBcLVzc-1mmhPhoBN4zJ2BGmYUFzw"
+                        alt="IPR Workshop"
+                    >
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INNOVATION ACTIVITIES -->
+
+        <section>
+
+            <div class="border-b border-surface-variant pb-5 mb-8">
+
+                <h3 class="font-heading text-2xl font-bold">
+                    Innovation & Entrepreneurship Activities
+                </h3>
+
+                <p class="text-xs uppercase tracking-widest text-on-surface-variant mt-2">
+                    Student Activities • Year Round
+                </p>
+
+            </div>
+
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+
+                <div
+                    class="gallery-image-wrapper aspect-square"
+                    onclick="openLightbox(this)"
+                >
+
+                    <img
+                        class="gallery-image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNCScFT7wUfzAlahW_YU4Kt8zUqo2KBZ9QT3MsLgcvdnlHz8gNMu14LOvIl-g795cnfMxGZtXwUduVTnJQEhNEm5WRQ_sNDdizEtAwZ28KuPItprMUm8u__RDSNLeWwZCQUZCoVlZWz029ozoHrOuzjJTnFvuRmzOe4oKvoa_2o622TYhDOdiLAv6iTrCfeIYtC1eEWfW0Azi9sATYeAJnNmFMazjnMK5eS0kf7bJgWikPj1kxYh8dBA"
+                        alt="Robotics Assembly"
+                    >
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+
+                <div
+                    class="gallery-image-wrapper aspect-square"
+                    onclick="openLightbox(this)"
+                >
+
+                    <img
+                        class="gallery-image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFQXnlehoFHAd6PgR3TZ9g-NhDS6x1VeAlvj0ghUNRNRk7aMDiBagfCWa61NqgYQ9TYNgj0GV4RbHMn7GaId6DrZ6_V_9llexZOYu53ZeNN0jkNe6CXIJ-D87vOTjTJ55mwBCy5XXadho-wXBbKLIt5ZjjjR8lGxI_RnU5bM1lvaUThERwuiU_7cPXrn8JRkCs20oPZbtpi434Dvrw0ZjnnBrpOITUsL2AH2o_gDoI2KSY7PqokeAWGQ"
+                        alt="Ideation"
+                    >
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+
+                <div
+                    class="gallery-image-wrapper aspect-square"
+                    onclick="openLightbox(this)"
+                >
+
+                    <img
+                        class="gallery-image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa9w1bUQjVNDIj88E7P1V30kBWXWojH8Vt0uofpiE3cccgoGRJ9bWt_RuVrY3MqnFPlyGgjQBxXckKXbEXIh0DCn7rvr1RCVCB-ffS_u56-huvKjpeHN6SP4htqSGRVFPNplQIr2-csHBz4skrveVQtIefD3ir5bDuy5l1PeCGhIQ4FvDGgcJExVylXCvxQPuxO2F6XasFeLJ8dsWY8nyj2zHAYrBrNyPyNQZPkUsKPQE7KNNw3HDjCg"
+                        alt="Student Presentation"
+                    >
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+
+                <div
+                    class="gallery-image-wrapper aspect-square"
+                    onclick="openLightbox(this)"
+                >
+
+                    <img
+                        class="gallery-image"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnDO_vphmBY3J9eOnY-Dm3YQYqcDgDchIJcWHHSP3xFRGM0tPTgn9W805hBavxth05Nlbiz3O1Z6G7YdVQJ4kreG42NcjD106kelVC5c-NXJc05Zo0HDUgmq4Mst7nIdr3MQZ5wg6KUaWX6Jdtrwim0_sTn5Dg_PS6zOUOaVzm09zTnmoaEDY92qp-2YO5iMgXvfS_MJA8Iu5l3rX3aTCW1FBvTHbcE8kVZUcqZI21_cJo5bxxR5I_iw"
+                        alt="3D Printing"
+                    >
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     IMPACT CTA
+============================================================ -->
+
+<section class="bg-secondary-container px-margin-mobile md:px-margin-desktop py-20">
+
+    <div class="max-w-5xl mx-auto text-center">
+
+        <span class="text-primary text-[11px] uppercase tracking-[0.2em] font-bold">
+            Your Idea Can Start Here
+        </span>
+
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary mt-4 mb-6">
+            It only takes a spark to start something extraordinary.
+        </h2>
+
+        <p class="text-lg text-on-surface max-w-2xl mx-auto mb-8">
+            Whether you're identifying a problem, building a prototype,
+            protecting an invention, or thinking about your first startup,
+            IDEA Lab gives your idea a place to grow.
+        </p>
+
+        <a
+            href="#contact"
+            class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold text-xs uppercase tracking-wider hover:bg-primary-container transition shadow-lg"
+        >
+            Connect With IDEA Lab
+            <span class="material-symbols-outlined text-sm">
+                arrow_forward
+            </span>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+
+<footer
+    id="contact"
+    class="bg-tertiary text-white border-t border-white/10"
+>
+
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-padding">
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+
+            <!-- BRAND -->
+
+            <div>
+
+                <img
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Scnw8_Od-8GHVWRbb_4M4g8iS6MJbw3e92DaCZgVOEWdDwduugNbKt2EHd1mkwPx1szCbxpx2HZyWeJFFhZgGWbCgKZX_06sj4qj4pc3V2_oYw4MaqupWGgT-Wwz3ulNK65U_4lxksGq2kUxxL-o4XadfVfsQdV3bkCrKhky1DXeI_09Gb-9pppywcdZmSbCCrVXWUZ_OZobwrqZ6yI7ZX6OUPpPZ8JRvZALemJ39n8729bEFrlqpr1DyZY5br_0vDI"
+                    alt="AKGEC IDEA Lab"
+                    class="h-16 w-auto object-contain mb-7"
+                >
+
+                <h3 class="font-heading text-2xl font-bold mb-4">
+                    Transforming Ideas into Innovation,
+                    Inspiring Minds, Shaping the Future.
+                </h3>
+
+                <p class="text-white/60 leading-relaxed">
+                    A 24/7 creative ecosystem where engineering,
+                    innovation, intellectual property, incubation,
+                    and entrepreneurship come together.
+                </p>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div>
+
+                <h4 class="text-xs uppercase tracking-widest font-bold mb-6">
+                    Quick Links
+                </h4>
+
+                <ul class="space-y-4 text-white/65">
+
+                    <li>
+                        <a href="#about" class="hover:text-secondary-fixed-dim transition">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#vision" class="hover:text-secondary-fixed-dim transition">
+                            Our Vision
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services" class="hover:text-secondary-fixed-dim transition">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#events" class="hover:text-secondary-fixed-dim transition">
+                            Events
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#gallery" class="hover:text-secondary-fixed-dim transition">
+                            Gallery
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- FOUR PILLARS -->
+
+            <div>
+
+                <h4 class="text-xs uppercase tracking-widest font-bold mb-6">
+                    Innovation Hub
+                </h4>
+
+                <ul class="space-y-4 text-white/65">
+
+                    <li>
+                        <a href="#about" class="hover:text-secondary-fixed-dim transition">
+                            TBI
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about" class="hover:text-secondary-fixed-dim transition">
+                            IIC
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about" class="hover:text-secondary-fixed-dim transition">
+                            IPR
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about" class="hover:text-secondary-fixed-dim transition">
+                            E-Cell
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- CONNECT -->
+
+            <div>
+
+                <h4 class="text-xs uppercase tracking-widest font-bold mb-6">
+                    Connect
+                </h4>
+
+                <ul class="space-y-5 text-white/65">
+
+                    <li>
+                        <a
+                            href="mailto:contact@akgec.ac.in"
+                            class="flex items-center gap-3 hover:text-secondary-fixed-dim transition"
+                        >
+                            <span class="material-symbols-outlined text-lg">
+                                mail
+                            </span>
+                            contact@akgec.ac.in
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center gap-3 hover:text-secondary-fixed-dim transition"
+                        >
+                            <span class="material-symbols-outlined text-lg">
+                                business_center
+                            </span>
+                            LinkedIn
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center gap-3 hover:text-secondary-fixed-dim transition"
+                        >
+                            <span class="material-symbols-outlined text-lg">
+                                photo_camera
+                            </span>
+                            Instagram
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="#"
+                            class="flex items-center gap-3 hover:text-secondary-fixed-dim transition"
+                        >
+                            <span class="material-symbols-outlined text-lg">
+                                public
+                            </span>
+                            Facebook
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="border-t border-white/10 mt-16 pt-7 flex flex-col md:flex-row justify-between gap-4 text-sm text-white/40">
+
+            <p>
+                © 2026 AKGEC IDEA Lab. All rights reserved.
+            </p>
+
+            <p>
+                Innovation • Incubation • Entrepreneurship
+            </p>
+
+        </div>
+
+    </div>
+
 </footer>
-<!-- Premium Popup Modal -->
-<div class="fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-[250ms] ease-in-out opacity-0 pointer-events-none" id="pillarModal">
-<!-- Backdrop -->
-<div class="absolute inset-0 bg-black/40 backdrop-blur-md cursor-pointer" onclick="closePillarModal()"></div>
-<!-- Modal Content -->
-<div class="modal-content relative bg-surface w-full md:w-[65%] md:rounded-[24px] shadow-2xl flex flex-col transform transition-all duration-[250ms] ease-in-out overflow-hidden scale-95 translate-y-4 h-auto max-h-[85vh]">
-<!-- Header -->
-<div class="flex items-start justify-between p-6 md:p-8 border-b border-surface-variant bg-surface-container-lowest z-10 shrink-0">
-<div>
-<span class="font-label-caps text-primary uppercase tracking-wider text-sm mb-2 block">Innovation Pillar</span>
-<h2 class="font-headline-md text-2xl md:text-3xl text-on-surface" id="pillarModalTitle">Institute Innovation Council (IIC)</h2>
+
+
+<!-- ============================================================
+     PILLAR MODAL
+============================================================ -->
+
+<div
+    id="pillarModal"
+    class="fixed inset-0 z-[80] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300"
+>
+
+    <div
+        class="absolute inset-0 bg-black/60 backdrop-blur-md"
+        onclick="closePillarModal()"
+    ></div>
+
+
+    <div
+        class="modal-content relative w-[92%] md:w-[650px] max-h-[85vh] bg-surface rounded-3xl shadow-2xl overflow-hidden scale-95 translate-y-4 transition-all duration-300"
+    >
+
+        <div class="p-7 md:p-9 border-b border-surface-variant flex justify-between items-start">
+
+            <div>
+
+                <span class="text-primary text-xs uppercase tracking-widest font-bold">
+                    Innovation Pillar
+                </span>
+
+                <h2
+                    id="pillarModalTitle"
+                    class="font-heading text-2xl md:text-3xl font-bold mt-2"
+                >
+                    Innovation Pillar
+                </h2>
+
+            </div>
+
+            <button
+                onclick="closePillarModal()"
+                class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-variant"
+            >
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+
+        </div>
+
+
+        <div class="p-7 md:p-9 overflow-y-auto max-h-[65vh]">
+
+            <ul
+                id="pillarModalList"
+                class="space-y-4"
+            ></ul>
+
+        </div>
+
+    </div>
+
 </div>
-<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors focus:outline-none focus:ring-2 focus:ring-primary" onclick="closePillarModal()">
-<span class="material-symbols-outlined">close</span>
-</button>
+
+
+<!-- ============================================================
+     LIGHTBOX
+============================================================ -->
+
+<div
+    id="lightbox"
+    class="fixed inset-0 z-[100] bg-black/95 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center"
+>
+
+    <button
+        onclick="closeLightbox()"
+        class="absolute top-6 right-6 z-50 text-white p-3 hover:text-primary-fixed-dim"
+    >
+        <span class="material-symbols-outlined text-4xl">
+            close
+        </span>
+    </button>
+
+
+    <button
+        onclick="prevImage()"
+        class="absolute left-3 md:left-10 top-1/2 -translate-y-1/2 text-white/70 hover:text-white z-50 p-4"
+    >
+        <span class="material-symbols-outlined text-5xl">
+            chevron_left
+        </span>
+    </button>
+
+
+    <button
+        onclick="nextImage()"
+        class="absolute right-3 md:right-10 top-1/2 -translate-y-1/2 text-white/70 hover:text-white z-50 p-4"
+    >
+        <span class="material-symbols-outlined text-5xl">
+            chevron_right
+        </span>
+    </button>
+
+
+    <div class="relative max-w-6xl w-full h-[85vh] px-6 flex flex-col items-center justify-center">
+
+        <img
+            id="lightboxImg"
+            src=""
+            alt="Gallery Image"
+            class="max-w-full max-h-[75vh] object-contain rounded-xl shadow-2xl scale-95 transition-transform duration-300"
+        >
+
+        <div class="text-center text-white mt-6">
+
+            <h3
+                id="lightboxTitle"
+                class="font-heading text-2xl font-bold"
+            ></h3>
+
+            <p
+                id="lightboxCategory"
+                class="text-xs uppercase tracking-widest text-white/60 mt-2"
+            ></p>
+
+        </div>
+
+    </div>
+
 </div>
-<!-- Scrollable Content -->
-<div class="p-6 md:p-8 overflow-y-auto flex-1 bg-surface">
-<ul class="space-y-4 font-body-md text-on-surface-variant list-none pl-0" id="pillarModalList">
-</ul>
-</div>
-</div>
-</div>
-<!-- Lightbox Modal -->
-<div class="fixed inset-0 z-[100] bg-black/90 hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300" id="lightbox">
-<button class="absolute top-6 right-6 text-white hover:text-primary-fixed transition-colors z-50 p-2" onclick="closeLightbox()">
-<span class="material-symbols-outlined" style="font-size: 32px;">close</span>
-</button>
-<button class="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-50 p-4" onclick="prevImage()">
-<span class="material-symbols-outlined" style="font-size: 48px;">chevron_left</span>
-</button>
-<button class="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-50 p-4" onclick="nextImage()">
-<span class="material-symbols-outlined" style="font-size: 48px;">chevron_right</span>
-</button>
-<div class="relative w-full max-w-5xl px-4 md:px-0 flex flex-col items-center justify-center h-full max-h-[870px]">
-<img alt="Gallery Image" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl transition-transform duration-300 scale-95" id="lightbox-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiIGZpbGw9IiNlOGVhZWQiLz48cGF0aCBkPSJNMTcwIDEzMCBsMzAgNDAgbDIwLTE1IGw0MCA1NSBIMTQweiIgZmlsbD0iI2JkYzFjNiIvPjxjaXJjbGUgY3g9IjI1MCIgY3k9IjEyMCIgcj0iMTgiIGZpbGw9IiNiZGMxYzYiLz48L3N2Zz4=">
-<div class="mt-6 text-center text-white">
-<h3 class="font-headline-md text-headline-md" id="lightbox-title"></h3>
-<p class="font-label-caps text-label-caps text-white/70 uppercase mt-2" id="lightbox-category"></p>
-</div>
-</div>
-</div>
-<!-- Interactive pillar modal and gallery lightbox behavior -->
+
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+
 <script>
-    function openPillarModal(title, bullets) {
-        document.getElementById('pillarModalTitle').innerText = title;
-        
-        const list = document.getElementById('pillarModalList');
-        list.innerHTML = '';
-        bullets.forEach(bullet => {
-            const li = document.createElement('li');
-            li.className = 'flex items-start gap-3 bg-surface-container p-5 rounded-xl border border-surface-variant';
-            li.innerHTML = '<span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span> <span class="text-on-surface text-lg">' + bullet + '</span>';
-            list.appendChild(li);
-        });
-        
-        const modal = document.getElementById('pillarModal');
-        const modalContent = modal.querySelector('.modal-content');
-        
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        
-        // Trigger reflow
-        void modalContent.offsetWidth;
-        
-        modalContent.classList.remove('scale-95', 'translate-y-4');
-        modalContent.classList.add('scale-100', 'translate-y-0');
-        
-        document.body.style.overflow = 'hidden';
-    }
 
-    function closePillarModal() {
-        const modal = document.getElementById('pillarModal');
-        const modalContent = modal.querySelector('.modal-content');
-        
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        
-        modalContent.classList.remove('scale-100', 'translate-y-0');
-        modalContent.classList.add('scale-95', 'translate-y-4');
-        
-        document.body.style.overflow = '';
-    }
+    /* --------------------------------
+       SERVICE TAG STYLE
+    -------------------------------- */
 
-    // Close modal on Escape key press
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            closePillarModal();
-        }
+    document.querySelectorAll(".service-tag").forEach(tag => {
+
+        tag.className =
+            "px-3 py-1 bg-surface-container rounded-full text-xs font-medium text-on-surface-variant border border-surface-variant";
+
     });
 
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxTitle = document.getElementById('lightbox-title');
-    const lightboxCategory = document.getElementById('lightbox-category');
+
+    /* --------------------------------
+       PILLAR MODAL
+    -------------------------------- */
+
+    function openPillarModal(title, bullets) {
+
+        const modal = document.getElementById("pillarModal");
+        const content = modal.querySelector(".modal-content");
+        const titleElement = document.getElementById("pillarModalTitle");
+        const list = document.getElementById("pillarModalList");
+
+        titleElement.textContent = title;
+
+        list.innerHTML = "";
+
+        bullets.forEach(bullet => {
+
+            const li = document.createElement("li");
+
+            li.className =
+                "flex items-start gap-3 bg-surface-container p-5 rounded-xl border border-surface-variant";
+
+            li.innerHTML = `
+                <span class="material-symbols-outlined text-primary text-xl mt-0.5">
+                    check_circle
+                </span>
+
+                <span class="text-on-surface leading-relaxed">
+                    ${bullet}
+                </span>
+            `;
+
+            list.appendChild(li);
+
+        });
+
+
+        modal.classList.remove(
+            "opacity-0",
+            "pointer-events-none"
+        );
+
+        void content.offsetWidth;
+
+        content.classList.remove(
+            "scale-95",
+            "translate-y-4"
+        );
+
+        content.classList.add(
+            "scale-100",
+            "translate-y-0"
+        );
+
+        document.body.style.overflow = "hidden";
+
+    }
+
+
+    function closePillarModal() {
+
+        const modal = document.getElementById("pillarModal");
+        const content = modal.querySelector(".modal-content");
+
+        modal.classList.add(
+            "opacity-0",
+            "pointer-events-none"
+        );
+
+        content.classList.remove(
+            "scale-100",
+            "translate-y-0"
+        );
+
+        content.classList.add(
+            "scale-95",
+            "translate-y-4"
+        );
+
+        document.body.style.overflow = "";
+
+    }
+
+
+    /* --------------------------------
+       GALLERY
+    -------------------------------- */
+
     let currentImages = [];
     let currentIndex = 0;
 
     function initGallery() {
-        const wrappers = document.querySelectorAll('.gallery-image-wrapper');
-        currentImages = Array.from(wrappers).map((wrapper, index) => {
-            const img = wrapper.querySelector('img');
-            const section = wrapper.closest('section');
-            const title = section.querySelector('h3').innerText;
-            const category = section.querySelector('p').innerText;
-            
-            // Assign index for navigation
-            wrapper.dataset.index = index;
-            
+
+        const wrappers =
+            document.querySelectorAll(".gallery-image-wrapper");
+
+        currentImages = Array.from(wrappers).map(wrapper => {
+
+            const img =
+                wrapper.querySelector("img");
+
+            const section =
+                wrapper.closest("section");
+
+            let title = "IDEA Lab Gallery";
+            let category = "Innovation";
+
+            if (section) {
+
+                const heading =
+                    section.querySelector("h3");
+
+                const categoryElement =
+                    section.querySelector("p");
+
+                if (heading) {
+                    title = heading.textContent.trim();
+                }
+
+                if (categoryElement) {
+                    category = categoryElement.textContent.trim();
+                }
+
+            }
+
             return {
                 src: img.src,
-                title: title,
-                category: category
+                title,
+                category
             };
+
         });
+
     }
+
 
     function openLightbox(element) {
-        if(currentImages.length === 0) initGallery();
-        
-        currentIndex = parseInt(element.dataset.index);
-        updateLightboxContent();
-        
-        lightbox.classList.remove('hidden');
-        document.body.classList.add('lightbox-open');
-        
-        // Trigger animation
+
+        if (!currentImages.length) {
+            initGallery();
+        }
+
+        currentIndex =
+            Array.from(
+                document.querySelectorAll(".gallery-image-wrapper")
+            ).indexOf(element);
+
+        updateLightbox();
+
+        const lightbox =
+            document.getElementById("lightbox");
+
+        const image =
+            document.getElementById("lightboxImg");
+
+        lightbox.classList.remove("hidden");
+
+        document.body.classList.add("lightbox-open");
+
         requestAnimationFrame(() => {
-            lightbox.classList.remove('opacity-0');
-            lightboxImg.classList.remove('scale-95');
-            lightboxImg.classList.add('scale-100');
+
+            lightbox.classList.remove("opacity-0");
+
+            image.classList.remove("scale-95");
+
+            image.classList.add("scale-100");
+
         });
+
     }
+
+
+    function updateLightbox() {
+
+        const data =
+            currentImages[currentIndex];
+
+        document.getElementById("lightboxImg").src =
+            data.src;
+
+        document.getElementById("lightboxTitle").textContent =
+            data.title;
+
+        document.getElementById("lightboxCategory").textContent =
+            data.category;
+
+    }
+
 
     function closeLightbox() {
-        lightbox.classList.add('opacity-0');
-        lightboxImg.classList.remove('scale-100');
-        lightboxImg.classList.add('scale-95');
-        
+
+        const lightbox =
+            document.getElementById("lightbox");
+
+        const image =
+            document.getElementById("lightboxImg");
+
+        lightbox.classList.add("opacity-0");
+
+        image.classList.remove("scale-100");
+
+        image.classList.add("scale-95");
+
         setTimeout(() => {
-            lightbox.classList.add('hidden');
-            document.body.classList.remove('lightbox-open');
+
+            lightbox.classList.add("hidden");
+
+            document.body.classList.remove("lightbox-open");
+
         }, 300);
+
     }
 
-    function updateLightboxContent() {
-        const data = currentImages[currentIndex];
-        lightboxImg.src = data.src;
-        lightboxTitle.innerText = data.title;
-        lightboxCategory.innerText = data.category;
-    }
 
     function nextImage() {
-        currentIndex = (currentIndex + 1) % currentImages.length;
-        updateLightboxContent();
+
+        if (!currentImages.length) {
+            initGallery();
+        }
+
+        currentIndex =
+            (currentIndex + 1) %
+            currentImages.length;
+
+        updateLightbox();
+
     }
+
 
     function prevImage() {
-        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-        updateLightboxContent();
+
+        if (!currentImages.length) {
+            initGallery();
+        }
+
+        currentIndex =
+            (currentIndex - 1 + currentImages.length) %
+            currentImages.length;
+
+        updateLightbox();
+
     }
 
-    // Close on escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
-            closeLightbox();
+
+    /* --------------------------------
+       KEYBOARD CONTROLS
+    -------------------------------- */
+
+    document.addEventListener("keydown", event => {
+
+        if (event.key === "Escape") {
+
+            closePillarModal();
+
+            const lightbox =
+                document.getElementById("lightbox");
+
+            if (!lightbox.classList.contains("hidden")) {
+                closeLightbox();
+            }
+
         }
-        if (e.key === 'ArrowRight' && !lightbox.classList.contains('hidden')) {
+
+        if (
+            event.key === "ArrowRight" &&
+            !document
+                .getElementById("lightbox")
+                .classList.contains("hidden")
+        ) {
+
             nextImage();
+
         }
-        if (e.key === 'ArrowLeft' && !lightbox.classList.contains('hidden')) {
+
+        if (
+            event.key === "ArrowLeft" &&
+            !document
+                .getElementById("lightbox")
+                .classList.contains("hidden")
+        ) {
+
             prevImage();
+
         }
+
     });
 
-    // Close on background click
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox || e.target.closest('.relative') === null && !e.target.closest('button')) {
-            closeLightbox();
-        }
-    });
-    
-    // Initialize on load to setup indexing
-    document.addEventListener('DOMContentLoaded', initGallery);
-</script>
-<!-- Theme toggle: remembers the selected mode in local storage -->
-<script>
-    const themeToggle = document.querySelector('nav.docked [aria-label="Toggle Theme"]');
-    const savedTheme = localStorage.getItem('idea-lab-theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    /* --------------------------------
+       LIGHTBOX BACKGROUND CLICK
+    -------------------------------- */
+
+    document
+        .getElementById("lightbox")
+        .addEventListener("click", event => {
+
+            if (event.target.id === "lightbox") {
+                closeLightbox();
+            }
+
+        });
+
+
+    /* --------------------------------
+       THEME TOGGLE
+    -------------------------------- */
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+    const savedTheme =
+        localStorage.getItem("idea-lab-theme");
+
+    const prefersDark =
+        window.matchMedia(
+            "(prefers-color-scheme: dark)"
+        ).matches;
+
 
     function updateTheme(isDark) {
-        document.documentElement.classList.toggle('dark', isDark);
-        themeToggle.querySelector('.material-symbols-outlined').textContent = isDark ? 'light_mode' : 'dark_mode';
-        themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+
+        document.documentElement.classList.toggle(
+            "dark",
+            isDark
+        );
+
+        if (!themeToggle) return;
+
+        themeToggle
+            .querySelector(".material-symbols-outlined")
+            .textContent =
+                isDark
+                    ? "light_mode"
+                    : "dark_mode";
+
+        themeToggle.setAttribute(
+            "aria-label",
+            isDark
+                ? "Switch to light theme"
+                : "Switch to dark theme"
+        );
+
     }
+
+
+    updateTheme(
+        savedTheme
+            ? savedTheme === "dark"
+            : prefersDark
+    );
+
 
     if (themeToggle) {
-        updateTheme(savedTheme ? savedTheme === 'dark' : prefersDark);
-        themeToggle.addEventListener('click', () => {
-            const isDark = !document.documentElement.classList.contains('dark');
+
+        themeToggle.addEventListener("click", () => {
+
+            const isDark =
+                !document.documentElement.classList.contains("dark");
+
             updateTheme(isDark);
-            localStorage.setItem('idea-lab-theme', isDark ? 'dark' : 'light');
+
+            localStorage.setItem(
+                "idea-lab-theme",
+                isDark ? "dark" : "light"
+            );
+
         });
+
     }
-</script>
 
 
-<!-- Navigation links: map menu labels to the page's section anchors -->
-<script>
-    const destinations = {
-        Home: '#',
-        'About US': '#about-pillars',
-        'OUR Vision': '#vision',
-        SERVICES: '#services',
-        Gallery: '#gallery-section',
-        Contact: '#contact'
-    };
+    /* --------------------------------
+       MOBILE MENU
+    -------------------------------- */
 
-    document.querySelectorAll('nav.docked a').forEach((link) => {
-        const destination = destinations[link.textContent.trim()];
-        if (destination) link.href = destination;
+    const mobileMenuButton =
+        document.getElementById("mobileMenuButton");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+
+    mobileMenuButton.addEventListener("click", () => {
+
+        const isOpen =
+            mobileMenu.classList.toggle("is-open");
+
+        mobileMenuButton.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+
+        mobileMenuButton.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+        );
+
+        mobileMenuButton
+            .querySelector(".material-symbols-outlined")
+            .textContent =
+                isOpen
+                    ? "close"
+                    : "menu";
+
     });
 
-    const secondaryNav = document.querySelector('nav.docked');
-    const navLinks = Array.from(secondaryNav.querySelectorAll('a')).filter((link) => destinations[link.textContent.trim()]);
-    const mobileMenuButton = document.createElement('button');
-    mobileMenuButton.type = 'button';
-    mobileMenuButton.className = 'md:hidden w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary';
-    mobileMenuButton.setAttribute('aria-label', 'Open navigation menu');
-    mobileMenuButton.setAttribute('aria-expanded', 'false');
-    mobileMenuButton.innerHTML = '<span class="material-symbols-outlined">menu</span>';
 
-    const mobileMenu = document.createElement('div');
-    mobileMenu.className = 'mobile-menu-panel md:hidden border-t border-surface-variant bg-surface-container-lowest px-margin-mobile py-3 gap-1';
-    navLinks.forEach((link) => {
-        const mobileLink = link.cloneNode(true);
-        mobileLink.className = 'font-label-caps text-[11px] uppercase text-on-surface-variant py-3 border-b border-surface-variant';
-        mobileLink.addEventListener('click', () => {
-            mobileMenu.classList.remove('is-open');
-            mobileMenuButton.setAttribute('aria-expanded', 'false');
-            mobileMenuButton.setAttribute('aria-label', 'Open navigation menu');
-            mobileMenuButton.querySelector('span').textContent = 'menu';
+    document
+        .querySelectorAll("#mobileMenu a")
+        .forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                mobileMenu.classList.remove("is-open");
+
+                mobileMenuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                mobileMenuButton
+                    .querySelector(".material-symbols-outlined")
+                    .textContent = "menu";
+
+            });
+
         });
-        mobileMenu.appendChild(mobileLink);
-    });
 
-    secondaryNav.firstElementChild.append(mobileMenuButton);
-    secondaryNav.appendChild(mobileMenu);
-    mobileMenuButton.addEventListener('click', () => {
-        const isOpen = mobileMenu.classList.toggle('is-open');
-        mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
-        mobileMenuButton.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
-        mobileMenuButton.querySelector('span').textContent = isOpen ? 'close' : 'menu';
-    });
+
+    /* --------------------------------
+       ACTIVE NAVIGATION
+    -------------------------------- */
+
+    const sections =
+        document.querySelectorAll(
+            "header[id], section[id], footer[id]"
+        );
+
+    const navLinks =
+        document.querySelectorAll(".nav-link");
+
+
+    const observer =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    navLinks.forEach(link => {
+
+                        link.classList.remove(
+                            "text-primary",
+                            "border-b-2",
+                            "border-primary",
+                            "pb-1"
+                        );
+
+                        link.classList.add(
+                            "text-on-surface-variant"
+                        );
+
+                    });
+
+
+                    const active =
+                        document.querySelector(
+                            `.nav-link[href="#${entry.target.id}"]`
+                        );
+
+                    if (active) {
+
+                        active.classList.remove(
+                            "text-on-surface-variant"
+                        );
+
+                        active.classList.add(
+                            "text-primary",
+                            "border-b-2",
+                            "border-primary",
+                            "pb-1"
+                        );
+
+                    }
+
+                });
+
+            },
+            {
+                rootMargin: "-25% 0px -65% 0px"
+            }
+        );
+
+
+    sections.forEach(section =>
+        observer.observe(section)
+    );
+
+
+    /* --------------------------------
+       INITIALIZE
+    -------------------------------- */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        () => {
+
+            initGallery();
+
+        }
+    );
+
 </script>
-</body></html>
+
+
+<script id="android-theme-toggle-script">
+(function(){
+ const root=document.documentElement, btn=document.getElementById('androidThemeToggle'), icon=document.getElementById('androidThemeIcon');
+ if(!btn||!icon)return;
+ const key='akgec-idea-lab-theme';
+ function apply(theme){const light=theme==='light';root.classList.toggle('android-light',light);icon.textContent=light?'dark_mode':'light_mode';btn.setAttribute('aria-label',light?'Switch to dark theme':'Switch to light theme');}
+ let saved=null;try{saved=localStorage.getItem(key)}catch(e){}
+ apply(saved==='light'?'light':'dark');
+ btn.addEventListener('click',function(){const next=root.classList.contains('android-light')?'dark':'light';apply(next);try{localStorage.setItem(key,next)}catch(e){}});
+})();
+</script>
+</body>
+</html>
