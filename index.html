@@ -400,318 +400,282 @@ html.android-light .android-theme-label{color:#1b1c1b}
 html.android-light #androidThemeToggle{background:#fff;color:#5b0417;border-color:rgba(91,4,23,.15)}
 @media (max-width:767px),(pointer:coarse){#androidThemeToggle{display:flex}}
 </style>
-<style id="compact-spacing-overrides">
+
+<style id="footer-half-height">
 /* ============================================================
-   COMPACT SPACING OVERRIDE
-   Reduces excessive vertical whitespace across all sections,
-   with extra-tight spacing on Android/mobile screens.
+   FOOTER — REDUCED TO APPROX. HALF OF THE ORIGINAL HEIGHT
+   Original footer used 120px top + 120px bottom section padding.
+   This intentionally overrides that utility only inside footer.
 ============================================================ */
 
-/* Global section rhythm */
-.py-section-padding {
-    padding-top: 64px !important;
-    padding-bottom: 64px !important;
-}
-
-/* HERO: remove the large empty area created by the image column */
-.hero-grid {
+footer#contact .footer-compact-container {
     padding-top: 32px !important;
-    padding-bottom: 32px !important;
+    padding-bottom: 28px !important;
 }
 
-.hero-grid > div {
-    gap: 32px !important;
+footer#contact .footer-compact-grid {
+    row-gap: 20px !important;
+    column-gap: 20px !important;
 }
 
-.hero-grid .space-y-7 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 20px !important;
-}
-
-.hero-grid .flex.items-center.justify-center.min-h-\[300px\].lg\:min-h-\[420px\] {
-    min-height: 300px !important;
-}
-
-/* About section */
-#about {
-    padding-top: 56px !important;
-    padding-bottom: 64px !important;
-}
-
-#about .max-w-4xl {
-    margin-bottom: 36px !important;
-}
-
-#about .pillar-card {
-    padding: 24px !important;
-}
-
-#about .pillar-card .mb-6 {
-    margin-bottom: 16px !important;
-}
-
-#about .pillar-card .mt-6 {
-    margin-top: 16px !important;
-}
-
-/* Vision */
-#vision .grid {
-    gap: 40px !important;
-}
-
-#vision .space-y-6 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 20px !important;
-}
-
-#vision .relative.flex.gap-6.mb-12 {
-    margin-bottom: 32px !important;
-}
-
-#vision .mt-20 {
-    margin-top: 48px !important;
-}
-
-#vision .pt-10 {
-    padding-top: 28px !important;
-}
-
-/* Services */
-#services .mb-14 {
-    margin-bottom: 32px !important;
-}
-
-#services .service-row {
-    padding-top: 24px !important;
-    padding-bottom: 24px !important;
-}
-
-#services .service-row .flex {
-    gap: 20px !important;
-}
-
-/* Events */
-#events .max-w-3xl {
-    margin-bottom: 36px !important;
-}
-
-#events article {
-    padding: 24px !important;
-}
-
-#events article h3 {
-    margin-top: 16px !important;
-    margin-bottom: 10px !important;
-}
-
-#events article p {
-    margin-bottom: 16px !important;
-}
-
-/* Gallery */
-#gallery .max-w-3xl {
-    margin-bottom: 36px !important;
-}
-
-#gallery > div > section {
-    margin-bottom: 48px !important;
-}
-
-#gallery > div > section > div:first-child {
-    padding-bottom: 16px !important;
-    margin-bottom: 24px !important;
-}
-
-#gallery .grid {
-    gap: 16px !important;
-}
-
-/* Contact/footer sections: keep the same compact rhythm */
-#contact {
-    padding-top: 64px !important;
-    padding-bottom: 64px !important;
-}
-
-/* Remove accidental large vertical spacing from common Tailwind utilities */
-main section.py-section-padding {
+footer#contact p {
     margin-top: 0 !important;
-    margin-bottom: 0 !important;
 }
 
-/* ============================================================
-   MOBILE / ANDROID
-============================================================ */
+footer#contact .leading-relaxed {
+    line-height: 1.45 !important;
+}
+
+footer#contact .footer-compact-container > .border-t {
+    margin-top: 24px !important;
+    padding-top: 14px !important;
+}
+
+/* Mobile / Android */
 @media (max-width: 767px) {
-
-    .py-section-padding {
-        padding-top: 42px !important;
-        padding-bottom: 42px !important;
-    }
-
-    /* Keep navigation compact */
-    .docked {
-        min-height: 60px !important;
-    }
-
-    .docked-logo {
-        height: 60px !important;
-        max-width: 150px !important;
-    }
-
-    /* Upcoming event banner */
-    #home {
-        padding-top: 12px !important;
-        padding-bottom: 12px !important;
-    }
-
-    #home .max-w-container-max {
-        gap: 10px !important;
-    }
-
-    /* Hero */
-    .hero-grid {
+    footer#contact .footer-compact-container {
         padding-top: 24px !important;
-        padding-bottom: 28px !important;
-    }
-
-    .hero-grid > div {
-        gap: 24px !important;
-    }
-
-    .hero-grid .space-y-7 > :not([hidden]) ~ :not([hidden]) {
-        margin-top: 16px !important;
-    }
-
-    .hero-grid .flex.items-center.justify-center.min-h-\[300px\].lg\:min-h-\[420px\] {
-        min-height: 220px !important;
-    }
-
-    .hero-grid .hero-logo {
-        max-width: 260px !important;
-    }
-
-    .hero-grid .flex.flex-wrap.gap-4.pt-2 {
-        gap: 10px !important;
-        padding-top: 0 !important;
-    }
-
-    .hero-grid .grid.grid-cols-3 {
-        gap: 12px !important;
-        padding-top: 16px !important;
-    }
-
-    /* About */
-    #about {
-        padding-top: 42px !important;
-        padding-bottom: 46px !important;
-    }
-
-    #about .max-w-4xl {
-        margin-bottom: 28px !important;
-    }
-
-    #about .pillar-card {
-        padding: 20px !important;
-    }
-
-    /* Vision */
-    #vision .grid {
-        gap: 30px !important;
-    }
-
-    #vision .relative.flex.gap-6.mb-12 {
-        margin-bottom: 24px !important;
-    }
-
-    #vision .relative.flex.gap-6 {
-        gap: 16px !important;
-    }
-
-    #vision .mt-20 {
-        margin-top: 36px !important;
-    }
-
-    #vision .pt-10 {
-        padding-top: 22px !important;
-    }
-
-    /* Services */
-    #services .mb-14 {
-        margin-bottom: 24px !important;
-    }
-
-    #services .service-row {
-        padding-top: 20px !important;
         padding-bottom: 20px !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
     }
 
-    #services .service-row .flex {
-        gap: 14px !important;
+    footer#contact .footer-compact-grid {
+        row-gap: 16px !important;
     }
 
-    /* Events */
-    #events .max-w-3xl {
-        margin-bottom: 28px !important;
+    footer#contact img {
+        height: 42px !important;
+        margin-bottom: 8px !important;
     }
 
-    #events article {
-        padding: 20px !important;
+    footer#contact h3 {
+        font-size: 1.15rem !important;
+        line-height: 1.35 !important;
+        margin-bottom: 6px !important;
     }
 
-    /* Gallery */
-    #gallery .max-w-3xl {
-        margin-bottom: 28px !important;
+    footer#contact h4 {
+        margin-bottom: 7px !important;
     }
 
-    #gallery > div > section {
-        margin-bottom: 38px !important;
+    footer#contact ul {
+        gap: 4px !important;
     }
 
-    #gallery > div > section > div:first-child {
-        margin-bottom: 18px !important;
+    footer#contact .footer-compact-container > .border-t {
+        margin-top: 18px !important;
+        padding-top: 10px !important;
     }
 
-    /* Prevent large fixed gallery heights on small screens */
-    #gallery .md\:h-\[600px\],
-    #gallery .md\:h-\[420px\] {
-        height: auto !important;
-    }
-
-    /* Smaller image blocks on Android */
-    #gallery .gallery-image-wrapper.h-72 {
-        height: 220px !important;
-    }
-
-    /* Contact */
-    #contact {
-        padding-top: 44px !important;
-        padding-bottom: 44px !important;
-    }
-}
-
-/* Extra-small phones */
-@media (max-width: 390px) {
-    .hero-grid .hero-logo {
-        max-width: 225px !important;
-    }
-
-    .hero-grid {
-        padding-top: 20px !important;
-        padding-bottom: 22px !important;
-    }
-
-    .py-section-padding {
-        padding-top: 36px !important;
-        padding-bottom: 36px !important;
-    }
-
-    #about,
-    #contact {
-        padding-top: 36px !important;
-        padding-bottom: 40px !important;
+    footer#contact .group.w-9.h-9 {
+        width: 34px !important;
+        height: 34px !important;
     }
 }
 </style>
+
+
+<style id="footer-final-fix">
+/* ===== FINAL FOOTER DESIGN FIX ===== */
+#contact .footer-compact-container {
+    padding-top: 32px !important;
+    padding-bottom: 26px !important;
+}
+
+#contact .footer-compact-grid {
+    align-items: start !important;
+}
+
+/* Quick Links + Innovation Hub + Follow IDEA Lab:
+   shift them slightly downward and give consistent top margin */
+#contact .footer-compact-grid > div:nth-child(2),
+#contact .footer-compact-grid > div:nth-child(3),
+#contact .footer-compact-grid > div:nth-child(4) {
+    padding-top: 18px !important;
+}
+
+/* Make the columns breathe without making footer tall */
+#contact .footer-compact-grid > div:nth-child(2),
+#contact .footer-compact-grid > div:nth-child(3) {
+    padding-left: 8px !important;
+}
+
+#contact .footer-compact-grid > div:nth-child(4) {
+    padding-left: 12px !important;
+}
+
+/* Better heading-to-content spacing */
+#contact .footer-compact-grid h4 {
+    margin-bottom: 10px !important;
+    line-height: 1.3 !important;
+}
+
+#contact .footer-compact-grid ul {
+    margin-top: 0 !important;
+}
+
+/* Social block */
+#contact .footer-compact-grid > div:nth-child(4) p {
+    margin-bottom: 12px !important;
+    line-height: 1.45 !important;
+}
+
+#contact .footer-compact-grid > div:nth-child(4) .flex {
+    gap: 8px !important;
+}
+
+/* Bottom copyright */
+#contact .footer-compact-container > .border-t {
+    margin-top: 24px !important;
+    padding-top: 13px !important;
+}
+
+/* Mobile / Android: stack naturally, but retain a subtle offset */
+@media (max-width: 767px) {
+    #contact .footer-compact-container {
+        padding-top: 26px !important;
+        padding-bottom: 20px !important;
+    }
+
+    #contact .footer-compact-grid {
+        row-gap: 10px !important;
+    }
+
+    #contact .footer-compact-grid > div:nth-child(2),
+    #contact .footer-compact-grid > div:nth-child(3),
+    #contact .footer-compact-grid > div:nth-child(4) {
+        padding-top: 8px !important;
+        padding-left: 0 !important;
+    }
+
+    #contact .footer-compact-grid h4 {
+        margin-bottom: 8px !important;
+    }
+
+    #contact .footer-compact-container > .border-t {
+        margin-top: 18px !important;
+        padding-top: 10px !important;
+    }
+}
+</style>
+
+
+<style id="footer-polished-final">
+/* ============================================================
+   FOOTER POLISH
+   - Main tagline only; secondary paragraph removed.
+   - Right columns start on the same visual line as tagline.
+   - Softer typography + controlled spacing.
+============================================================ */
+
+#contact .footer-compact-container {
+    padding-top: 34px !important;
+    padding-bottom: 24px !important;
+}
+
+#contact .footer-compact-grid {
+    align-items: start !important;
+    column-gap: 42px !important;
+    row-gap: 20px !important;
+}
+
+/* Brand / tagline */
+#contact .footer-compact-grid > div:first-child {
+    padding-top: 0 !important;
+}
+
+#contact .footer-tagline {
+    max-width: 360px !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.02em !important;
+}
+
+/* Quick Links, Innovation Hub, Follow IDEA Lab:
+   same starting height as the tagline */
+#contact .footer-compact-grid > div:nth-child(2),
+#contact .footer-compact-grid > div:nth-child(3),
+#contact .footer-compact-grid > div:nth-child(4) {
+    padding-top: 3px !important;
+    padding-left: 0 !important;
+}
+
+/* Clean column headings */
+#contact .footer-compact-grid h4 {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.13em !important;
+    margin-bottom: 12px !important;
+}
+
+/* Link rhythm */
+#contact .footer-compact-grid ul {
+    gap: 7px !important;
+}
+
+#contact .footer-compact-grid ul a {
+    font-size: 16px !important;
+    line-height: 1.35 !important;
+}
+
+/* Follow section */
+#contact .footer-compact-grid > div:nth-child(4) p {
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+    max-width: 310px !important;
+    margin-bottom: 12px !important;
+}
+
+#contact .footer-compact-grid > div:nth-child(4) .flex {
+    gap: 8px !important;
+}
+
+/* Copyright divider */
+#contact .footer-compact-container > .border-t {
+    margin-top: 24px !important;
+    padding-top: 12px !important;
+}
+
+/* Android / Mobile */
+@media (max-width: 767px) {
+    #contact .footer-compact-container {
+        padding-top: 26px !important;
+        padding-bottom: 20px !important;
+    }
+
+    #contact .footer-compact-grid {
+        column-gap: 0 !important;
+        row-gap: 16px !important;
+    }
+
+    #contact .footer-tagline {
+        max-width: 100% !important;
+        font-size: 20px !important;
+    }
+
+    #contact .footer-compact-grid > div:nth-child(2),
+    #contact .footer-compact-grid > div:nth-child(3),
+    #contact .footer-compact-grid > div:nth-child(4) {
+        padding-top: 2px !important;
+    }
+
+    #contact .footer-compact-grid h4 {
+        margin-bottom: 8px !important;
+    }
+
+    #contact .footer-compact-grid ul {
+        gap: 5px !important;
+    }
+
+    #contact .footer-compact-grid ul a {
+        font-size: 15px !important;
+    }
+
+    #contact .footer-compact-container > .border-t {
+        margin-top: 18px !important;
+        padding-top: 10px !important;
+    }
+}
+</style>
+
 </head>
 
 <body class="overflow-x-hidden">
@@ -2414,9 +2378,9 @@ main section.py-section-padding {
     class="bg-tertiary text-white border-t border-white/10"
 >
 
-    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-padding">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop footer-compact-container">
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-5 footer-compact-grid">
 
             <!-- BRAND -->
 
@@ -2425,19 +2389,15 @@ main section.py-section-padding {
                 <img
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Scnw8_Od-8GHVWRbb_4M4g8iS6MJbw3e92DaCZgVOEWdDwduugNbKt2EHd1mkwPx1szCbxpx2HZyWeJFFhZgGWbCgKZX_06sj4qj4pc3V2_oYw4MaqupWGgT-Wwz3ulNK65U_4lxksGq2kUxxL-o4XadfVfsQdV3bkCrKhky1DXeI_09Gb-9pppywcdZmSbCCrVXWUZ_OZobwrqZ6yI7ZX6OUPpPZ8JRvZALemJ39n8729bEFrlqpr1DyZY5br_0vDI"
                     alt="AKGEC IDEA Lab"
-                    class="h-16 w-auto object-contain mb-7"
+                    class="h-12 w-auto object-contain mb-3"
                 >
 
-                <h3 class="font-heading text-2xl font-bold mb-4">
-                    Transforming Ideas into Innovation,
+                <h3 class="footer-tagline font-heading text-xl md:text-[22px] font-semibold leading-[1.25] tracking-tight mb-0">
+                    Transforming Ideas into Innovation,<br>
                     Inspiring Minds, Shaping the Future.
                 </h3>
 
-                <p class="text-white/60 leading-relaxed">
-                    A 24/7 creative ecosystem where engineering,
-                    innovation, intellectual property, incubation,
-                    and entrepreneurship come together.
-                </p>
+                
 
             </div>
 
@@ -2446,11 +2406,11 @@ main section.py-section-padding {
 
             <div>
 
-                <h4 class="text-xs uppercase tracking-widest font-bold mb-6">
+                <h4 class="text-xs uppercase tracking-widest font-bold mb-3">
                     Quick Links
                 </h4>
 
-                <ul class="space-y-4 text-white/65">
+                <ul class="space-y-2 text-white/65">
 
                     <li>
                         <a href="#about" class="hover:text-secondary-fixed-dim transition">
@@ -2491,11 +2451,11 @@ main section.py-section-padding {
 
             <div>
 
-                <h4 class="text-xs uppercase tracking-widest font-bold mb-6">
+                <h4 class="text-xs uppercase tracking-widest font-bold mb-3">
                     Innovation Hub
                 </h4>
 
-                <ul class="space-y-4 text-white/65">
+                <ul class="space-y-2 text-white/65">
 
                     <li>
                         <a href="#about" class="hover:text-secondary-fixed-dim transition">
@@ -2531,11 +2491,11 @@ main section.py-section-padding {
            <!-- CONNECT / SOCIAL MEDIA -->
 
 <div>
-    <h4 class="text-xs uppercase tracking-widest font-bold mb-6">
+    <h4 class="text-xs uppercase tracking-widest font-bold mb-3">
         Follow IDEA Lab
     </h4>
 
-    <p class="text-white/50 text-sm leading-relaxed mb-6">
+    <p class="text-white/50 text-sm leading-relaxed mb-3">
         Stay connected with IDEA Lab and follow our latest
         innovations, events, and updates.
     </p>
@@ -2548,7 +2508,7 @@ main section.py-section-padding {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Follow IDEA Lab on LinkedIn"
-            class="group w-11 h-11 rounded-full border border-white/15 bg-white/5 flex items-center justify-center hover:bg-white/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300"
+            class="group w-9 h-9 rounded-full border border-white/15 bg-white/5 flex items-center justify-center hover:bg-white/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300"
         >
             <svg
                 class="w-5 h-5 fill-current text-white/70 group-hover:text-white transition-colors duration-300"
@@ -2564,7 +2524,7 @@ main section.py-section-padding {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Follow IDEA Lab on Instagram"
-            class="group w-11 h-11 rounded-full border border-white/15 bg-white/5 flex items-center justify-center hover:bg-white/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300"
+            class="group w-9 h-9 rounded-full border border-white/15 bg-white/5 flex items-center justify-center hover:bg-white/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300"
         >
             <svg
                 class="w-5 h-5 fill-none stroke-current text-white/70 group-hover:text-white transition-colors duration-300"
@@ -2583,7 +2543,7 @@ main section.py-section-padding {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Follow IDEA Lab on Facebook"
-            class="group w-11 h-11 rounded-full border border-white/15 bg-white/5 flex items-center justify-center hover:bg-white/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300"
+            class="group w-9 h-9 rounded-full border border-white/15 bg-white/5 flex items-center justify-center hover:bg-white/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300"
         >
             <svg
                 class="w-5 h-5 fill-current text-white/70 group-hover:text-white transition-colors duration-300"
@@ -2599,7 +2559,7 @@ main section.py-section-padding {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Follow IDEA Lab on YouTube"
-            class="group w-11 h-11 rounded-full border border-white/15 bg-white/5 flex items-center justify-center hover:bg-white/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300"
+            class="group w-9 h-9 rounded-full border border-white/15 bg-white/5 flex items-center justify-center hover:bg-white/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300"
         >
             <svg
                 class="w-5 h-5 fill-current text-white/70 group-hover:text-white transition-colors duration-300"
@@ -2611,7 +2571,7 @@ main section.py-section-padding {
 
     </div>
 
-    <p class="text-white/30 text-[11px] mt-5 uppercase tracking-wider">
+    <p class="text-white/30 text-[11px] mt-2 uppercase tracking-wider">
         Follow • Connect • Innovate
     </p>
 </div>
@@ -2620,7 +2580,7 @@ main section.py-section-padding {
         </div>
 
 
-        <div class="border-t border-white/10 mt-16 pt-7 flex flex-col md:flex-row justify-between gap-4 text-sm text-white/40">
+        <div class="border-t border-white/10 mt-7 pt-4 flex flex-col md:flex-row justify-between gap-2 text-sm text-white/40">
 
             <p>
                 © 2026 AKGEC IDEA Lab. All rights reserved.
