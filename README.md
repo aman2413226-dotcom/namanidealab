@@ -1,4 +1,4 @@
-# AKGEC IDEA Lab — Startup Conclave'26
+# IdeaLabOfficial — AKGEC IDEA Lab Startup Conclave'26
 
 > Official landing page for the **AKGEC IDEA Lab Startup Conclave'26** initiative.
 
