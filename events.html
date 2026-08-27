@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | AKGEC IDEA Lab</title>
+    <meta name="description" content="Explore innovation, entrepreneurship, incubation, and intellectual property events at AKGEC IDEA Lab.">
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Sora:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#5b0417",
+                        "primary-container": "#7a1e2b",
+                        "secondary-container": "#feb64e",
+                        "secondary-fixed-dim": "#ffb956",
+                        background: "#fbf9f7",
+                        surface: "#fbf9f7",
+                        "surface-container": "#efedeb",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e4e2e0",
+                        "on-surface-variant": "#564242"
+                    },
+                    spacing: {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "section-padding": "120px",
+                        "container-max": "1280px"
+                    },
+                    fontFamily: {
+                        body: ["DM Sans"],
+                        heading: ["Sora"]
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: "DM Sans", sans-serif;
+            background: #fbf9f7;
+            color: #1b1c1b;
+        }
+        h1, h2, h3 { font-family: "Sora", sans-serif; }
+        .docked { min-height: 80px; }
+        .docked-logo { height: 80px; width: auto; object-fit: contain; }
+        .mobile-menu-panel { display: none; }
+        .mobile-menu-panel.is-open { display: grid; }
+
+        html.dark body {
+            background: #111827;
+            color: #f3f4f6;
+        }
+
+        html.dark .idea-nav,
+        html.dark .mobile-menu-panel {
+            background: #1f2937;
+            border-color: #374151;
+        }
+
+        html.dark .idea-nav a,
+        html.dark .mobile-menu-panel a {
+            color: #f3f4f6;
+        }
+
+        html.dark .global-nav {
+            background: #1f2937;
+            border-color: #374151;
+        }
+
+        html.dark .global-nav a {
+            color: #f3f4f6;
+        }
+
+        html.dark .light-surface {
+            background: #1f2937;
+            border-color: #374151;
+        }
+
+        html.dark button[id^="themeToggle"] {
+            background: #374151;
+            color: #ffb3b6;
+            border-color: #4b5563;
+        }
+
+        html.dark .events-surface {
+            background: #1f2937;
+            color: #f3f4f6;
+        }
+
+        html.dark .events-surface article {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        #contact .footer-compact-container {
+            padding-top: 34px;
+            padding-bottom: 24px;
+        }
+
+        #contact .footer-compact-grid {
+            align-items: start;
+            column-gap: 42px;
+            row-gap: 20px;
+        }
+
+        #contact .footer-tagline {
+            max-width: 360px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        #contact .footer-compact-grid > div:not(:first-child) {
+            padding-top: 3px;
+        }
+
+        #contact .footer-compact-grid h3 {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.13em;
+            margin-bottom: 12px;
+        }
+
+        #contact .footer-compact-grid ul {
+            display: grid;
+            gap: 7px;
+            margin: 0;
+        }
+
+        #contact .footer-compact-grid ul a {
+            font-size: 16px;
+            line-height: 1.35;
+        }
+
+        #contact .footer-compact-container > .border-t {
+            margin-top: 24px;
+            padding-top: 12px;
+        }
+
+        @media (max-width: 767px) {
+            .docked { min-height: 72px; }
+            .docked-logo { height: 72px; max-width: 175px; }
+
+            #contact .footer-compact-container {
+                padding-top: 26px;
+                padding-bottom: 20px;
+            }
+
+            #contact .footer-compact-grid {
+                column-gap: 0;
+                row-gap: 16px;
+            }
+
+            #contact .footer-tagline {
+                max-width: 100%;
+                font-size: 20px;
+            }
+
+            #contact .footer-compact-grid > div:not(:first-child) {
+                padding-top: 2px;
+            }
+
+            #contact .footer-compact-grid h3 {
+                margin-bottom: 8px;
+            }
+
+            #contact .footer-compact-grid ul {
+                gap: 5px;
+            }
+
+            #contact .footer-compact-grid ul a {
+                font-size: 15px;
+            }
+
+            #contact .footer-compact-container > .border-t {
+                margin-top: 18px;
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+    <div class="hidden md:block bg-surface-container-lowest border-b border-surface-variant light-surface">
+        <div class="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center h-16">
+                <img
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6syRMqqzKGFRhwcnGheAXP3eNBTHY0SxMpkEfzg_0UUMi99UatJsqOSJbftcPSooTRFgUbw_0A8mwuJjgoHUUny-oiTCrdSJ0R0lbifmvupgjNzE2bPFkaiIFQi3i4yzKFELJONhlHeTUu-72xJH2r-APxW043gQVTkgISzXdy4RQLjEsCF1ydSVi0j2_XUdt_X4p_9PSqxvavtpl1-Xl2uVMmgI3JrbO3V24qqzPYYsgBPJ3xPJY-GEjAEV93szwnWc"
+                    alt="Ajay Kumar Garg Engineering College"
+                    class="h-full w-auto object-contain"
+                >
+            </div>
+
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-2 h-14">
+                    <div class="h-full border border-surface-variant px-3 py-1 flex items-center justify-center bg-surface-container">
+                        <span class="text-primary font-bold text-lg leading-none">NAAC<br><span class="text-xs font-normal text-on-surface-variant">GRADE</span> A++</span>
+                    </div>
+                    <div class="h-full border border-surface-variant px-3 py-1 flex flex-col items-center justify-center bg-surface-container">
+                        <div class="flex items-center gap-1 text-secondary-fixed-dim font-bold">
+                            <span class="bg-secondary-fixed-dim text-black px-1 text-xs rounded-sm">QS</span> I-GAUGE
+                        </div>
+                        <span class="bg-tertiary-container text-white text-[10px] px-2 py-0.5 mt-1 font-bold rounded-sm w-full text-center">DIAMOND</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <a href="index.html#contact" class="bg-primary-container hover:bg-primary text-white text-sm font-semibold py-2 px-6 rounded shadow-md transition">❖ Apply Now for Admissions</a>
+                    <a href="index.html#contact" class="bg-primary-container hover:bg-primary text-white text-sm font-semibold py-2 px-6 rounded shadow-md transition">❖ Registration Process for First Year</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="global-nav hidden lg:block w-full bg-surface-container-highest border-b-2 border-secondary-fixed-dim">
+        <div class="max-w-[1400px] mx-auto px-6">
+            <ul class="flex items-center h-12 text-[11px] font-bold tracking-wider">
+                <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">ABOUT</a></li>
+                <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">DEPARTMENTS</a></li>
+                <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">ACADEMICS</a></li>
+                <li><a href="#" class="px-3 py-3 uppercase text-primary"><span class="material-symbols-outlined text-[14px] align-middle">school</span> ADMISSIONS</a></li>
+                <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">R&amp;D</a></li>
+                <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">LIFE@AKGEC</a></li>
+                <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">ACHIEVEMENTS</a></li>
+                <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">PLACEMENTS</a></li>
+                <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">VE CELL</a></li>
+                <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">IQAC</a></li>
+                <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">ERP</a></li>
+                <li><a href="#" class="px-3 py-3 uppercase hover:text-primary">CAREER</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <nav class="idea-nav docked sticky top-0 z-40 bg-surface-container-lowest/90 backdrop-blur-md shadow-sm border-b border-surface-variant">
+        <div class="max-w-[95%] mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center">
+            <a href="index.html#home" class="flex items-center">
+                <img
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Scnw8_Od-8GHVWRbb_4M4g8iS6MJbw3e92DaCZgVOEWdDwduugNbKt2EHd1mkwPx1szCbxpx2HZyWeJFFhZgGWbCgKZX_06sj4qj4pc3V2_oYw4MaqupWGgT-Wwz3ulNK65U_4lxksGq2kUxxL-o4XadfVfsQdV3bkCrKhky1DXeI_09Gb-9pppywcdZmSbCCrVXWUZ_OZobwrqZ6yI7ZX6OUPpPZ8JRvZALemJ39n8729bEFrlqpr1DyZY5br_0vDI"
+                    alt="AKGEC IDEA Lab Logo"
+                    class="docked-logo"
+                >
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html#home" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">Home</a>
+                <a href="index.html#about" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">About Us</a>
+                <a href="index.html#vision" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">Our Vision</a>
+                <a href="index.html#services" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">Services</a>
+                <a href="index.html#gallery" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">Gallery</a>
+                <a href="index.html#contact" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">Contact</a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-3">
+                <a href="events.html" class="bg-primary text-white text-[11px] uppercase font-bold px-5 py-2.5 rounded-full hover:bg-primary-container transition shadow-sm">Events</a>
+                <button id="themeToggle" aria-label="Toggle Theme" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition border border-surface-variant">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+            </div>
+
+            <div class="flex items-center gap-2 md:hidden">
+                <button id="themeToggleMobile" aria-label="Toggle Theme" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition border border-surface-variant">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+                <button id="mobileMenuButton" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary" aria-label="Open navigation menu" aria-expanded="false">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu-panel md:hidden border-t border-surface-variant bg-surface-container-lowest px-5 py-3">
+            <a href="index.html#home" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">Home</a>
+            <a href="index.html#about" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">About Us</a>
+            <a href="index.html#vision" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">Our Vision</a>
+            <a href="index.html#services" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">Services</a>
+            <a href="events.html" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold text-primary">Events</a>
+            <a href="index.html#gallery" class="py-3 border-b border-surface-variant text-[11px] uppercase font-bold">Gallery</a>
+            <a href="index.html#contact" class="py-3 text-[11px] uppercase font-bold">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="events-surface py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-low text-on-surface">
+            <div class="max-w-container-max mx-auto">
+                <div class="max-w-3xl mb-16">
+                    <span class="text-primary text-[11px] uppercase tracking-[0.2em] font-bold">Innovation in Action</span>
+                    <h1 class="text-4xl md:text-6xl font-bold mt-4 mb-6">Where Ideas Meet Opportunity</h1>
+                    <p class="text-on-surface-variant text-lg leading-relaxed">It only takes a spark to start something extraordinary, and every great idea deserves the chance to become impact.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <article class="rounded-2xl border border-surface-variant bg-white p-8 hover:bg-surface-container-lowest transition">
+                        <span class="material-symbols-outlined text-secondary-fixed-dim text-4xl">groups</span>
+                        <h2 class="text-2xl font-bold mt-6 mb-3">Startup Conclave</h2>
+                        <p class="text-on-surface-variant leading-relaxed mb-6">An event where ambitious founders connect, opportunities unfold, and possibilities grow.</p>
+                        <span class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-bold">Entrepreneurship &bull; Networking &bull; Startups</span>
+                    </article>
+
+                    <article class="rounded-2xl border border-surface-variant bg-white p-8 hover:bg-surface-container-lowest transition">
+                        <span class="material-symbols-outlined text-secondary-fixed-dim text-4xl">code</span>
+                        <h2 class="text-2xl font-bold mt-6 mb-3">Smart India Hackathon</h2>
+                        <p class="text-on-surface-variant leading-relaxed mb-6">Where young innovators unite, collaborate, and change the world through technology-driven solutions.</p>
+                        <span class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-bold">Innovation &bull; Collaboration &bull; Impact</span>
+                    </article>
+
+                    <article class="rounded-2xl border border-surface-variant bg-white p-8 hover:bg-surface-container-lowest transition">
+                        <span class="material-symbols-outlined text-secondary-fixed-dim text-4xl">gavel</span>
+                        <h2 class="text-2xl font-bold mt-6 mb-3">IPR Workshop</h2>
+                        <p class="text-on-surface-variant leading-relaxed mb-6">From idea to invention to ownership, understand the journey of protecting innovation.</p>
+                        <span class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-bold">Patents &bull; Copyright &bull; IP</span>
+                    </article>
+
+                    <article class="rounded-2xl border border-surface-variant bg-white p-8 hover:bg-surface-container-lowest transition">
+                        <span class="material-symbols-outlined text-secondary-fixed-dim text-4xl">lightbulb</span>
+                        <h2 class="text-2xl font-bold mt-6 mb-3">Innovation &amp; Entrepreneurship Activities</h2>
+                        <p class="text-on-surface-variant leading-relaxed mb-6">Ideation activities, bootcamps, hackathons, workshops, mentoring sessions, and student-led initiatives.</p>
+                        <span class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-bold">Year Round &bull; Student Activities</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="bg-[#861f2d] text-white border-t border-white/10">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop footer-compact-container">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-5 footer-compact-grid">
+                <div>
+                    <img src="images/idea-lab-logo-glow.png" alt="AKGEC IDEA Lab" class="h-24 w-auto object-contain mb-3">
+                    <h2 class="footer-tagline font-heading text-xl md:text-[16px] font-semibold leading-[1.25] tracking-tight mb-0">
+                        Transforming Ideas into Innovation,<br>
+                        Inspiring Minds, Shaping the Future.
+                    </h2>
+                </div>
+
+                <div>
+                    <h3 class="text-xs uppercase tracking-widest font-bold mb-3">Quick Links</h3>
+                    <ul class="space-y-2 text-white/65">
+                        <li><a href="index.html#about" class="hover:text-secondary-fixed-dim transition">About Us</a></li>
+                        <li><a href="index.html#vision" class="hover:text-secondary-fixed-dim transition">Our Vision</a></li>
+                        <li><a href="index.html#services" class="hover:text-secondary-fixed-dim transition">Services</a></li>
+                        <li><a href="events.html" class="hover:text-secondary-fixed-dim transition">Events</a></li>
+                        <li><a href="index.html#gallery" class="hover:text-secondary-fixed-dim transition">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xs uppercase tracking-widest font-bold mb-3">Innovation Hub</h3>
+                    <ul class="space-y-2 text-white/65">
+                        <li><a href="index.html#about" class="hover:text-secondary-fixed-dim transition">TBI</a></li>
+                        <li><a href="index.html#about" class="hover:text-secondary-fixed-dim transition">IIC</a></li>
+                        <li><a href="index.html#about" class="hover:text-secondary-fixed-dim transition">IPR</a></li>
+                        <li><a href="index.html#about" class="hover:text-secondary-fixed-dim transition">E-Cell</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xs uppercase tracking-widest font-bold mb-3">Follow IDEA Lab</h3>
+                    <p class="text-white/50 text-sm leading-relaxed mb-3">Stay connected with IDEA Lab and follow our latest innovations, events, and updates.</p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://www.linkedin.com/company/akgecidealab/" aria-label="Follow IDEA Lab on LinkedIn" class="group w-9 h-9 rounded-full border border-white/15 bg-white/5 flex items-center justify-center hover:bg-white/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300">
+                            <svg class="w-5 h-5 fill-current text-white/70 group-hover:text-white transition-colors duration-300" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A2.01 2.01 0 1 0 5.25 7.02 2.01 2.01 0 0 0 5.25 3ZM20.44 13.42c0-3.46-1.85-5.07-4.32-5.07-1.99 0-2.88 1.1-3.38 1.87V8.5H9.36V20h3.38v-5.7c0-1.5.28-2.95 2.14-2.95 1.83 0 1.85 1.71 1.85 3.05V20h3.38l.33-6.58Z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/akgec_idealab/" aria-label="Follow IDEA Lab on Instagram" class="group w-9 h-9 rounded-full border border-white/15 bg-white/5 flex items-center justify-center hover:bg-white/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300">
+                            <svg class="w-5 h-5 fill-none stroke-current text-white/70 group-hover:text-white transition-colors duration-300" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+                        </a>
+                        <a href="#" aria-label="Follow IDEA Lab on Facebook" class="group w-9 h-9 rounded-full border border-white/15 bg-white/5 flex items-center justify-center hover:bg-white/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300">
+                            <svg class="w-5 h-5 fill-current text-white/70 group-hover:text-white transition-colors duration-300" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.75l.42-3h-3.17V8.08c0-.87.24-1.46 1.49-1.46h1.59V3.94c-.28-.04-1.25-.12-2.39-.12-2.36 0-3.98 1.44-3.98 4.08V10H7.5v3h2.71v8h3.29Z"/></svg>
+                        </a>
+                    </div>
+                    <p class="text-white/30 text-[11px] mt-6 uppercase tracking-wider">Follow &bull; Connect &bull; Innovate</p>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-7 pt-4 flex flex-col md:flex-row justify-between gap-2 text-sm text-white/40">
+                <p>&copy; 2026 AKGEC IDEA Lab. All rights reserved.</p>
+                <p>Innovation &bull; Incubation &bull; Entrepreneurship</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById("mobileMenuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const themeToggle = document.getElementById("themeToggle");
+        const themeToggleMobile = document.getElementById("themeToggleMobile");
+
+        function updateTheme(isDark) {
+            document.documentElement.classList.toggle("dark", isDark);
+            [themeToggle, themeToggleMobile].forEach(button => {
+                if (!button) return;
+                button.querySelector(".material-symbols-outlined").textContent = isDark ? "light_mode" : "dark_mode";
+                button.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+            });
+        }
+
+        const savedTheme = localStorage.getItem("idea-lab-theme");
+        updateTheme(savedTheme === "dark");
+
+        [themeToggle, themeToggleMobile].forEach(button => {
+            if (!button) return;
+            button.addEventListener("click", () => {
+                const isDark = !document.documentElement.classList.contains("dark");
+                updateTheme(isDark);
+                localStorage.setItem("idea-lab-theme", isDark ? "dark" : "light");
+            });
+        });
+
+        mobileMenuButton.addEventListener("click", () => {
+            const isOpen = mobileMenu.classList.toggle("is-open");
+            mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+            mobileMenuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+            mobileMenuButton.querySelector(".material-symbols-outlined").textContent = isOpen ? "close" : "menu";
+        });
+    </script>
+</body>
+</html>
