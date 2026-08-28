@@ -6,6 +6,7 @@
     <title>Events | AKGEC IDEA Lab</title>
     <meta name="description" content="Explore innovation, entrepreneurship, incubation, and intellectual property events at AKGEC IDEA Lab.">
 
+    <script src="theme.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Sora:wght@400..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
@@ -56,52 +57,6 @@
         .docked-logo { height: 80px; width: auto; object-fit: contain; }
         .mobile-menu-panel { display: none; }
         .mobile-menu-panel.is-open { display: grid; }
-
-        html.dark body {
-            background: #111827;
-            color: #f3f4f6;
-        }
-
-        html.dark .idea-nav,
-        html.dark .mobile-menu-panel {
-            background: #1f2937;
-            border-color: #374151;
-        }
-
-        html.dark .idea-nav a,
-        html.dark .mobile-menu-panel a {
-            color: #f3f4f6;
-        }
-
-        html.dark .global-nav {
-            background: #1f2937;
-            border-color: #374151;
-        }
-
-        html.dark .global-nav a {
-            color: #f3f4f6;
-        }
-
-        html.dark .light-surface {
-            background: #1f2937;
-            border-color: #374151;
-        }
-
-        html.dark button[id^="themeToggle"] {
-            background: #374151;
-            color: #ffb3b6;
-            border-color: #4b5563;
-        }
-
-        html.dark .events-surface {
-            background: #1f2937;
-            color: #f3f4f6;
-        }
-
-        html.dark .events-surface article {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.15);
-        }
 
         #contact .footer-compact-container {
             padding-top: 34px;
@@ -188,6 +143,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="theme.css">
 </head>
 
 <body class="overflow-x-hidden">
@@ -215,8 +171,8 @@
                 </div>
 
                 <div class="flex flex-col gap-2">
-                    <a href="index.html#contact" class="bg-primary-container hover:bg-primary text-white text-sm font-semibold py-2 px-6 rounded shadow-md transition">❖ Apply Now for Admissions</a>
-                    <a href="index.html#contact" class="bg-primary-container hover:bg-primary text-white text-sm font-semibold py-2 px-6 rounded shadow-md transition">❖ Registration Process for First Year</a>
+                    <a href="https://admissions.akgec.ac.in/" class="bg-primary-container hover:bg-primary text-white text-sm font-semibold py-2 px-6 rounded shadow-md transition">❖ Apply Now for Enquiry</a>
+                    <a href="https://www.akgec.ac.in/uptac/" class="bg-primary-container hover:bg-primary text-white text-sm font-semibold py-2 px-6 rounded shadow-md transition">❖ Registration Process for First Year</a>
                 </div>
             </div>
         </div>
@@ -242,16 +198,15 @@
     </div>
 
     <nav class="idea-nav docked sticky top-0 z-40 bg-surface-container-lowest/90 backdrop-blur-md shadow-sm border-b border-surface-variant">
-        <div class="max-w-[95%] mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center">
-            <a href="index.html#home" class="flex items-center">
-                <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Scnw8_Od-8GHVWRbb_4M4g8iS6MJbw3e92DaCZgVOEWdDwduugNbKt2EHd1mkwPx1szCbxpx2HZyWeJFFhZgGWbCgKZX_06sj4qj4pc3V2_oYw4MaqupWGgT-Wwz3ulNK65U_4lxksGq2kUxxL-o4XadfVfsQdV3bkCrKhky1DXeI_09Gb-9pppywcdZmSbCCrVXWUZ_OZobwrqZ6yI7ZX6OUPpPZ8JRvZALemJ39n8729bEFrlqpr1DyZY5br_0vDI"
-                    alt="AKGEC IDEA Lab Logo"
-                    class="docked-logo"
-                >
+        <div class="nav-shell px-4 md:px-4 flex items-center">
+            <a href="index.html#home" class="nav-logo flex items-center">
+                <span class="docked-logo-stack" aria-label="AKGEC IDEA Lab Logo">
+                    <img src="images/idea-lab-navbar-light.png" alt="" class="docked-logo docked-logo-light">
+                    <img src="images/idea-lab-navbar-dark.png" alt="" class="docked-logo docked-logo-dark">
+                </span>
             </a>
 
-            <div class="hidden md:flex items-center gap-8">
+            <div class="nav-links hidden md:flex items-center justify-center gap-8">
                 <a href="index.html#home" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">Home</a>
                 <a href="index.html#about" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">About Us</a>
                 <a href="index.html#vision" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">Our Vision</a>
@@ -260,16 +215,16 @@
                 <a href="index.html#contact" class="nav-link font-bold text-[11px] uppercase text-on-surface-variant hover:text-primary">Contact</a>
             </div>
 
-            <div class="hidden md:flex items-center gap-3">
+            <div class="nav-actions hidden md:flex items-center justify-end gap-3">
                 <a href="events.html" class="bg-primary text-white text-[11px] uppercase font-bold px-5 py-2.5 rounded-full hover:bg-primary-container transition shadow-sm">Events</a>
-                <button id="themeToggle" aria-label="Toggle Theme" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition border border-surface-variant">
-                    <span class="material-symbols-outlined">dark_mode</span>
+                <button id="themeToggle" data-theme-toggle aria-label="Toggle Theme" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition border border-surface-variant">
+                    <span class="material-symbols-outlined" data-theme-icon>dark_mode</span>
                 </button>
             </div>
 
-            <div class="flex items-center gap-2 md:hidden">
-                <button id="themeToggleMobile" aria-label="Toggle Theme" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition border border-surface-variant">
-                    <span class="material-symbols-outlined">dark_mode</span>
+            <div class="nav-mobile-actions flex items-center justify-end gap-2 md:hidden">
+                <button id="themeToggleMobile" data-theme-toggle aria-label="Toggle Theme" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-white transition border border-surface-variant">
+                    <span class="material-symbols-outlined" data-theme-icon>dark_mode</span>
                 </button>
                 <button id="mobileMenuButton" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary" aria-label="Open navigation menu" aria-expanded="false">
                     <span class="material-symbols-outlined">menu</span>
@@ -305,7 +260,7 @@
             </div>
 
             <a
-                href="events.html"
+                href="#"
                 class="bg-white text-primary font-bold text-[11px] uppercase px-6 py-2.5 rounded-full hover:bg-surface-bright transition"
             >
                 Register Now
@@ -415,30 +370,6 @@
     <script>
         const mobileMenuButton = document.getElementById("mobileMenuButton");
         const mobileMenu = document.getElementById("mobileMenu");
-        const themeToggle = document.getElementById("themeToggle");
-        const themeToggleMobile = document.getElementById("themeToggleMobile");
-
-        function updateTheme(isDark) {
-            document.documentElement.classList.toggle("dark", isDark);
-            [themeToggle, themeToggleMobile].forEach(button => {
-                if (!button) return;
-                button.querySelector(".material-symbols-outlined").textContent = isDark ? "light_mode" : "dark_mode";
-                button.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
-            });
-        }
-
-        const savedTheme = localStorage.getItem("idea-lab-theme");
-        updateTheme(savedTheme === "dark");
-
-        [themeToggle, themeToggleMobile].forEach(button => {
-            if (!button) return;
-            button.addEventListener("click", () => {
-                const isDark = !document.documentElement.classList.contains("dark");
-                updateTheme(isDark);
-                localStorage.setItem("idea-lab-theme", isDark ? "dark" : "light");
-            });
-        });
-
         mobileMenuButton.addEventListener("click", () => {
             const isOpen = mobileMenu.classList.toggle("is-open");
             mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
